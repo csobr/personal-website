@@ -1,4 +1,3 @@
 .next
 node_module
-/utils
-./src/components/layout.js
+../src/utils
