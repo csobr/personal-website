@@ -1,0 +1,676 @@
+$primary_color: #1b1b1b;
+$bg_color: rgb(245, 245, 243);
+$white: #fff;
+$third_color: rgb(198, 156, 109);
+$black: #000;
+$secondary_color: #050505;
+
+html {
+  font-size: 62.5%;
+  font-family: "Montserrat", sans-serif;
+  font-family: "Varela", sans-serif;
+  font-weight: 300;
+}
+
+@media (max-width: 75em) {
+  html {
+    font-size: 56.25%;
+  }
+}
+
+@media (max-width: 56.25em) {
+  html {
+    font-size: 50%;
+  }
+}
+
+@media (min-width: 112.5em) {
+  html {
+    font-size: 75%;
+  }
+}
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  box-sizing: inherit;
+}
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background: $bg_color;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+.app-wrapper,
+.site-wrapper {
+  min-height: 100vh;
+}
+
+/***************************************
+  Navigation
+****************************************/
+.main-nav {
+  position: fixed;
+  width: 100%;
+  height: 5rem;
+  background: $bg_color;
+  z-index: 999;
+  font-family: "Varela", sans-serif;
+
+  @media (max-width: 415px) {
+    height: 3rem;
+  }
+}
+
+.logo {
+  cursor: pointer;
+  position: absolute;
+  z-index: 2;
+  padding: 0.7rem 0 0 1rem;
+  margin: 0;
+
+  img {
+    width: 5rem;
+  }
+
+  @media (max-width: 415px) {
+    z-index: 2;
+    position: relative;
+    padding: 0.5rem 1rem 0 0;
+    float: right;
+    width: auto;
+
+    img {
+      width: 6rem;
+    }
+  }
+}
+.hamburger {
+  margin: 0.5%;
+}
+
+.hamburger span {
+  background: $primary_color;
+  border-radius: 4px;
+  display: block;
+  margin-bottom: 5px;
+  transition: 0.3s all ease;
+  height: 1px;
+  width: 30px;
+}
+
+.hamburger span:nth-child(1) {
+  width: 25px;
+}
+
+.hamburger span:nth-child(2) {
+  width: 20px;
+}
+
+.hamburger:hover span:nth-child(3) {
+  width: 25px;
+}
+
+.hamburger:hover span:nth-child(2) {
+  width: 30px;
+}
+
+.hamburger:hover span:nth-child(1) {
+  width: 20px;
+}
+
+.toggle {
+  color: $primary_color;
+  margin: 0;
+  padding: 1rem;
+  height: 30px;
+  background: $bg_color;
+  // If the screen width is wider, the toggle icon isn't visible
+  @media (min-width: 415px) {
+    display: none;
+  }
+}
+
+.links {
+  // Links initially are not visible *smaller screens
+  display: none;
+  flex-direction: column;
+  margin: 0;
+  padding: 0 0.4rem 1rem 1rem;
+  background: $bg_color;
+  z-index: 1;
+  position: absolute;
+  width: 100%;
+  font-size: 1.5em;
+
+  @media (min-width: 415px) {
+    display: flex;
+    background-color: transparent;
+    margin: 2rem;
+    padding: 0 0 0 7rem;
+    position: relative;
+    flex-direction: row;
+    color: $primary_color;
+    font-size: 1.3em;
+  }
+
+  li {
+    list-style: none;
+
+    @media (max-width: 415px) {
+      padding: 1.4rem 0 0 1rem;
+      margin: 1rem;
+    }
+  }
+
+  a {
+    text-decoration: none;
+    color: $primary_color;
+    margin: 1.4rem;
+    letter-spacing: 0.1em;
+    cursor: pointer;
+
+    @media (max-width: 415px) {
+      color: $primary_color;
+    }
+  }
+  a:hover {
+    border-bottom: 1px solid $primary_color;
+
+    @media (max-width: 415px) {
+      border-bottom: 1px solid $primary_color;
+    }
+  }
+
+  /* selected link */
+  .active {
+    border-bottom: 1px solid $primary_color;
+
+    @media (max-width: 415px) {
+      border-bottom: 1px solid $primary_color;
+    }
+  }
+}
+
+// When "open" class is added after clicking, the links will be shown using flexbox
+.links.open {
+  display: flex;
+}
+
+/***************************************
+Page: Home
+****************************************/
+#__next-prerender-indicator {
+  display: none;
+}
+
+.about {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+  width: 100%;
+  color: $white;
+}
+h1 {
+  text-align: center;
+  color: $white;
+  white-space: pre-wrap;
+  font-size: 2.4em;
+  font-weight: 600;
+  font-family: Didot, Didot LT STD, Hoefler Text, Garamond, Times New Roman,
+    serif;
+
+  @media (max-width: 415px) {
+    font-size: 2em;
+    white-space: wrap;
+  }
+}
+
+.about-me {
+  text-align: center;
+  justify-content: space-evenly;
+
+  p {
+    margin: 1.5%;
+    font-size: 1.3em;
+    font-weight: 400;
+    line-height: 2.5rem;
+    white-space: pre-wrap;
+    font-family: "Montserrat", sans-serif;
+  }
+
+  @media (max-width: 415px) {
+    text-align: center;
+    font-size: 1.2em;
+    white-space: nowrap;
+  }
+}
+
+.social a {
+  font-size: 1.2em;
+  padding: 0.5em;
+  text-decoration: none;
+  display: inline-block;
+  position: relative;
+  color: $white;
+  @media (max-width: 415px) {
+    font-size: 1.2em;
+  }
+}
+/* hover */
+.social a:after {
+  background-color: none repeat scroll 0 0 transparent;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 1px;
+  left: 50%;
+  position: absolute;
+  background-color: $white;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
+}
+.social a:hover:after {
+  width: 100%;
+  left: 0;
+}
+/***************************************
+Page: Projects
+****************************************/
+.projects--wrapper {
+  display: flex;
+  width: 100%;
+  height: 70vh;
+  justify-content: center;
+  font-family: "Montserrat", sans-serif;
+  color: $white;
+  @media (max-width: 415px) {
+    width: 100%;
+  }
+}
+.projects--header {
+  text-align: center;
+  font-weight: 900;
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  font-style: normal;
+  color: $white;
+  padding-bottom: 2.5rem;
+}
+.slider {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  @media (max-width: 415px) {
+    width: 90%;
+  }
+}
+.item {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  width: 75rem;
+  @media (max-width: 415px) {
+    margin: auto;
+    width: 40rem;
+    flex-direction: column;
+  }
+}
+.item--image img {
+  width: 40rem;
+  @media (max-width: 415px) {
+    width: 40rem;
+  }
+}
+.item--text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 auto;
+  font-size: 1.2rem;
+  line-height: 2rem;
+  width: 30rem;
+}
+.item--name {
+  font-weight: 700;
+}
+.item--description {
+  padding: 0.5rem 0 0.5rem 0;
+  line-height: 1.4rem;
+}
+.pagination {
+  display: flex;
+  display: row;
+  list-style: none;
+  justify-content: space-around;
+  width: 40rem;
+  list-style-type: none;
+  padding-top: 1rem;
+}
+.dots {
+  display: flex;
+  text-align: center;
+  display: inline-block;
+  border-radius: 100%;
+  width: 2rem;
+  height: 2rem;
+  background: $white;
+  cursor: pointer;
+}
+.dot {
+  font-size: 2rem;
+}
+
+/***************************************
+Page: Contact
+****************************************/
+h3 {
+  color: $primary_color;
+  text-align: center;
+  padding-bottom: 2rem;
+  font-size: 2.5em;
+  text-transform: uppercase;
+}
+.contact {
+  display: flex;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  justify-content: center;
+}
+form {
+  display: flex;
+  justify-content: space-evenly;
+  margin: auto;
+  flex-direction: column;
+  padding: 6rem 5rem 8rem 6rem;
+  background: rgba(202, 202, 202, 0.1);
+  z-index: 5;
+}
+
+label {
+  font-family: sans-serif;
+  letter-spacing: 0.5em;
+  text-transform: uppercase;
+  color: $primary_color;
+}
+
+input {
+  margin: 3rem 0 0 0;
+  box-sizing: border-box;
+  width: 100%;
+  display: inline-block;
+  font-size: 1.2em;
+  border: 0;
+  border-bottom: 1px solid $primary_color;
+  text-align: left;
+  outline: none;
+  background: transparent;
+  color: $primary_color;
+}
+
+textarea {
+  border: 0;
+  padding: 0.3rem;
+  margin-top: 4rem;
+  border-bottom: 1px solid $primary_color;
+  font-family: sans-serif;
+  font-size: 1.2em;
+  width: 100%;
+  background: transparent;
+  color: $primary_color;
+  outline: none;
+}
+
+input:focus {
+  background: transparent;
+  padding: 1rem;
+  border: none;
+  border-bottom: 1px solid $third_color;
+  color: $primary_color;
+  outline: none;
+}
+
+button {
+  background: transparent;
+  color: $primary_color;
+  font-family: sans-serif;
+  letter-spacing: 0.2em;
+  margin: 7rem;
+  padding: 10px 30px;
+  border: 1px solid $primary_color;
+  outline: none;
+}
+
+button:hover {
+  background: transparent;
+  border: 1px solid $third_color;
+}
+
+/***************************************
+Page: Work
+****************************************/
+.projects-grid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+
+  img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    padding: 0.5rem;
+  }
+}
+
+.item {
+  position: relative;
+}
+
+@media (max-width: 415px) {
+  .text {
+    font-size: 1em;
+  }
+
+  h4 {
+    font-size: 1em;
+    padding-top: 9rem;
+  }
+}
+
+.text {
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  position: absolute;
+  font-size: auto;
+
+  :hover {
+    color: $third_color;
+  }
+}
+
+.text a {
+  font-size: 1.8em;
+  cursor: pointer;
+  margin: auto;
+  text-decoration: none;
+  color: $white;
+  z-index: 3;
+  font-weight: bold;
+  font-family: "Montserrat", sans-serif;
+}
+
+h2 {
+  font-size: 2.8em;
+  margin: 0 auto;
+  text-align: center;
+  padding-top: 3rem;
+  position: relative;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 300;
+  font-style: italic;
+  color: $primary_color;
+}
+
+/***************************************
+Page: Wore
+****************************************/
+.container-wore {
+  p {
+    width: 100%;
+    margin: auto;
+    white-space: pre-wrap;
+    font-size: 2em;
+    font-family: Didot, Didot LT STD, Hoefler Text, Garamond, Times New Roman,
+      serif;
+    font-style: italic;
+    font-weight: 200;
+    line-height: 3.4rem;
+  }
+
+  @media (max-width: 415px) {
+    width: 90%;
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+/***************************************
+Page: Furniture/Photos/Unit
+****************************************/
+.container-furniture {
+  display: grid;
+  padding-bottom: 6%;
+  justify-content: center;
+  margin: 0 auto;
+  grid-template-areas: "a a";
+  grid-gap: 10px;
+  justify-items: stretch;
+  text-align: center;
+  width: 60%;
+
+  img {
+    width: 100%;
+  }
+
+  @media (max-width: 415px) {
+    width: 90%;
+    justify-content: center;
+  }
+}
+.container {
+  display: grid;
+  grid-template-columns: repeat(3, 3fr);
+  grid-gap: 20px;
+  grid-auto-rows: minmax(100px, auto);
+  padding: 4rem 0 6rem 0;
+  margin: 0 auto;
+  text-align: center;
+  width: 80%;
+
+  img {
+    width: 100%;
+  }
+  @media (max-width: 415px) {
+    width: 90%;
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+h5 {
+  font-size: 1.4em;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 100;
+  white-space: pre-wrap;
+  text-align: center;
+  padding: 9rem 0 3rem 0;
+
+  @media (max-width: 415px) {
+    font-size: 1.2em;
+    padding-top: 9rem;
+  }
+}
+
+/***************************************
+Page: Unit
+****************************************/
+.container-unit {
+  @media (max-width: 415px) {
+    width: 90%;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+h4 {
+  margin: auto;
+  padding: 8rem 0 0 0;
+  font-size: 2.5em;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+}
+.unit-text {
+  text-align: center;
+  margin: auto;
+  white-space: pre-wrap;
+  font-size: 1.8em;
+  font-family: Didot, Didot LT STD, Hoefler Text, Garamond, Times New Roman,
+    serif;
+  font-style: italic;
+  font-weight: 200;
+  line-height: 3.4rem;
+  padding: 3rem;
+}
+
+.error {
+  font-size: 3em;
+  padding: 0;
+  width: 100%;
+  text-align: center;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+
+  .error-title {
+    font-size: 2.4em;
+    padding: 0;
+    margin: 0;
+  }
+
+  p {
+    text-align: center;
+    font-size: 1em;
+  }
+
+  a {
+    font-size: 0.5em;
+    text-decoration: none;
+    color: $white;
+  }
+}
+
+/*Footer*/
+.footer {
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  padding: 1rem;
+  font-size: 1.2em;
+  color: $primary_color;
+  @media (max-width: 415px) {
+    font-size: 1.2em;
+  }
+}
