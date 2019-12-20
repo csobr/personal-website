@@ -4,23 +4,26 @@ import ProjectsView from "./project";
 import Navbar from "../components/navigation";
 import Footer from "../components/footer";
 import "../styles/main.scss";
+import Layout from "../components/layout";
 
 const Home = () => {
   return (
-    <div>
-      <Head>
-        <title>Siham Hadi</title>
-        <link rel="icon" href="favicon.ico" type="image/x-icon" />
-        <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
-        <meta charSet="utf-8" />
-        <meta
-          name="description"
-          content="A software developer and designer based in Stockholm."
-        />
-      </Head>
-      <Navbar />
-      <div className="about">
-        <style type="text/css">{`
+    <Layout>
+      <div>
+        <Head>
+          <title>Siham Hadi</title>
+          <link rel="icon" href="favicon.ico" type="image/x-icon" />
+          <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+          <meta charSet="utf-8" />
+          <meta
+            name="description"
+            content="A software developer and designer based in Stockholm."
+          />
+        </Head>
+        <Navbar />
+
+        <div className="about">
+          <style type="text/css">{`
         body {
             background-color:#050505 ;
 
@@ -42,11 +45,14 @@ const Home = () => {
         a:hover{
              border-bottom: 1px solid #fff !important;
         }
+        .links{
+          background-color: #050505;
+        }
         .links a{
           color:#fff;
         }
         .hamburger span {
-         background: #fff;
+         background-color: #fff;
 
         }
         .footer p {
@@ -54,32 +60,33 @@ const Home = () => {
           ;
         }
     `}</style>
-        <div className="about-me">
-          <h1>
-            I have learnt to use a set of tools that I now try to create value
-            with.{" "}
-          </h1>
-          <p>
-            {" "}
-            I’m Siham a software developer and designer based in Stockholm,
-            Sweden.
-            {"\n"}Languages: Somali - Swedish - English
-          </p>
+          <div className="about-me">
+            <h1>
+              I have learnt to use a set of tools that I now try to create value
+              with.{" "}
+            </h1>
+            <p>
+              {" "}
+              I’m Siham a software developer and designer based in Stockholm,
+              Sweden.
+              {"\n"}Languages: Somali - Swedish - English
+            </p>
 
-          <span className="social">
-            <a href="mailto: siham.hadi@live.se">Email</a>
-            <a href="https://github.com/csobr" target="_blank">
-              Github
-            </a>
-            <a href="https://www.instagram.com/texturlab/" target="_blank">
-              Instagram
-            </a>
-          </span>
+            <span className="social">
+              <a href="mailto: siham.hadi@live.se">Email</a>
+              <a href="https://github.com/csobr" target="_blank">
+                Github
+              </a>
+              <a href="https://www.instagram.com/texturlab/" target="_blank">
+                Instagram
+              </a>
+            </span>
+          </div>
         </div>
-      </div>
-      <ProjectsView />
-      <Footer />
-    </div>
+        <ProjectsView />
+        <Footer />
+      </div>{" "}
+    </Layout>
   );
 };
 
