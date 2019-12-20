@@ -1,7 +1,7 @@
 {
   "name": "personalWebsite",
   "version": "1.0.0",
-  "description": "My personal website Siham Hadi.",
+  "description": "My personal website",
   "main": "index.js",
   "dependencies": {
     "@zeit/next-sass": "^1.0.1",
