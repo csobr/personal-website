@@ -2,7 +2,6 @@ $primary_color: #0b0b0b;
 $bg_color: rgb(245, 245, 243);
 $white: #fff;
 $third_color: rgb(198, 156, 109);
-$black: #000;
 $secondary_color: #050505;
 @mixin center {
   display: flex;
@@ -65,6 +64,7 @@ body {
   background: $bg_color;
   z-index: 999;
   font-family: "Varela", sans-serif;
+  font-weight: 400;
 
   @media (max-width: 415px) {
     height: 3rem;
