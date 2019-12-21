@@ -32,8 +32,9 @@ function Project() {
   return (
     <div>
       {" "}
-      <h2 className="projects--header">Projects</h2>
       <div className="projects--wrapper">
+        {" "}
+        <h2 className="projects--header">Projects</h2>
         <div className="grid">
           <Projects projects={currentProjects} loading={loading} />
           <Pagination

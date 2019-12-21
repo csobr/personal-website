@@ -4,7 +4,11 @@ $white: #fff;
 $third_color: rgb(198, 156, 109);
 $black: #000;
 $secondary_color: #050505;
-
+@mixin center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 html {
   font-size: 62.5%;
   font-family: "Montserrat", sans-serif;
@@ -210,9 +214,7 @@ Page: Home
 }
 
 .about {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @include center();
   height: 90vh;
   width: 100%;
   color: $white;
@@ -323,10 +325,11 @@ Page: Projects
   }
 }
 .projects--wrapper {
-  display: flex;
+  @include center();
   width: 100%;
-  height: 70vh;
-  justify-content: center;
+  height: 60vh;
+  padding-bottom: 20rem;
+  flex-direction: column;
   font-family: "Montserrat", sans-serif;
   color: $white;
   @media (max-width: 415px) {
@@ -370,8 +373,8 @@ Page: Projects
 }
 .item--text {
   display: flex;
-  flex-direction: column;
   justify-content: center;
+  flex-direction: column;
   margin: 0 auto;
   font-size: 1.4rem;
   line-height: 2rem;
@@ -529,7 +532,6 @@ Page: Furniture/Photos/Unit
 .container-furniture {
   display: grid;
   padding-bottom: 6%;
-  justify-content: center;
   margin: 0 auto;
   grid-template-areas: "a a";
   grid-gap: 10px;
@@ -543,7 +545,6 @@ Page: Furniture/Photos/Unit
 
   @media (max-width: 415px) {
     width: 90%;
-    justify-content: center;
   }
 }
 .container {
@@ -642,9 +643,7 @@ h4 {
 
 /*Footer*/
 .footer {
-  display: flex;
-  justify-content: center;
-  align-self: center;
+  @include center();
   padding: 1rem;
   font-size: 1.2em;
   color: $primary_color;
