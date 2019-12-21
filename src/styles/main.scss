@@ -303,25 +303,11 @@ Page: Projects
   position: absolute;
   top: 0;
   left: 0;
-  background-color: #00000052;
-  animation-name: animate;
-  -webkit-animation-name: animate;
-  -webkit-animation: 3s infinite;
-  animation: 3s infinite;
+  background: $third_color;
+  -webkit-animation: animate 3s infinite;
+  animation: animate 3s infinite;
   animation-timing-function: ease-in-out;
   -webkit-animation-timing-function: ease-in-out;
-}
-@-webkit-keyframes animate {
-  0% {
-    background: -webkit-linear-gradient(to right, $white);
-    background-size: 0%;
-    background-position: top bottom;
-  }
-  100% {
-    background: -webkit-linear-gradient(to right, $white, $primary_color);
-    background-size: 2%;
-    background-position: top bottom;
-  }
 }
 
 @keyframes animate {
