@@ -12,7 +12,7 @@ function Project() {
   useEffect(() => {
     const fetchProject = async () => {
       setLoading(true);
-      const res = await axios.get("projects.jon").then();
+      const res = await axios.get("projects.json").then();
       setProjects(res.data);
       setLoading(false);
     };
