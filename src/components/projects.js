@@ -14,11 +14,7 @@ const Projects = ({ projects, loading }) => {
         <div key={project.name}>
           <div className="item">
             <div className="item--image">
-              <img
-                loading="lazy"
-                src={project.backgroundImage}
-                alt="Project Image"
-              ></img>
+              <img src={project.backgroundImage} alt="Project Image"></img>
             </div>
             <div className="item--text">
               <p className="item--name">{project.name}</p>

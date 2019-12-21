@@ -1,4 +1,4 @@
-$primary_color: #1b1b1b;
+$primary_color: #0b0b0b;
 $bg_color: rgb(245, 245, 243);
 $white: #fff;
 $third_color: rgb(198, 156, 109);
@@ -331,6 +331,7 @@ Page: Projects
   color: $white;
   @media (max-width: 415px) {
     width: 100%;
+    height: 80vh;
   }
 }
 .projects--header {
@@ -375,6 +376,11 @@ Page: Projects
   font-size: 1.4rem;
   line-height: 2rem;
   width: 30rem;
+  padding-top: 1rem;
+  @media (max-width: 415px) {
+    width: 40rem;
+    text-align: center;
+  }
 }
 .item--name {
   font-weight: 700;
@@ -390,8 +396,9 @@ Page: Projects
   justify-content: space-around;
   width: 40rem;
   list-style-type: none;
-  padding-top: 1rem;
+  padding-top: 3rem;
 }
+
 .dots {
   display: flex;
   text-align: center;

@@ -25,11 +25,11 @@ const Home = () => {
         <div className="about">
           <style type="text/css">{`
         body {
-            background-color:#1b1b1b ;
+            background-color:#0b0b0b ;
 
         }
         .main-nav{
-          background-color:#1b1b1b ;
+          background-color:#0b0b0b ;
         }
         .toggle{
           background-color: transparent;
@@ -46,7 +46,7 @@ const Home = () => {
              border-bottom: 1px solid #fff !important;
         }
         .links{
-          background-color: #1b1b1b;
+          background-color:#0b0b0b;
         }
         .links a{
           color:#fff;
