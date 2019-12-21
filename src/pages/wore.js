@@ -3,6 +3,7 @@ import Head from "next/head";
 import "../styles/main.scss";
 import Navbar from "../components/navigation";
 import Layout from "../components/layout";
+import Footer from "../components/footer";
 const Wore = () => {
   return (
     <Layout>
@@ -39,6 +40,7 @@ const Wore = () => {
           <img src="./images/wore/wore9.jpg" alt="website"></img>
           <img src="./images/wore/wore10.jpg" alt="website"></img>
         </div>
+        <Footer />
       </div>
     </Layout>
   );

@@ -1,36 +1,14 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,500,600,700|Varela&display=swap");
 $primary_color: #0b0b0b;
-$bg_color: rgb(245, 245, 243);
-$white: #fff;
-$third_color: rgb(198, 156, 109);
 $secondary_color: #050505;
+$third_color: rgb(198, 156, 109);
+$bg_color: rgb(245, 245, 243);
+$white: #ffffff;
+
 @mixin center {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-html {
-  font-size: 62.5%;
-  font-family: "Montserrat", sans-serif;
-  font-family: "Varela", sans-serif;
-  font-weight: 300;
-}
-
-@media (max-width: 75em) {
-  html {
-    font-size: 56.25%;
-  }
-}
-
-@media (max-width: 56.25em) {
-  html {
-    font-size: 50%;
-  }
-}
-
-@media (min-width: 112.5em) {
-  html {
-    font-size: 75%;
-  }
 }
 *,
 *::after,
@@ -40,6 +18,27 @@ html {
   box-sizing: border-box;
   box-sizing: inherit;
 }
+html {
+  font-size: 62.5%;
+  font-family: "Montserrat", sans-serif;
+  font-family: "Varela", sans-serif;
+  font-weight: 300;
+}
+@media (max-width: 75em) {
+  html {
+    font-size: 56.25%;
+  }
+}
+@media (max-width: 56.25em) {
+  html {
+    font-size: 50%;
+  }
+}
+@media (min-width: 112.5em) {
+  html {
+    font-size: 75%;
+  }
+}
 html,
 body {
   margin: 0;
@@ -48,12 +47,12 @@ body {
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
 }
-
-.app-wrapper,
-.site-wrapper {
+body {
+  display: grid;
+  grid-template-rows: auto auto;
+  grid-gap: 1em;
   min-height: 100vh;
 }
-
 /***************************************
   Navigation
 ****************************************/
@@ -64,24 +63,19 @@ body {
   background: $bg_color;
   z-index: 999;
   font-family: "Varela", sans-serif;
-  font-weight: 400;
-
+  font-weight: 500;
   @media (max-width: 415px) {
     height: 3rem;
   }
 }
-
 .logo {
   cursor: pointer;
   position: absolute;
   z-index: 2;
   padding: 0.7rem 0 0 1rem;
-  margin: 0;
-
   img {
     width: 5rem;
   }
-
   @media (max-width: 415px) {
     z-index: 2;
     position: relative;
@@ -97,61 +91,49 @@ body {
 .hamburger {
   margin: 0.5%;
 }
-
 .hamburger span {
+  display: block;
   background: $primary_color;
   border-radius: 4px;
-  display: block;
   margin-bottom: 5px;
   transition: 0.3s all ease;
   height: 1px;
   width: 30px;
 }
-
 .hamburger span:nth-child(1) {
   width: 25px;
 }
-
 .hamburger span:nth-child(2) {
   width: 20px;
 }
-
 .hamburger:hover span:nth-child(3) {
   width: 25px;
 }
-
 .hamburger:hover span:nth-child(2) {
   width: 30px;
 }
-
 .hamburger:hover span:nth-child(1) {
   width: 20px;
 }
-
 .toggle {
   color: $primary_color;
-  margin: 0;
   padding: 1rem;
   height: 30px;
   background: $bg_color;
-  // If the screen width is wider, the toggle icon isn't visible
   @media (min-width: 415px) {
     display: none;
   }
 }
-
 .links {
-  // Links initially are not visible *smaller screens
+  //Wider screens
   display: none;
   flex-direction: column;
-  margin: 0;
   padding: 0 0.4rem 1rem 1rem;
   background: $bg_color;
   z-index: 1;
   position: absolute;
   width: 100%;
   font-size: 1.5em;
-
   @media (min-width: 415px) {
     display: flex;
     background-color: transparent;
@@ -162,7 +144,6 @@ body {
     color: $primary_color;
     font-size: 1.3em;
   }
-
   li {
     list-style: none;
 
@@ -171,7 +152,6 @@ body {
       margin: 1rem;
     }
   }
-
   a {
     text-decoration: none;
     color: $primary_color;
@@ -200,19 +180,16 @@ body {
     }
   }
 }
-
 // When "open" class is added after clicking, the links will be shown using flexbox
 .links.open {
   display: flex;
 }
-
 /***************************************
 Page: Home
 ****************************************/
 #__next-prerender-indicator {
   display: none;
 }
-
 .about {
   @include center();
   height: 90vh;
@@ -233,7 +210,6 @@ h1 {
     white-space: wrap;
   }
 }
-
 .about-me {
   padding: 3rem;
   margin: auto;
@@ -248,7 +224,6 @@ h1 {
     white-space: pre-wrap;
     font-family: "Montserrat", sans-serif;
   }
-
   @media (max-width: 415px) {
     text-align: center;
     font-size: 1.2em;
@@ -327,7 +302,6 @@ Page: Projects
 .projects--wrapper {
   @include center();
   width: 100%;
-  height: 60vh;
   padding-bottom: 20rem;
   flex-direction: column;
   font-family: "Montserrat", sans-serif;
@@ -376,7 +350,7 @@ Page: Projects
   justify-content: center;
   flex-direction: column;
   margin: 0 auto;
-  font-size: 1.4rem;
+  font-size: 1.3rem;
   line-height: 2rem;
   width: 30rem;
   padding-top: 1rem;
@@ -415,95 +389,61 @@ Page: Projects
 .dot {
   font-size: 1.5rem;
 }
-
 /***************************************
-Page: Contact
+Page: Furniture/Photos/Unit
 ****************************************/
-h3 {
-  color: $primary_color;
+.container {
+  display: grid;
+  grid-template-columns: repeat(3, 3fr);
+  grid-gap: 20px;
+  grid-auto-rows: minmax(100px, auto);
+  padding: 4rem 0 6rem 0;
+  margin: 0 auto;
   text-align: center;
-  padding-bottom: 2rem;
-  font-size: 2.5em;
-  text-transform: uppercase;
+  width: 80%;
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+  @media (max-width: 415px) {
+    width: 90%;
+    grid-template-columns: repeat(1, 1fr);
+  }
 }
-.contact {
-  display: flex;
-  -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  justify-content: center;
-}
-form {
-  display: flex;
-  justify-content: space-evenly;
-  margin: auto;
-  flex-direction: column;
-  padding: 6rem 5rem 8rem 6rem;
-  background: rgba(202, 202, 202, 0.1);
-  z-index: 5;
+h5 {
+  font-size: 1.4em;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 100;
+  white-space: pre-wrap;
+  text-align: center;
+  padding: 9rem 0 3rem 0;
+
+  @media (max-width: 415px) {
+    font-size: 1.2em;
+    padding-top: 9rem;
+  }
 }
 
-label {
-  font-family: sans-serif;
-  letter-spacing: 0.5em;
-  text-transform: uppercase;
-  color: $primary_color;
-}
+.container-furniture {
+  display: grid;
+  padding-bottom: 6%;
+  margin: 0 auto;
+  grid-template-areas: "a a";
+  grid-gap: 10px;
+  justify-items: stretch;
+  text-align: center;
+  width: 60%;
 
-input {
-  margin: 3rem 0 0 0;
-  box-sizing: border-box;
-  width: 100%;
-  display: inline-block;
-  font-size: 1.2em;
-  border: 0;
-  border-bottom: 1px solid $primary_color;
-  text-align: left;
-  outline: none;
-  background: transparent;
-  color: $primary_color;
-}
+  img {
+    width: 100%;
+    height: auto;
+  }
 
-textarea {
-  border: 0;
-  padding: 0.3rem;
-  margin-top: 4rem;
-  border-bottom: 1px solid $primary_color;
-  font-family: sans-serif;
-  font-size: 1.2em;
-  width: 100%;
-  background: transparent;
-  color: $primary_color;
-  outline: none;
+  @media (max-width: 415px) {
+    width: 90%;
+  }
 }
-
-input:focus {
-  background: transparent;
-  padding: 1rem;
-  border: none;
-  border-bottom: 1px solid $third_color;
-  color: $primary_color;
-  outline: none;
-}
-
-button {
-  background: transparent;
-  color: $primary_color;
-  font-family: sans-serif;
-  letter-spacing: 0.2em;
-  margin: 7rem;
-  padding: 10px 30px;
-  border: 1px solid $primary_color;
-  outline: none;
-}
-
-button:hover {
-  background: transparent;
-  border: 1px solid $third_color;
-}
-
 /***************************************
 Page: Wore
 ****************************************/
@@ -519,74 +459,25 @@ Page: Wore
     font-weight: 200;
     line-height: 3.4rem;
   }
-
   @media (max-width: 415px) {
     width: 90%;
     grid-template-columns: repeat(1, 1fr);
+    padding: 1rem 0 6rem 0;
   }
 }
-
-/***************************************
-Page: Furniture/Photos/Unit
-****************************************/
-.container-furniture {
-  display: grid;
-  padding-bottom: 6%;
-  margin: 0 auto;
-  grid-template-areas: "a a";
-  grid-gap: 10px;
-  justify-items: stretch;
-  text-align: center;
-  width: 60%;
-
-  img {
-    width: 100%;
-  }
-
-  @media (max-width: 415px) {
-    width: 90%;
-  }
-}
-.container {
-  display: grid;
-  grid-template-columns: repeat(3, 3fr);
-  grid-gap: 20px;
-  grid-auto-rows: minmax(100px, auto);
-  padding: 4rem 0 6rem 0;
-  margin: 0 auto;
-  text-align: center;
-  width: 80%;
-
-  img {
-    width: 100%;
-  }
-  @media (max-width: 415px) {
-    width: 90%;
-    grid-template-columns: repeat(1, 1fr);
-  }
-}
-
-h5 {
-  font-size: 1.4em;
-  font-family: "Montserrat", sans-serif;
-  font-weight: 100;
-  white-space: pre-wrap;
-  text-align: center;
-  padding: 9rem 0 3rem 0;
-
-  @media (max-width: 415px) {
-    font-size: 1.2em;
-    padding-top: 9rem;
-  }
-}
-
 /***************************************
 Page: Unit
 ****************************************/
 .container-unit {
+  margin: 0 auto;
+  width: 60%;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: minmax(100px, auto);
+  img {
+    width: 250px;
+    height: auto;
+  }
   @media (max-width: 415px) {
-    width: 90%;
-    display: grid;
     grid-template-columns: repeat(1, 1fr);
   }
 }
@@ -609,9 +500,9 @@ h4 {
   font-style: italic;
   font-weight: 200;
   line-height: 3.4rem;
-  padding: 3rem;
+  padding: 1rem;
 }
-
+// error
 .error {
   font-size: 3em;
   padding: 0;
@@ -622,25 +513,20 @@ h4 {
   top: 50%;
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
-
   .error-title {
     font-size: 2.4em;
-    padding: 0;
-    margin: 0;
   }
 
   p {
     text-align: center;
     font-size: 1em;
   }
-
   a {
     font-size: 0.5em;
     text-decoration: none;
     color: $white;
   }
 }
-
 /*Footer*/
 .footer {
   @include center();

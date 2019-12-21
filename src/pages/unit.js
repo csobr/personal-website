@@ -24,16 +24,19 @@ const Unit = () => {
         <h4>Unit app</h4>
         <h5>Project year: 2018 | Designer | Developer</h5>
         <p className="unit-text">
-          Unit evolved from Wore and it's a more sustainable idea.{"\n"}
           Unit is a fashion rental marketplace where local businesses rent out
           their clothes to anyone through the app.
         </p>
         <div className=" container container-unit">
           <img src="./images/unit/unit1.jpg" alt="app"></img>
           <img src="./images/unit/unit2.jpg" alt="app"></img>
+          <img src="./images/unit/futur-rent.gif" alt="gif"></img>
           <img src="./images/unit/unit3.jpg" alt="app"></img>
           <img src="./images/unit/unit4.jpg" alt="app"></img>
-          <img src="./images/unit/futur-rent.gif" alt="gif"></img>
+
+          <p className="unit-text">
+            Unit evolved from Wore and it's a more sustainable idea.
+          </p>
         </div>
         <Footer />
       </div>
