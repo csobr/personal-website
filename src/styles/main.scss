@@ -213,7 +213,7 @@ Page: Home
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 80vh;
+  height: 90vh;
   width: 100%;
   color: $white;
 }
@@ -285,6 +285,43 @@ h1 {
 /***************************************
 Page: Projects
 ****************************************/
+.loader {
+  position: relative;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  width: 5rem;
+  height: 5rem;
+}
+.circle {
+  border-radius: 50%;
+  width: 5rem;
+  height: 5rem;
+}
+.circle-fill {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #00000052;
+  -webkit-animation: animate 3s infinite;
+  animation: animate 3s infinite;
+  animation-timing-function: ease-in-out;
+  -webkit-animation-timing-function: ease-in-out;
+}
+
+@keyframes animate {
+  0% {
+    background: linear-gradient(to right, $white);
+    background-size: 0%;
+    background-position: top bottom;
+  }
+  100% {
+    background: linear-gradient(to right, $white, $primary_color);
+    background-size: 2%;
+    background-position: top bottom;
+  }
+}
 .projects--wrapper {
   display: flex;
   width: 100%;
@@ -360,13 +397,13 @@ Page: Projects
   text-align: center;
   display: inline-block;
   border-radius: 100%;
-  width: 2rem;
-  height: 2rem;
+  width: 1.5rem;
+  height: 1.5rem;
   background: $white;
   cursor: pointer;
 }
 .dot {
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
 
 /***************************************
@@ -455,74 +492,6 @@ button {
 button:hover {
   background: transparent;
   border: 1px solid $third_color;
-}
-
-/***************************************
-Page: Work
-****************************************/
-.projects-grid {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-
-  img {
-    width: 100%;
-    max-width: 300px;
-    height: auto;
-    padding: 0.5rem;
-  }
-}
-
-.item {
-  position: relative;
-}
-
-@media (max-width: 415px) {
-  .text {
-    font-size: 1em;
-  }
-
-  h4 {
-    font-size: 1em;
-    padding-top: 9rem;
-  }
-}
-
-.text {
-  height: 100%;
-  width: 100%;
-  text-align: center;
-  display: flex;
-  position: absolute;
-  font-size: auto;
-
-  :hover {
-    color: $third_color;
-  }
-}
-
-.text a {
-  font-size: 1.8em;
-  cursor: pointer;
-  margin: auto;
-  text-decoration: none;
-  color: $white;
-  z-index: 3;
-  font-weight: bold;
-  font-family: "Montserrat", sans-serif;
-}
-
-h2 {
-  font-size: 2.8em;
-  margin: 0 auto;
-  text-align: center;
-  padding-top: 3rem;
-  position: relative;
-  font-family: "Montserrat", sans-serif;
-  font-weight: 300;
-  font-style: italic;
-  color: $primary_color;
 }
 
 /***************************************

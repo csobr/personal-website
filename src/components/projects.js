@@ -2,7 +2,11 @@ import React from "react";
 
 const Projects = ({ projects, loading }) => {
   if (loading) {
-    return <h2>Loading...</h2>;
+    return (
+      <div className="loader">
+        <div className="circle circle-fill"></div>
+      </div>
+    );
   }
   return (
     <div>
