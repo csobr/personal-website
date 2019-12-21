@@ -12,7 +12,9 @@ function Project() {
   useEffect(() => {
     const fetchProject = async () => {
       setLoading(true);
-      const res = await axios.get("http://localhost:3000/data/projects.json");
+      const res = await axios.get(
+        "https://projectssrh.s3.eu-north-1.amazonaws.com/projects.json"
+      );
       setProjects(res.data);
       setLoading(false);
     };
