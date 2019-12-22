@@ -42,7 +42,7 @@ const Home = () => {
           color: #fff;
 
         }
-        a:hover{
+       links a:hover{
              border-bottom: 1px solid #fff !important;
         }
         .links{

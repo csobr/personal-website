@@ -244,7 +244,7 @@ h1 {
 }
 /* hover */
 .social a:after {
-  background-color: none repeat scroll 0 0 transparent;
+  background: none repeat scroll 0 0 transparent;
   bottom: 0;
   content: "";
   display: block;
@@ -425,7 +425,8 @@ h5 {
   }
 }
 
-.container-furniture {
+.container-furniture,
+.container-unit {
   display: grid;
   padding-bottom: 6%;
   margin: 0 auto;
@@ -469,16 +470,13 @@ Page: Wore
 Page: Unit
 ****************************************/
 .container-unit {
-  margin: 0 auto;
-  width: 60%;
-  grid-template-columns: repeat(3, 1fr);
-  grid-auto-rows: minmax(100px, auto);
   img {
     width: 250px;
     height: auto;
+    margin: auto;
   }
   @media (max-width: 415px) {
-    grid-template-columns: repeat(1, 1fr);
+    grid-template-areas: "a";
   }
 }
 h4 {
