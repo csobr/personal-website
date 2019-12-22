@@ -42,8 +42,8 @@ const Home = () => {
           color: #fff;
 
         }
-       links a:hover{
-             border-bottom: 1px solid #fff !important;
+       a:after{
+          background-color: #fff;
         }
         .links{
           background-color:#0b0b0b;

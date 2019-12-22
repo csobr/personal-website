@@ -125,7 +125,6 @@ body {
   }
 }
 .links {
-  //Wider screens
   display: none;
   flex-direction: column;
   padding: 0 0.4rem 1rem 1rem;
@@ -133,12 +132,11 @@ body {
   z-index: 1;
   position: absolute;
   width: 100%;
-  font-size: 1.5em;
+  font-size: 1.6rem;
   @media (min-width: 415px) {
     display: flex;
     background-color: transparent;
-    margin: 2rem;
-    padding: 0 0 0 7rem;
+    padding: 0.7rem 0 0 7rem;
     position: relative;
     flex-direction: row;
     color: $primary_color;
@@ -154,20 +152,16 @@ body {
   }
   a {
     text-decoration: none;
+    display: inline-block;
+    position: relative;
     color: $primary_color;
     margin: 1.4rem;
-    letter-spacing: 0.1em;
+    padding-bottom: 0.5em;
+    letter-spacing: 0.11em;
     cursor: pointer;
 
     @media (max-width: 415px) {
       color: $primary_color;
-    }
-  }
-  a:hover {
-    border-bottom: 1px solid $primary_color;
-
-    @media (max-width: 415px) {
-      border-bottom: 1px solid $primary_color;
     }
   }
 
@@ -230,7 +224,6 @@ h1 {
     white-space: nowrap;
   }
 }
-
 .social a {
   font-size: 1.2em;
   padding: 0.5em;
@@ -243,7 +236,7 @@ h1 {
   }
 }
 /* hover */
-.social a:after {
+a:after {
   background: none repeat scroll 0 0 transparent;
   bottom: 0;
   content: "";
@@ -251,11 +244,11 @@ h1 {
   height: 1px;
   left: 50%;
   position: absolute;
-  background-color: $white;
+  background-color: $primary_color;
   transition: width 0.3s ease 0s, left 0.3s ease 0s;
   width: 0;
 }
-.social a:hover:after {
+a:hover:after {
   width: 100%;
   left: 0;
 }
