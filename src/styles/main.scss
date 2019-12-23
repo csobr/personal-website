@@ -76,6 +76,10 @@ body {
   img {
     width: 5rem;
   }
+  a {
+    display: inline-block;
+    position: relative;
+  }
   @media (max-width: 415px) {
     z-index: 2;
     position: relative;
@@ -243,7 +247,6 @@ a:after {
   display: block;
   height: 1px;
   left: 50%;
-  position: absolute;
   background-color: $primary_color;
   transition: width 0.3s ease 0s, left 0.3s ease 0s;
   width: 0;
@@ -380,7 +383,10 @@ Page: Projects
   cursor: pointer;
 }
 .dot {
-  font-size: 1.5rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  display: inline-block;
+  border-radius: 100%;
 }
 /***************************************
 Page: Furniture/Photos/Unit
