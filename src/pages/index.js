@@ -8,8 +8,8 @@ import Layout from "../components/layout";
 
 const Home = () => {
   return (
-    <Layout>
-      <div>
+    <div>
+      <Layout>
         <Head>
           <title>Siham Hadi</title>
           <link rel="icon" href="favicon.ico" type="image/x-icon" />
@@ -21,15 +21,14 @@ const Home = () => {
           />
         </Head>
         <Navbar />
-
-        <div className="about">
-          <style type="text/css">{`
-        body {
-            background-color:#0b0b0b ;
-
-        }
+        <main>
+          <div className="about">
+            <style type="text/css">{`
         .main-nav{
           background-color:#0b0b0b ;
+        }
+        main{
+                  background-color:#0b0b0b ;
         }
         .toggle{
           background-color: transparent;
@@ -55,38 +54,40 @@ const Home = () => {
          background-color: #fff;
 
         }
-        .footer p {
+        footer {
+                 background-color:#0b0b0b ;
           color:#fff;
           ;
         }
     `}</style>
-          <div className="about-me">
-            <h1>
-              I have learnt to use a set of tools that I now try to create value
-              with.{" "}
-            </h1>
-            <p>
-              {" "}
-              I’m Siham a software developer and designer based in Stockholm,
-              Sweden.
-              {"\n"}Languages: Somali - Swedish - English
-            </p>
+            <div className="about-me">
+              <h1>
+                I have learnt to use a set of tools that I now try to create
+                value with.{" "}
+              </h1>
+              <p>
+                {" "}
+                I’m Siham a software developer and designer based in Stockholm,
+                Sweden.
+                {"\n"}Languages: Somali - Swedish - English
+              </p>
 
-            <span className="social">
-              <a href="mailto: siham.hadi@live.se">Email</a>
-              <a href="https://github.com/csobr" target="_blank">
-                Github
-              </a>
-              <a href="https://www.instagram.com/texturlab/" target="_blank">
-                Instagram
-              </a>
-            </span>
+              <span className="social">
+                <a href="mailto: siham.hadi@live.se">Email</a>
+                <a href="https://github.com/csobr" target="_blank">
+                  Github
+                </a>
+                <a href="https://www.instagram.com/texturlab/" target="_blank">
+                  Instagram
+                </a>
+              </span>
+            </div>
           </div>
-        </div>
+        </main>
         <ProjectsView />
         <Footer />
-      </div>{" "}
-    </Layout>
+      </Layout>{" "}
+    </div>
   );
 };
 

@@ -7,17 +7,15 @@ const Pagination = ({ projectsPerPage, totalProjects, paginate }) => {
   }
 
   return (
-    <nav>
-      <div className="pagination">
-        {pageNumbers.map(number => (
-          <div key={number} className="dots">
-            <a onClick={() => paginate(number)} className="dot">
-              {number}
-            </a>
-          </div>
-        ))}
-      </div>
-    </nav>
+    <div className="pagination">
+      {pageNumbers.map(number => (
+        <div key={number} className="dots">
+          <a onClick={() => paginate(number)} className="dot">
+            {number}
+          </a>
+        </div>
+      ))}
+    </div>
   );
 };
 export default Pagination;

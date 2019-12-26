@@ -30,10 +30,8 @@ function Project() {
   //change page
   const paginate = pageNumber => setCurrentPage(pageNumber);
   return (
-    <div>
-      {" "}
+    <main>
       <div className="projects--wrapper">
-        {" "}
         <h2 className="projects--header">Projects</h2>
         <div className="grid">
           <Projects projects={currentProjects} loading={loading} />
@@ -44,7 +42,7 @@ function Project() {
           />
         </div>
       </div>
-    </div>
+    </main>
   );
 }
 export default Project;

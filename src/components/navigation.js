@@ -2,7 +2,7 @@ import React from "react";
 class Navbar extends React.Component {
   render() {
     return (
-      <nav className="main-nav">
+      <nav>
         <div className="logo">
           <a href="/">
             <img src="./logo.svg" alt="logo"></img>

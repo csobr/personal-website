@@ -1,19 +1,18 @@
-import React, {Component} from "react";
-import { Helmet } from 'react-helmet';
+import React, { Component } from "react";
+import { Helmet } from "react-helmet";
 
 class Error extends Component {
-  render(){
-  return (
-    
-    <div>
-      <Helmet>
-    <title>Error</title>
-    <meta charSet="utf-8" />
-    <meta name="description" content="Error" />
-  </Helmet>
-      <style type="text/css">{`
+  render() {
+    return (
+      <div>
+        <Helmet>
+          <title>Error</title>
+          <meta charSet="utf-8" />
+          <meta name="description" content="Error" />
+        </Helmet>
+        <style type="text/css">{`
         body {
-            background-color:#050505 ;
+       background-color:#0b0b0b ;
             min-height: 100vh;
             min-width: 100vw;
             margin: 0;
@@ -21,7 +20,7 @@ class Error extends Component {
             overflow:hidden;
         }
         .main-nav{
-          background-color:#050505 ;
+       background-color:#0b0b0b ;
         }
         .toggle{
           background-color: transparent;
@@ -41,18 +40,20 @@ class Error extends Component {
          background: #fff;
 
         }
-        .footer p {
+        footer  {
           color:#fff;
+                 background-color:#0b0b0b ;
           ;
         }
     `}</style>
-      <section className="error">
-        {" "}
-        <p className="error-title">Error 404</p> <p> Page not found!</p>{" "}
-        <a href="/">Home</a>
-      </section>
-    </div>
-  );
-}};
+        <section className="error">
+          {" "}
+          <p className="error-title">Error 404</p> <p> Page not found!</p>{" "}
+          <a href="/">Home</a>
+        </section>
+      </div>
+    );
+  }
+}
 
 export default Error;
