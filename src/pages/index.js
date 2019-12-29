@@ -31,7 +31,7 @@ const Home = () => {
                   background-color:#0b0b0b ;
         }
         .toggle{
-          background-color: transparent;
+           background-color:#0b0b0b ;
         }
  
         p{
