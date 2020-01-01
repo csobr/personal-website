@@ -3,7 +3,7 @@ import React from "react";
 const Footer = () => {
   return (
     <footer>
-      <p> © Copyright 2019 Siham Hadi.</p>
+      <p> © Copyright 2020 Siham Hadi.</p>
     </footer>
   );
 };

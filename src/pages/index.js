@@ -23,7 +23,7 @@ const Home = () => {
         <Navbar />
         <main>
           <div className="about">
-            <style type="text/css">{`
+            {/* <style type="text/css">{`
         .main-nav{
           background-color:#0b0b0b ;
         }
@@ -59,7 +59,7 @@ const Home = () => {
           color:#fff;
           ;
         }
-    `}</style>
+    `}</style> */}
             <div className="about-me">
               <h1>
                 I have learnt to use a set of tools that I now try to create

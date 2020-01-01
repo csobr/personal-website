@@ -198,11 +198,10 @@ main {
   @include center();
   height: 80vh;
   width: 100%;
-  color: $white;
+  color: $primary_color;
 }
 h1 {
   text-align: center;
-  color: $white;
   white-space: pre-wrap;
   font-size: 2.4em;
   font-weight: 600;
@@ -240,7 +239,7 @@ h1 {
   text-decoration: none;
   display: inline-block;
   position: relative;
-  color: $white;
+  color: $primary_color;
   @media (max-width: 415px) {
     font-size: 1.2em;
   }
@@ -282,9 +281,9 @@ Page: Projects
   position: absolute;
   top: 0;
   left: 0;
-  background: $third_color;
-  -webkit-animation: animate 3s infinite;
-  animation: animate 3s infinite;
+
+  -webkit-animation: animate 2s infinite;
+  animation: animate 2s infinite;
   animation-timing-function: ease-in-out;
   -webkit-animation-timing-function: ease-in-out;
 }
@@ -307,7 +306,7 @@ Page: Projects
   padding-bottom: 4rem;
   flex-direction: column;
   font-family: "Montserrat", sans-serif;
-  color: $white;
+  color: $primary_color;
   @media (max-width: 415px) {
     width: 100%;
     height: 100vh;
@@ -319,7 +318,6 @@ Page: Projects
   font-size: 2.5rem;
   text-transform: uppercase;
   font-style: normal;
-  color: $white;
   padding-bottom: 2.5rem;
 }
 .slider {
@@ -335,12 +333,69 @@ Page: Projects
   flex-direction: row;
   height: 100%;
   width: 75rem;
+
+  -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
+  -moz-animation: fadein 2s; /* Firefox < 16 */
+  -ms-animation: fadein 2s; /* Internet Explorer */
+  -o-animation: fadein 2s; /* Opera < 12.1 */
+  animation: fadein 2s;
+
+  @keyframes fadein {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  /* Firefox < 16 */
+  @-moz-keyframes fadein {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  /* Safari, Chrome and Opera > 12.1 */
+  @-webkit-keyframes fadein {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  /* Internet Explorer */
+  @-ms-keyframes fadein {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  /* Opera < 12.1 */
+  @-o-keyframes fadein {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
   @media (max-width: 415px) {
     margin: auto;
     width: 40rem;
     flex-direction: column;
   }
 }
+
 .item--image img {
   width: 40rem;
   @media (max-width: 415px) {
@@ -383,14 +438,14 @@ Page: Projects
   text-align: center;
   display: inline-block;
   border-radius: 100%;
-  width: 1.5rem;
-  height: 1.5rem;
-  background: $white;
+  width: 2rem;
+  height: 2rem;
+  background: $primary_color;
   cursor: pointer;
 }
 .dot {
-  width: 1.5rem;
-  height: 1.5rem;
+  font-size: 2rem;
+  color: $primary_color;
   display: inline-block;
   border-radius: 100%;
   &:hover:after {
