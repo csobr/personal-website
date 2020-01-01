@@ -6,4 +6,4 @@ const Footer = () => {
   };
   return <footer> © {getYear()} Siham Hadi</footer>;
 };
-export default footer;
+export default Footer;
