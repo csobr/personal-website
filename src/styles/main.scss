@@ -303,6 +303,7 @@ Page: Projects
 .projects--wrapper {
   @include center();
   width: 100%;
+  height: auto;
   padding-bottom: 4rem;
   flex-direction: column;
   font-family: "Montserrat", sans-serif;
@@ -331,7 +332,7 @@ Page: Projects
 .item {
   display: flex;
   flex-direction: row;
-  height: 100%;
+  height: auto;
   width: 75rem;
 
   -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
@@ -396,8 +397,13 @@ Page: Projects
   }
 }
 
-.item--image img {
+.item--image {
   width: 40rem;
+  height: 40rem;
+  img {
+    width: 40rem;
+  }
+
   @media (max-width: 415px) {
     width: 40rem;
   }
@@ -428,6 +434,7 @@ Page: Projects
   display: row;
   list-style: none;
   justify-content: space-around;
+  margin: 0 auto;
   width: 40rem;
   list-style-type: none;
   padding-top: 3rem;
