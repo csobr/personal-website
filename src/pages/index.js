@@ -23,43 +23,6 @@ const Home = () => {
         <Navbar />
         <main>
           <div className="about">
-            {/* <style type="text/css">{`
-        .main-nav{
-          background-color:#0b0b0b ;
-        }
-        main{
-                  background-color:#0b0b0b ;
-        }
-        .toggle{
-           background-color:#0b0b0b ;
-        }
- 
-        p{
-            color:#fff;
-        }
-        .socialicon a{
-          color: #fff;
-
-        }
-       a:after{
-          background-color: #fff;
-        }
-        .links{
-          background-color:#0b0b0b;
-        }
-        .links a{
-          color:#fff;
-        }
-        .hamburger span {
-         background-color: #fff;
-
-        }
-        footer {
-                 background-color:#0b0b0b ;
-          color:#fff;
-          ;
-        }
-    `}</style> */}
             <div className="about-me">
               <h1>
                 I have learnt to use a set of tools that I now try to create
@@ -68,7 +31,11 @@ const Home = () => {
               <p>
                 {" "}
                 I’m Siham a software developer and designer based in Stockholm,
-                Sweden.
+                Sweden. {"\n"} The 3 words I would use to describe myself are:
+                Ambitious, determined and helpful.{"\n"}Mostly work with
+                JavaScript today. Sometimes use python.{"\n"}Comfortable with
+                both frontend and backend{"\n"} and lastly, I'm always working
+                on a side project :).
                 {"\n"}Languages: Somali - Swedish - English
               </p>
 

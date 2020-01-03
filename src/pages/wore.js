@@ -18,7 +18,7 @@ const Wore = () => {
           />
         </Head>{" "}
         <main>
-          <h5>Project year: 2017 | Designer | Developer </h5>
+          <h5>Project year: 2017 | Designer | Fullstack developer </h5>
           <div className="container container-wore">
             <p>
               “Wore started out from a problem I had whilst shopping. Finding

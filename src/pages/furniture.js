@@ -16,7 +16,7 @@ const Furniture = () => {
           <meta name="description" content="Furniture by Siham Hadi" />
         </Head>
         <main>
-          <h5>Project year: 2016-2017 | Designer | Photographer</h5>
+          <h5>Project year: 2016-2017 | Designer | CG Work</h5>
           <div className=" container-furniture">
             <img src="./images/furniture/srh1.jpg" alt="pendant"></img>
             <img src="./images/furniture/srh2.png" alt="chair"></img>
