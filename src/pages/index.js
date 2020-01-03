@@ -35,7 +35,7 @@ const Home = () => {
                 Ambitious, determined and helpful.{"\n"}Mostly work with
                 JavaScript today. Sometimes use python.{"\n"}Comfortable with
                 both frontend and backend{"\n"} and lastly, I'm always working
-                on a side project :).
+                on a side project ;).
                 {"\n"}Languages: Somali - Swedish - English
               </p>
 
