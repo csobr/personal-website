@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import "../styles/main.scss";
+import Head from "next/head";
 import Navbar from "../components/navigation";
 import Footer from "../components/footer";
 import Layout from "../components/layout";
@@ -8,7 +9,12 @@ export default class Seyn extends Component {
     render() {
         return (
             <div>
-            <Layout>
+                <Layout>
+                     <Head>
+          <title>Seyn</title>
+          <meta charSet="utf-8" />
+          <meta name="description" content="Seyn app coming soon" />
+        </Head>
                     <main>
                         <Navbar />
           <h4>Seyn</h4>
