@@ -50,6 +50,7 @@ body {
 body {
   display: grid;
   height: 100%;
+  min-height: 100vh;
   grid-template-columns: 1fr;
   grid-template-areas:
     "nav"
@@ -191,6 +192,7 @@ Page: Home
   display: none;
 }
 main {
+  min-height: 100vh;
   grid-area: main;
 }
 .about {
@@ -202,7 +204,7 @@ main {
 h1 {
   white-space: pre-wrap;
   font-size: 2.4em;
-  font-weight: 600;
+  font-weight: 700;
   font-family: Didot, Didot LT STD, Hoefler Text, Garamond, Times New Roman,
     serif;
 }
@@ -450,7 +452,7 @@ Page: Projects
 }
 
 /***************************************
-Page: Furniture/Photos/Unit
+Page: Furniture/Photos/App
 ****************************************/
 .container {
   display: grid;
@@ -486,11 +488,12 @@ h5 {
 }
 
 .container-furniture,
-.container-unit {
+.container-app {
   display: grid;
   padding-bottom: 6%;
   margin: 0 auto;
-  grid-template-areas: "a a";
+ grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
   grid-gap: 10px;
   justify-items: stretch;
   text-align: center;
@@ -527,28 +530,29 @@ Page: Wore
   }
 }
 /***************************************
-Page: Unit
+Page: App
 ****************************************/
-.container-unit {
+.container-app {
   img {
     width: 250px;
     height: auto;
     margin: auto;
   }
-  @media (max-width: 415px) {
-    grid-template-areas: "a";
-  }
+
 }
 h4 {
   margin: auto;
-  padding: 8rem 0 0 0;
-  font-size: 2.5em;
+  padding: 9rem 0 1rem 0;
+  font-size: 2em;
   font-weight: 700;
   text-transform: uppercase;
   text-align: center;
   font-family: "Montserrat", sans-serif;
 }
-.unit-text {
+h5{
+  padding: 0;
+}
+.app-text {
   text-align: center;
   margin: auto;
   white-space: pre-wrap;

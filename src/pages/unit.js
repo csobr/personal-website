@@ -13,29 +13,24 @@ const Unit = () => {
           <meta charSet="utf-8" />
           <meta name="description" content="Rent fashion from local business" />
         </Head>
-        <Navbar />{" "}
+        <Navbar />
         <main>
-          <style type="text/css">
-            {`
-     h5{
-       padding:1rem 0 0 0;
-     }`}
-            >
-          </style>
+
+      
           <h4>Unit app</h4>
           <h5>Project year: 2018 | Designer | Developer</h5>
-          <p className="unit-text">
+          <p className="app-text">
             Unit is a fashion rental marketplace where local businesses rent out
             their clothes to anyone through the app.
           </p>
-          <div className=" container container-unit">
+          <div className=" container container-app">
             <img src="./images/unit/unit1.jpg" alt="app"></img>
             <img src="./images/unit/unit2.jpg" alt="app"></img>
             <img src="./images/unit/futur-rent.gif" alt="gif"></img>
             <img src="./images/unit/unit3.jpg" alt="app"></img>
             <img src="./images/unit/unit4.jpg" alt="app"></img>
 
-            <p className="unit-text">
+            <p className="app-text">
               Unit evolved from Wore and it's a more sustainable idea.
             </p>
           </div>{" "}

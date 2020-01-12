@@ -1,10 +1,10 @@
-import React from "react";
-import Head from "next/head";
-import ProjectsView from "./project";
-import Navbar from "../components/navigation";
-import Footer from "../components/footer";
-import "../styles/main.scss";
-import Layout from "../components/layout";
+import React from 'react';
+import Head from 'next/head';
+import ProjectsView from './project';
+import Navbar from '../components/navigation';
+import Footer from '../components/footer';
+import '../styles/main.scss';
+import Layout from '../components/layout';
 
 const Home = () => {
   return (
@@ -26,17 +26,14 @@ const Home = () => {
             <div className="about-me">
               <h1>
                 I have learnt to use a set of tools that I now try to create
-                value with.{" "}
+                value with.
               </h1>
               <p>
-                {" "}
                 I’m Siham a software developer and designer based in Stockholm,
-                Sweden. {"\n"} The 3 words I would use to describe myself are:
-                Ambitious, determined and helpful.{"\n"}Mostly work with
-                JavaScript today. Sometimes use python.{"\n"}Comfortable with
-                both frontend and backend{"\n"} and lastly, I'm always working
-                on a side project ;).
-                {"\n"}Languages: Somali - Swedish - English
+                Sweden.{'\n'}
+                Comfortable with both frontend and backend and always working on
+                a side project ;).
+                {'\n'}Languages: Somali - Swedish - English
               </p>
 
               <span className="social">
@@ -53,7 +50,7 @@ const Home = () => {
         </main>
         <ProjectsView />
         <Footer />
-      </Layout>{" "}
+      </Layout>
     </div>
   );
 };

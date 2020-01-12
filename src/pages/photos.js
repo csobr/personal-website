@@ -16,7 +16,7 @@ const Unit = () => {
           <meta name="description" content="Photos taken by Siham Hadi" />
         </Head>{" "}
         <main>
-          <h5>Siham Hadi</h5>
+          <h4>Some My Photos</h4>
           <div className="container container-photos ">
             <img src="./images/photos/landskap_srh.jpg" alt="landscape"></img>
             <img src="./images/photos/landskap_srh_1.jpg" alt="landscape"></img>
