@@ -10,27 +10,27 @@ export default class Seyn extends Component {
         return (
             <div>
                 <Layout>
-                     <Head>
-          <title>Seyn</title>
-          <meta charSet="utf-8" />
-          <meta name="description" content="Seyn app coming soon" />
-        </Head>
+                    <Head>
+                        <title>Seyn</title>
+                        <meta charSet="utf-8" />
+                        <meta name="description" content="Seyn app coming soon" />
+                    </Head>
                     <main>
                         <Navbar />
-          <h4>Seyn</h4>
-          <h5>Project year: 2020 | Designer | Developer | React Native</h5>
-          <p className="app-text">
-           Coming soon.
-          </p>
-          <div className=" container container-app">
-            <img src="./images/seyn/seynHand.png" alt="app"></img>
+                        <h4>Seyn</h4>
+                        <h5>Project year: 2020 | Designer | Developer | React Native</h5>
+                        <p className="app-text">
+                            Coming soon.  </p>
+                        <div className=" container container-app">
+                            <div className = "seyn-img">
+                            <img src="./images/seyn/seynHand.png" alt="app" ></img> </div>
 
 
-        
-          </div>
-        </main>
-        <Footer />
-            </Layout>
+
+                        </div>
+                    </main>
+                    <Footer />
+                </Layout>
             </div>
         )
     }
