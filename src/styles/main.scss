@@ -135,7 +135,7 @@ nav {
 .links {
   display: none;
   flex-direction: column;
-  padding: 0 0.4rem 1rem 1rem;
+text-align: center;
   background: $bg_color;
   z-index: 1;
   position: absolute;
@@ -155,6 +155,8 @@ nav {
     @media (max-width: 415px) {
       padding: 1.4rem 0 0 1rem;
       margin: 1rem;
+          border-bottom: .1rem  solid #00000009;
+      
     }
   }
   a {
