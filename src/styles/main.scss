@@ -197,19 +197,23 @@ main {
   min-height: 100vh;
   grid-area: main;
 }
-.about {
+.about { 
   @include center();
   height: 95vh;
   width: 100%;
   color: $primary_color;
 }
 h1 {
-  white-space: pre-wrap;
+  white-space: nowrap;
   font-size: 2.4em;
   font-weight: 700;
   font-family: Didot, Didot LT STD, Hoefler Text, Garamond, Times New Roman,
     serif;
+      @media (max-width: 415px) {
+    white-space: pre-wrap;
+  }
 }
+
 .about-me {
   text-align: center;
   word-wrap: break-word;
