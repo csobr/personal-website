@@ -155,7 +155,7 @@ text-align: center;
     @media (max-width: 415px) {
       padding: 1.4rem 0 0 1rem;
       margin: 1rem;
-          border-bottom: .1rem  solid #00000009;
+          border-bottom: .1rem  solid #00000015;
       
     }
   }
@@ -513,6 +513,9 @@ h5 {
   @media (max-width: 415px) {
     width: 90%;
   }
+}
+.container-furniture{
+   grid-template-columns: repeat(2, 1fr);
 }
 /***************************************
 Page: Wore
