@@ -1,10 +1,10 @@
-import React from 'react';
-import Head from 'next/head';
-import ProjectsView from './project';
-import Navbar from '../components/navigation';
-import Footer from '../components/footer';
-import '../styles/main.scss';
-import Layout from '../components/layout';
+import React from "react";
+import Head from "next/head";
+import ProjectsView from "./project";
+import Navbar from "../components/navigation";
+import Footer from "../components/footer";
+import "../styles/main.scss";
+import Layout from "../components/layout";
 
 const Home = () => {
   return (
@@ -14,10 +14,17 @@ const Home = () => {
           <title>Siham Hadi</title>
           <link rel="icon" href="favicon.ico" type="image/x-icon" />
           <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+          <link rel="manifest" href="/manifest.json" />
           <meta charSet="utf-8" />
           <meta
             name="description"
             content="A software developer and designer based in Stockholm."
+          />
+          <meta name="keywords" content="JavaScript,Frontend,developer" />
+          <meta name="author" content="Siham Hadi" />
+          <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0"
           />
         </Head>
         <Navbar />
@@ -30,10 +37,9 @@ const Home = () => {
               </h1>
               <p>
                 I’m Siham a software developer and designer based in Stockholm,
-                Sweden.{'\n'}
-                Comfortable with both frontend and backend and always working on
-                a side project ;).
-                {'\n'}Languages: Somali - Swedish - English
+                Sweden.{"\n"} I specialize in JavaScript. I have experience
+                working C ++, Swift and write some scripts in Python.{"\n"}
+                Speak: Somali - Swedish - English
               </p>
 
               <span className="social">

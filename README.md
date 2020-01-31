@@ -1,11 +1,10 @@
 ## My personal website.
+Built with Next.js
 
-Build app
+Installation
 
 ```bash
 npm install
-```
 
-```bash
 npm run dev
 ```
