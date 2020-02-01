@@ -135,7 +135,7 @@ nav {
 .links {
   display: none;
   flex-direction: column;
-text-align: center;
+  text-align: center;
   background: $bg_color;
   z-index: 1;
   position: absolute;
@@ -155,8 +155,7 @@ text-align: center;
     @media (max-width: 415px) {
       padding: 1.4rem 0 0 1rem;
       margin: 1rem;
-          border-bottom: .1rem  solid #00000015;
-      
+      border-bottom: 0.1rem solid #00000015;
     }
   }
   a {
@@ -197,7 +196,7 @@ main {
   min-height: 100vh;
   grid-area: main;
 }
-.about { 
+.about {
   @include center();
   height: 95vh;
   width: 100%;
@@ -209,7 +208,7 @@ h1 {
   font-weight: 700;
   font-family: Didot, Didot LT STD, Hoefler Text, Garamond, Times New Roman,
     serif;
-      @media (max-width: 415px) {
+  @media (max-width: 415px) {
     white-space: pre-wrap;
   }
 }
@@ -498,7 +497,7 @@ h5 {
   display: grid;
   padding-bottom: 6%;
   margin: 0 auto;
- grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
   grid-gap: 10px;
   justify-items: stretch;
@@ -514,8 +513,8 @@ h5 {
     width: 90%;
   }
 }
-.container-furniture{
-   grid-template-columns: repeat(2, 1fr);
+.container-furniture {
+  grid-template-columns: repeat(2, 1fr);
 }
 /***************************************
 Page: Wore
@@ -529,7 +528,7 @@ Page: Wore
     font-family: Didot, Didot LT STD, Hoefler Text, Garamond, Times New Roman,
       serif;
     font-style: italic;
-    font-weight: 200;
+    font-weight: 100;
     line-height: 3.4rem;
   }
   @media (max-width: 415px) {
@@ -547,12 +546,11 @@ Page: App
     height: auto;
     margin: auto;
   }
-
 }
 .seyn-img img {
- width: 450px;
-    height: auto;
-    margin: auto;
+  width: 450px;
+  height: auto;
+  margin: auto;
 }
 
 h4 {
@@ -564,7 +562,7 @@ h4 {
   text-align: center;
   font-family: "Montserrat", sans-serif;
 }
-h5{
+h5 {
   padding: 0;
 }
 .app-text {

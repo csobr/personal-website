@@ -18,7 +18,7 @@ const Home = () => {
           <meta charSet="utf-8" />
           <meta
             name="description"
-            content="Siham Hadi Software developer And Designer Based In Stockholm."
+            content="Siham Hadi Software Developer And Designer Based In Stockholm."
           />
           <meta name="keywords" content="JavaScript,Frontend,developer" />
           <meta name="author" content="Siham Hadi" />
