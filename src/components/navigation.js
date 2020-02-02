@@ -17,9 +17,9 @@ class Navbar extends React.Component {
         </div>
 
         <ul className="links">
-              <li>
+          <li>
             <a href="/seyn" onClick={this.toggle}>
-         Seyn
+              Seyn
             </a>
           </li>
           <li>
@@ -30,6 +30,11 @@ class Navbar extends React.Component {
           <li>
             <a href="/unit" onClick={this.toggle}>
               Unit
+            </a>
+          </li>
+          <li>
+            <a href="/ui" onClick={this.toggle}>
+              Ui exploration
             </a>
           </li>
           <li>
