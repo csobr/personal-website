@@ -11,21 +11,21 @@
     "backgroundImage": "./images/projects/sihamhadicom/srh.png",
     "year": "2019",
     "description": "This website is place for me to share I've created and to explore my personal design aesthetic. ",
-    "stack": "React.js | Next.js"
+    "stack": "Next.js"
   },
   {
     "name": "Unit",
     "backgroundImage": "./images/projects/unit/unit_background.png",
     "year": "2018",
     "description": "Unit is a fashion rental marketplace where local businesses rent out their clothes to anyone through the app.",
-    "stack": "Swift | AWS"
+    "stack": "Swift"
   },
   {
     "name": "Wore",
     "backgroundImage": "./images/projects/wore/wore_background.png",
     "year": "2017",
     "description": "Modest fashion from the high street.",
-    "stack": " Html,CSS, Vanilla JavaScript | AWS "
+    "stack": " Html,CSS, Vanilla JavaScript | Backend: AWS "
   },
   {
     "name": "Mashiin",
