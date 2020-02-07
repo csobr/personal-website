@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,500,600,700|Varela&display=swap");
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,500,600,700|Varela&display=swap');
 $primary_color: #0b0b0b;
 $secondary_color: #050505;
 $third_color: rgb(198, 156, 109);
@@ -20,8 +20,8 @@ $white: #ffffff;
 }
 html {
   font-size: 62.5%;
-  font-family: "Montserrat", sans-serif;
-  font-family: "Varela", sans-serif;
+  font-family: 'Montserrat', sans-serif;
+  font-family: 'Varela', sans-serif;
   font-weight: 300;
 }
 @media (max-width: 75em) {
@@ -53,10 +53,10 @@ body {
   min-height: 100vh;
   grid-template-columns: 1fr;
   grid-template-areas:
-    "nav"
-    "main"
-    "footer";
-  grid-template-rows: "";
+    'nav'
+    'main'
+    'footer';
+  grid-template-rows: '';
 }
 /***************************************
   Navigation
@@ -67,7 +67,7 @@ nav {
   width: 100%;
   background: $bg_color;
   z-index: 999;
-  font-family: "Varela", sans-serif;
+  font-family: 'Varela', sans-serif;
   font-weight: 500;
   @media (max-width: 415px) {
     height: 3rem;
@@ -227,7 +227,7 @@ h1 {
     font-size: 1.3em;
     font-weight: 400;
     line-height: 2.5rem;
-    font-family: "Montserrat", sans-serif;
+    font-family: 'Montserrat', sans-serif;
   }
 }
 .social a {
@@ -245,7 +245,7 @@ h1 {
 a:after {
   background: none repeat scroll 0 0 transparent;
   bottom: 0;
-  content: "";
+  content: '';
   display: block;
   height: 1px;
   left: 50%;
@@ -302,7 +302,7 @@ Page: Projects
   width: 100%;
   padding-bottom: 20rem;
   flex-direction: column;
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   color: $primary_color;
   @media (max-width: 415px) {
     width: 100%;
@@ -480,7 +480,7 @@ Page: Furniture/Photos/App
 }
 h5 {
   font-size: 1.4em;
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-weight: 100;
   white-space: pre-wrap;
   text-align: center;
@@ -547,11 +547,6 @@ Page: App
     margin: auto;
   }
 }
-.seyn-img img {
-  width: 450px;
-  height: auto;
-  margin: auto;
-}
 
 h4 {
   margin: auto;
@@ -560,7 +555,7 @@ h4 {
   font-weight: 700;
   text-transform: uppercase;
   text-align: center;
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
 h5 {
   padding: 0;
