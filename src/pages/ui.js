@@ -19,7 +19,6 @@ export default class Ui extends Component {
             <Navbar />
             <h4> UI Exploration</h4>
             <h5>Project year: 2020 | Designer | Figma | More to come </h5>
-            <p className='app-text'> Neumorphism </p>
             <div className=' container container-app'>
               <img src='./images/swedbank.png' alt='app'></img>
               <img src='./images/bev.png' alt='app'></img>
