@@ -463,7 +463,7 @@ Page: Furniture/Photos/App
   display: grid;
   grid-template-columns: repeat(3, 3fr);
   grid-gap: 20px;
-  grid-auto-rows: minmax(100px, auto);
+  grid-auto-rows: minmax(10px, auto);
   padding: 4rem 0 6rem 0;
   margin: 0 auto;
   text-align: center;
@@ -531,7 +531,7 @@ Page: Wore
     font-weight: 100;
     line-height: 3.4rem;
   }
-  @media (max-width: 415px) {
+  @media (max-width: 768px) {
     width: 90%;
     grid-template-columns: repeat(1, 1fr);
     padding: 1rem 0 6rem 0;
