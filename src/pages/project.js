@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from "react";
-import Projects from "../components/projects";
-import Pagination from "../components/pagination";
-import axios from "axios";
+import React, { useState, useEffect } from 'react';
+import Projects from '../components/projects';
+import Pagination from '../components/pagination';
+import axios from 'axios';
 
 function Project() {
   const [projects, setProjects] = useState([]);
@@ -12,7 +12,7 @@ function Project() {
   useEffect(() => {
     const fetchProject = async () => {
       setLoading(true);
-      const res = await axios.get("projects.json").then();
+      const res = await axios.get('projects.json').then();
       setProjects(res.data);
       setLoading(false);
     };
@@ -31,9 +31,9 @@ function Project() {
   const paginate = pageNumber => setCurrentPage(pageNumber);
   return (
     <main>
-      <div className="projects--wrapper">
-        <h2 className="projects--header">Projects</h2>
-        <div className="grid">
+      <div className='projects--wrapper'>
+        <h2 className='projects--header'>Projects</h2>
+        <div className='grid'>
           <Projects projects={currentProjects} loading={loading} />
           <Pagination
             projectsPerPage={projectsPerPage}
