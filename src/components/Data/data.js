@@ -3,7 +3,7 @@ import axios from 'axios';
 
 const ImageApi = () => {
   const [data, setData] = useState([]);
-  const [url, setUrl] = useState('wore.json');
+  const [url, setUrl] = useState('images.json');
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(false);
 
@@ -22,6 +22,6 @@ const ImageApi = () => {
 
     requestImages();
   }, [url]);
-  return [{ data, loading, error }, setUrl];
+  return [{ data, loading, error }];
 };
 export default ImageApi;

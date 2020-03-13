@@ -5,8 +5,11 @@ import Navbar from '../components/navigation';
 import Layout from '../components/layout';
 import Footer from '../components/footer';
 import ImageApi from '../components/Data/data';
+import { set } from 'react-ga';
+import { createPortal } from 'react-dom';
 const Wore = () => {
   const [{ data, loading, error }] = ImageApi();
+  const wore = data.wore;
   return (
     <div>
       <Layout>
@@ -30,20 +33,21 @@ const Wore = () => {
               curating all the clothes I found modest. Then I designed and built
               Wore.”{'\n'}- Siham Hadi
             </p>
+
             <Fragment>
               {error && <div>Something went wrong...</div>}
               {loading ? (
                 <div className='loader'>
-                  {' '}
                   <div className='circle circle-fill'></div>
                 </div>
               ) : (
                 <Fragment>
-                  {data.map(item => (
-                    <div key={item.id}>
-                      <img src={item.image}></img>
-                    </div>
-                  ))}
+                  {wore &&
+                    wore.map(item => (
+                      <div key={item.id}>
+                        <img src={item.image}></img>{' '}
+                      </div>
+                    ))}
                 </Fragment>
               )}
             </Fragment>
