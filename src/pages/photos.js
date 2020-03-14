@@ -18,7 +18,7 @@ const Photos = () => {
           <meta name='description' content='Photos taken by Siham Hadi' />
         </Head>{' '}
         <main>
-          <h4>Some My Photos</h4>
+          <h4>Selection of photos</h4>
           <animated.div style={props}>
             <div className='container container-photos '>
               <img src='./images/photos/landskap_srh.jpg' alt='landscape'></img>

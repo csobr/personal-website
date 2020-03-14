@@ -273,28 +273,26 @@ Page: Projects
   border-radius: 50%;
   width: 5rem;
   height: 5rem;
-}
-.circle-fill {
-  position: absolute;
-  top: 0;
-  left: 0;
-
   -webkit-animation: animate 2s infinite;
   animation: animate 2s infinite;
   animation-timing-function: ease-in-out;
   -webkit-animation-timing-function: ease-in-out;
 }
+.circle-fill {
+  background-color: $bg_color;
+
+  box-shadow: 0 0.6px 1px 0.1px rgba(0, 0, 0, 0.308) inset;
+}
 
 @keyframes animate {
   0% {
-    background: linear-gradient(to right, $white);
+    background: linear-gradient(to right, $primary_color);
     background-size: 0%;
-    background-position: top bottom;
   }
   100% {
-    background: linear-gradient(to right, $white, $primary_color);
-    background-size: 2%;
-    background-position: top bottom;
+    background-position: left bottom;
+    background: linear-gradient(to right, $primary_color, $bg_color);
+    background-size: 200%;
   }
 }
 .projects--wrapper {

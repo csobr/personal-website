@@ -24,6 +24,7 @@
   "wore": [
     {
       "id": "1",
+
       "image": "./images/wore/wore1.jpg"
     },
     {
@@ -61,10 +62,6 @@
     {
       "id": "10",
       "image": "./images/wore/wore10.jpg"
-    },
-    {
-      "id": "11",
-      "image": "./images/wore/wore11.jpg"
     }
   ]
 }

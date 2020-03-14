@@ -1,15 +1,14 @@
-import React, { Fragment } from 'react';
+import React, { Fragment, useRef } from 'react';
 import '../styles/main.scss';
 import Head from 'next/head';
 import Navbar from '../components/navigation';
 import Layout from '../components/layout';
 import Footer from '../components/footer';
 import ImageApi from '../components/Data/data';
-import { set } from 'react-ga';
-import { createPortal } from 'react-dom';
 const Wore = () => {
   const [{ data, loading, error }] = ImageApi();
   const wore = data.wore;
+
   return (
     <div>
       <Layout>
@@ -25,7 +24,6 @@ const Wore = () => {
         <main>
           <h4>Wore </h4>
           <h5>Project year: 2017 | Designer | Fullstack developer </h5>
-
           <div className='container container-wore'>
             <p>
               “Wore started out from a problem I had whilst shopping. Finding
@@ -51,11 +49,13 @@ const Wore = () => {
                 </Fragment>
               )}
             </Fragment>
+
             <p>
               The website was place for women to find inspiration on how they
               could dress modestly.
             </p>
           </div>
+          ))}
         </main>
         <Footer />
       </Layout>
