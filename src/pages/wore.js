@@ -1,13 +1,21 @@
-import React, { Fragment, useRef } from 'react';
+import React, { Fragment, useRef, useEffect } from 'react';
 import '../styles/main.scss';
 import Head from 'next/head';
 import Navbar from '../components/navigation';
 import Layout from '../components/layout';
 import Footer from '../components/footer';
 import ImageApi from '../components/Data/data';
+import { TweenMax } from 'gsap';
+
 const Wore = () => {
   const [{ data, loading, error }] = ImageApi();
   const wore = data.wore;
+
+  let app = useRef(null);
+
+  useEffect(() => {
+    TweenMax.to(app, 0, { css: { visibility: 'visiable' } });
+  });
 
   return (
     <div>
@@ -24,7 +32,10 @@ const Wore = () => {
         <main>
           <h4>Wore </h4>
           <h5>Project year: 2017 | Designer | Fullstack developer </h5>
-          <div className='container container-wore'>
+          <div
+            className='container container-wore'
+            ref={element => (app = element)}
+          >
             <p>
               “Wore started out from a problem I had whilst shopping. Finding
               modest clothes at the high street shops was not easy, so I started
