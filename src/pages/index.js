@@ -31,15 +31,12 @@ const Home = () => {
         <main>
           <div className='about'>
             <div className='about-me'>
-              <h1>
-                "Seek knowledge and wisdom, whatever the vessel from which it
-                flows, you will never be the loser."
-              </h1>
+              <h1>Stay curious and go deeper.</h1>
               <p>
                 I’m Siham a software developer and designer based in Stockholm,
-                Sweden.{'\n'} I specialize in JavaScript. I learn whatever
-                tool/language that is required to build a product.{'\n'}
-                Speak: Somali - Swedish - English
+                Sweden.{'\n'} I specialize in JavaScript. Language agnostic and
+                will learn whatever tool that is required to build a product.
+                {'\n'}Speak: Somali - Swedish - English
               </p>
 
               <span className='social'>

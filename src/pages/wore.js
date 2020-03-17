@@ -5,16 +5,21 @@ import Navbar from '../components/navigation';
 import Layout from '../components/layout';
 import Footer from '../components/footer';
 import ImageApi from '../components/Data/data';
-import { TweenMax } from 'gsap';
+import { TweenMax, TimelineLite, Power3 } from 'gsap';
 
 const Wore = () => {
   const [{ data, loading, error }] = ImageApi();
   const wore = data.wore;
 
-  let app = useRef(null);
-
+  let images = useRef(null);
+  let tl = new TimelineLite();
   useEffect(() => {
-    TweenMax.to(app, 0, { css: { visibility: 'visiable' } });
+    TweenMax.from(images, 0.5, { opacity: 0 });
+    tl.to(images, 2, {
+      opacity: 1,
+      y: 40,
+      ease: Power3.easeInOut,
+    });
   });
 
   return (
@@ -34,7 +39,7 @@ const Wore = () => {
           <h5>Project year: 2017 | Designer | Fullstack developer </h5>
           <div
             className='container container-wore'
-            ref={element => (app = element)}
+            ref={element => (images = element)}
           >
             <p>
               “Wore started out from a problem I had whilst shopping. Finding
@@ -43,23 +48,21 @@ const Wore = () => {
               Wore.”{'\n'}- Siham Hadi
             </p>
 
-            <Fragment>
-              {error && <div>Something went wrong...</div>}
-              {loading ? (
-                <div className='loader'>
-                  <div className='circle circle-fill'></div>
-                </div>
-              ) : (
-                <Fragment>
-                  {wore &&
-                    wore.map(item => (
-                      <div key={item.id}>
-                        <img src={item.image}></img>{' '}
-                      </div>
-                    ))}
-                </Fragment>
-              )}
-            </Fragment>
+            {error && <div>Something went wrong...</div>}
+            {loading ? (
+              <div className='loader'>
+                <div className='circle circle-fill'></div>
+              </div>
+            ) : (
+              <Fragment>
+                {wore &&
+                  wore.map(item => (
+                    <div key={item.id}>
+                      <img src={item.image}></img>{' '}
+                    </div>
+                  ))}
+              </Fragment>
+            )}
 
             <p>
               The website was place for women to find inspiration on how they
