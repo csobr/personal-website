@@ -19,7 +19,7 @@ export default class Seyn extends Component {
             <Navbar />
             <h4>Seyn</h4>
             <h5>Project year: 2020 | Designer | Developer | React Native</h5>
-            <p className='app-text'>Coming soon. </p>
+            <p className='app-text'>Under construction. </p>
             <div className=' container container-app'>
               <img src='./images/seyn/seyn.png' alt='seyn'></img>
             </div>
