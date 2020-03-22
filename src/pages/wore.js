@@ -39,7 +39,7 @@ const Wore = () => {
           <h5>Project year: 2017 | Designer | Fullstack developer </h5>
           <div
             className='container container-wore'
-            ref={element => (images = element)}
+            ref={(element) => (images = element)}
           >
             <p>
               “Wore started out from a problem I had whilst shopping. Finding
@@ -56,7 +56,7 @@ const Wore = () => {
             ) : (
               <Fragment>
                 {wore &&
-                  wore.map(item => (
+                  wore.map((item) => (
                     <div key={item.id}>
                       <img src={item.image}></img>{' '}
                     </div>
@@ -69,7 +69,6 @@ const Wore = () => {
               could dress modestly.
             </p>
           </div>
-          ))}
         </main>
         <Footer />
       </Layout>
