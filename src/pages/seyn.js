@@ -21,7 +21,7 @@ export default class Seyn extends Component {
             <h5>Project year: 2020 | Designer | Developer | React Native</h5>
             <p className='app-text'>Coming soon. </p>
             <div className=' container container-app'>
-              <img src='./images/seyn/seyn.png' alt='app'></img>
+              <img src='./images/seyn/seyn.png' alt='seyn'></img>
             </div>
           </main>
           <Footer />

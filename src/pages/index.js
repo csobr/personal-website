@@ -36,7 +36,7 @@ const Home = () => {
                 I’m Siham a software developer and designer based in Stockholm,
                 Sweden.{'\n'} I specialize in JavaScript. Language agnostic and
                 will learn whatever tool that is required to build a product.
-                {'\n'}Speak: Somali - Swedish - English
+                {'\n'}Languages: Somali - Swedish - English
               </p>
 
               <span className='social'>
