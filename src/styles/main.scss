@@ -1,8 +1,10 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,500,600,700|Varela&display=swap');
-$primary_color: #0b0b0b;
+$primary_color: #ffffff;
+// #0b0b0b
 $secondary_color: #050505;
 $third_color: rgb(198, 156, 109);
-$bg_color: rgb(245, 245, 243);
+// rgb(245, 245, 243)
+$bg_color: #181818;
 $white: #ffffff;
 
 @mixin center {
@@ -195,6 +197,7 @@ Page: Home
 main {
   min-height: 100vh;
   grid-area: main;
+  color: $primary_color;
 }
 .about {
   @include center();
@@ -204,6 +207,7 @@ main {
 }
 h1 {
   white-space: nowrap;
+  color: rgb(85, 85, 85);
   font-size: 2.4em;
   font-weight: 700;
   font-family: Didot, Didot LT STD, Hoefler Text, Garamond, Times New Roman,
@@ -280,7 +284,6 @@ Page: Projects
 }
 .circle-fill {
   background-color: $bg_color;
-
   box-shadow: 0 0.6px 1px 0.1px rgba(0, 0, 0, 0.308) inset;
 }
 
@@ -301,7 +304,6 @@ Page: Projects
   padding-bottom: 20rem;
   flex-direction: column;
   font-family: 'Montserrat', sans-serif;
-  color: $primary_color;
   @media (max-width: 415px) {
     width: 100%;
     height: 100vh;
