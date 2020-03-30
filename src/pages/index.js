@@ -8,6 +8,7 @@ import Layout from '../components/layout';
 import { TweenMax, TimelineLite, Power3 } from 'gsap';
 
 const Home = () => {
+  // reveal when gasaps load
   let text = useRef(null);
   let tl = new TimelineLite();
   useEffect(() => {

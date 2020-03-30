@@ -23,7 +23,6 @@ $white: #ffffff;
 html {
   font-size: 62.5%;
   font-family: 'Montserrat', sans-serif;
-  font-family: 'Varela', sans-serif;
   font-weight: 300;
 }
 @media (max-width: 75em) {
@@ -157,7 +156,7 @@ nav {
     @media (max-width: 415px) {
       padding: 1.4rem 0 0 1rem;
       margin: 1rem;
-      border-bottom: 0.1rem solid #00000015;
+      border-bottom: 0.1rem solid #ffffff1c;
     }
   }
   a {
@@ -207,13 +206,14 @@ main {
 }
 h1 {
   white-space: nowrap;
-  color: rgb(85, 85, 85);
-  font-size: 2.4em;
+  color: rgba(66, 66, 66, 0.1);
+  text-shadow: 1px 1px 1px #181818, 0 0 0 rgb(10, 10, 10), 1px 0px 3px #181818;
+  font-size: 9rem;
   font-weight: 700;
   font-family: Didot, Didot LT STD, Hoefler Text, Garamond, Times New Roman,
     serif;
   @media (max-width: 415px) {
-    white-space: pre-wrap;
+    white-space: pre-line;
   }
 }
 
@@ -231,7 +231,6 @@ h1 {
     font-size: 1.3em;
     font-weight: 400;
     line-height: 2.5rem;
-    font-family: 'Montserrat', sans-serif;
   }
 }
 .social a {
@@ -303,7 +302,6 @@ Page: Projects
   width: 100%;
   padding-bottom: 20rem;
   flex-direction: column;
-  font-family: 'Montserrat', sans-serif;
   @media (max-width: 415px) {
     width: 100%;
     height: 100vh;
@@ -480,7 +478,6 @@ Page: Furniture/Photos/App
 }
 h5 {
   font-size: 1.4em;
-  font-family: 'Montserrat', sans-serif;
   font-weight: 100;
   white-space: pre-wrap;
   text-align: center;
@@ -528,8 +525,9 @@ Page: Wore
     font-size: 2em;
     font-family: Didot, Didot LT STD, Hoefler Text, Garamond, Times New Roman,
       serif;
+
     font-style: italic;
-    font-weight: 100;
+    font-weight: 300;
     line-height: 3.4rem;
   }
   @media (max-width: 768px) {
@@ -556,7 +554,6 @@ h4 {
   font-weight: 700;
   text-transform: uppercase;
   text-align: center;
-  font-family: 'Montserrat', sans-serif;
 }
 h5 {
   padding: 0;
