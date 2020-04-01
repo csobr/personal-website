@@ -213,7 +213,8 @@ h1 {
   font-family: Didot, Didot LT STD, Hoefler Text, Garamond, Times New Roman,
     serif;
   @media (max-width: 415px) {
-    white-space: pre-line;
+    font-size: 2.4rem;
+    color: $primary_color;
   }
 }
 
