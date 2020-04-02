@@ -206,9 +206,9 @@ main {
 }
 h1 {
   white-space: nowrap;
-  color: rgba(66, 66, 66, 0.1);
-  text-shadow: 1px 1px 1px #181818, 0 0 0 rgb(10, 10, 10), 1px 0px 3px #181818;
-  font-size: 9rem;
+  color: rgba(68, 68, 68, 0.1);
+  text-shadow: 1px 1px 1px #181818, 0 0 0 rgb(10, 10, 10), 1px 1px 1px #181818;
+  font-size: 5.5rem;
   font-weight: 700;
   font-family: Didot, Didot LT STD, Hoefler Text, Garamond, Times New Roman,
     serif;
@@ -217,7 +217,12 @@ h1 {
     color: $primary_color;
   }
 }
-
+@-moz-document url-prefix() {
+  h1 {
+    color: $primary_color;
+    font-size: 2.5rem;
+  }
+}
 .about-me {
   text-align: center;
   word-wrap: break-word;
