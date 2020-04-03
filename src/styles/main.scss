@@ -206,8 +206,8 @@ main {
 }
 h1 {
   white-space: nowrap;
-  color: rgba(68, 68, 68, 0.1);
-  text-shadow: 1px 1px 1px #181818, 0 0 0 rgb(10, 10, 10), 1px 1px 1px #181818;
+  color: rgba(80, 80, 80, 0.1);
+  text-shadow: 1px 1px 1px #181818, 0 0 0 rgb(10, 10, 10), 1px 2px 3px #181818;
   font-size: 5.5rem;
   font-weight: 700;
   font-family: Didot, Didot LT STD, Hoefler Text, Garamond, Times New Roman,
@@ -229,7 +229,7 @@ h1 {
   white-space: pre-line;
   padding: 1.5%;
   @media (max-width: 415px) {
-    white-space: unset;
+    white-space: pre-line;
   }
 
   p {
@@ -270,10 +270,7 @@ a:hover:after {
 Page: Projects
 ****************************************/
 .loader {
-  position: relative;
-  top: 40%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  margin: auto;
   border-radius: 50%;
   width: 5rem;
   height: 5rem;
@@ -294,13 +291,12 @@ Page: Projects
 
 @keyframes animate {
   0% {
-    background: linear-gradient(to right, $primary_color);
+    background: right, $primary_color;
     background-size: 0%;
   }
   100% {
-    background-position: left bottom;
-    background: linear-gradient(to right, $primary_color, $bg_color);
-    background-size: 200%;
+    background: linear(to right, $primary_color, $bg_color);
+    background-size: 100%;
   }
 }
 .projects--wrapper {

@@ -28,7 +28,7 @@ function Project() {
   );
 
   //change page
-  const paginate = pageNumber => setCurrentPage(pageNumber);
+  const paginate = (pageNumber) => setCurrentPage(pageNumber);
   return (
     <main>
       <div className='projects--wrapper'>
