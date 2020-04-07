@@ -45,7 +45,7 @@ const Home = () => {
               <h1>Stay curious and go deeper.</h1>
               <p>
                 I’m Siham a software developer and designer based in Stockholm,
-                Sweden.{'\n'} I specialize in JavaScript. Language agnostic, I
+                Sweden.{'\n'}I specialize in JavaScript. Language agnostic, I
                 learn the tools required to build a product.
                 {'\n'}Languages: Somali - Swedish - English
               </p>
@@ -62,7 +62,7 @@ const Home = () => {
             </div>
           </div>
         </main>
-        <ProjectsView />
+
         <Footer />
       </Layout>
     </div>

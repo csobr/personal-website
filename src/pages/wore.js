@@ -41,13 +41,6 @@ const Wore = () => {
             className='container container-wore'
             ref={(element) => (images = element)}
           >
-            <p>
-              “Wore started out from a problem I had whilst shopping. Finding
-              modest clothes at the high street shops was not easy, so I started
-              curating all the clothes I found modest. Then I designed and built
-              Wore.”{'\n'}- Siham Hadi
-            </p>
-
             {error && <div>Something went wrong...</div>}
             {loading ? (
               <div className='loader'>
@@ -58,16 +51,12 @@ const Wore = () => {
                 {wore &&
                   wore.map((item) => (
                     <div key={item.id}>
+                      <p>{item.text}</p>
                       <img src={item.image}></img>{' '}
                     </div>
                   ))}
               </Fragment>
             )}
-
-            <p>
-              The website was place for women to find inspiration on how they
-              could dress modestly.
-            </p>
           </div>
         </main>
         <Footer />

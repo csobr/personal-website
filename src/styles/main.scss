@@ -1,9 +1,9 @@
-$primary_color: #ffffff;
+$primary_color: #eeeeee;
 // #0b0b0b
 $secondary_color: #050505;
 $third_color: rgb(198, 156, 109);
 // rgb(245, 245, 243)
-$bg_color: #181818;
+$bg_color: #171616;
 $white: #ffffff;
 
 @mixin center {
@@ -204,11 +204,10 @@ main {
   color: $primary_color;
 }
 h1 {
-  white-space: nowrap;
-  color: rgba(80, 80, 80, 0.1);
-  text-shadow: 1px 1px 1px #181818, 0 0 0 rgb(10, 10, 10), 1px 2px 3px #181818;
-  font-size: 5.5rem;
+  color: $primary_color;
+  font-size: 2.5rem;
   font-weight: 700;
+  padding: 1rem;
   font-family: Didot, Didot LT STD, Hoefler Text, Garamond, Times New Roman,
     serif;
   @media (max-width: 415px) {
@@ -216,31 +215,24 @@ h1 {
     color: $primary_color;
   }
 }
-@-moz-document url-prefix() {
-  h1 {
-    color: $primary_color;
-    font-size: 2.5rem;
-  }
-}
+
 .about-me {
   text-align: center;
-  word-wrap: break-word;
   white-space: pre-line;
-  padding: 1.5%;
+  padding: 1rem;
   @media (max-width: 415px) {
     white-space: pre-line;
   }
 
   p {
-    padding: 1.5%;
     font-size: 1.3em;
     font-weight: 400;
-    line-height: 2.5rem;
+    line-height: 2.8rem;
   }
 }
 .social a {
   font-size: 1.2em;
-  padding: 0.5em;
+  padding: 1rem;
   text-decoration: none;
   display: inline-block;
   position: relative;
