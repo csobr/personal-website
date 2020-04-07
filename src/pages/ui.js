@@ -20,8 +20,8 @@ export default class Ui extends Component {
             <h4> UI Exploration</h4>
             <h5>Project year: 2020 | Designer | Figma | More to come </h5>
             <div className=' container container-app'>
-              <img src='./images/swedbank.png' alt='app'></img>
-              <img src='./images/bev.png' alt='app'></img>
+              <img src='./images/ui/swedbank.png' alt='app'></img>
+              <img src='./images/ui/bev.png' alt='app'></img>
             </div>
           </main>
           <Footer />
