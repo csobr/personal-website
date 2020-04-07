@@ -4,7 +4,7 @@ import Head from 'next/head';
 import Navbar from '../components/navigation';
 import Layout from '../components/layout';
 import Footer from '../components/footer';
-import ImageApi from '../components/Data/data';
+import ImageApi from '../components/api';
 import { TweenMax, TimelineLite, Power3 } from 'gsap';
 
 const Wore = () => {
@@ -37,6 +37,7 @@ const Wore = () => {
         <main>
           <h4>Wore </h4>
           <h5>Project year: 2017 | Designer | Fullstack developer </h5>
+
           <div
             className='container container-wore'
             ref={(element) => (images = element)}

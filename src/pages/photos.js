@@ -1,13 +1,24 @@
-import React from 'react';
+import React, { Fragment, useRef, useEffect } from 'react';
 import Head from 'next/head';
 import '../styles/main.scss';
 import Navbar from '../components/navigation';
 import Footer from '../components/footer';
 import Layout from '../components/layout';
-import { useSpring, animated } from 'react-spring';
-
+import imageApi from '../components/api';
+import { TweenMax, TimelineLite, Power3 } from 'gsap';
 const Photos = () => {
-  const props = useSpring({ opacity: 1, from: { opacity: 0 } });
+  const [{ data, loading, error }] = imageApi();
+  const photo = data.photos;
+  let photos = useRef(null);
+  let tl = new TimelineLite();
+  useEffect(() => {
+    TweenMax.from(photos, 0.5, { opacity: 0 });
+    tl.to(photos, 2, {
+      opacity: 1,
+      y: 40,
+      ease: Power3.easeInOut,
+    });
+  });
   return (
     <div>
       <Layout>
@@ -19,33 +30,27 @@ const Photos = () => {
         </Head>{' '}
         <main>
           <h4>Selection of photos</h4>
-          <animated.div style={props}>
-            <div className='container container-photos '>
-              <img src='./images/photos/landskap_srh.jpg' alt='landscape'></img>
-              <img
-                src='./images/photos/landskap_srh_1.jpg'
-                alt='landscape'
-              ></img>
-              <img
-                src='./images/photos/tagstation_srh_2.jpg'
-                alt='landscape'
-              ></img>
-              <img
-                src='./images/photos/tagstation_srh_1.jpg'
-                alt='station'
-              ></img>
-              <img src='./images/photos/tagstation_srh.jpg' alt='station'></img>
-              <img src='./images/photos/host_srh.jpg' alt='landscape'></img>
-              <img src='./images/photos/srh1.jpg' alt='skyline'></img>
-              <img src='./images/photos/srh2.jpg' alt='skyline'></img>
-              <img src='./images/photos/srh3.jpg' alt='skyline'></img>
-              <img src='./images/photos/srh4.jpg' alt='landscape'></img>
-              <img src='./images/photos/srh5.jpg' alt='landscape'></img>
-              <img src='./images/photos/srh6.jpg' alt='boxingring'></img>
-              <img src='./images/photos/srh7.jpg' alt='landscape'></img>
-              <img src='./images/photos/srh8.jpg' alt='landscape'></img>
-            </div>{' '}
-          </animated.div>
+
+          <div
+            className='container container-photos '
+            ref={(el) => (photos = el)}
+          >
+            {error && <div>Something went wrong...</div>}
+            {loading ? (
+              <div className='loader'>
+                <div className='circle circle-fill'></div>
+              </div>
+            ) : (
+              <Fragment>
+                {photo &&
+                  photo.map((item) => (
+                    <div key={item.id}>
+                      <img src={item.image}></img>
+                    </div>
+                  ))}
+              </Fragment>
+            )}
+          </div>
         </main>
         <Footer />
       </Layout>

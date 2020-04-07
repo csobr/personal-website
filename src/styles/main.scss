@@ -261,7 +261,7 @@ a:hover:after {
 Page: Projects
 ****************************************/
 .loader {
-  margin: auto;
+  margin: 0 auto;
   border-radius: 50%;
   width: 5rem;
   height: 5rem;
@@ -277,7 +277,7 @@ Page: Projects
 }
 .circle-fill {
   background-color: $bg_color;
-  box-shadow: 0 0.6px 1px 0.1px rgba(0, 0, 0, 0.308) inset;
+  box-shadow: 0 0.6px 1px 0.1px rgba(0, 0, 0, 0.582) inset;
 }
 
 @keyframes animate {
@@ -448,7 +448,7 @@ Page: Projects
 }
 
 /***************************************
-Page: Furniture/Photos/App
+Pages: Furniture/Photos
 ****************************************/
 .container {
   display: grid;
@@ -556,6 +556,7 @@ h5 {
 }
 .app-text {
   margin: auto;
+  text-align: center;
   white-space: pre-wrap;
   font-size: 1.8em;
   font-family: Didot, Didot LT STD, Hoefler Text, Garamond, Times New Roman,
