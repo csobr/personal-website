@@ -221,13 +221,16 @@ h1 {
   white-space: pre-line;
   padding: 1rem;
   @media (max-width: 415px) {
-    white-space: pre-line;
+    white-space: pre-wrap;
   }
 
   p {
     font-size: 1.3em;
     font-weight: 400;
     line-height: 2.8rem;
+    @media (max-width: 415px) {
+      line-height: 2rem;
+    }
   }
 }
 .social a {
@@ -237,9 +240,6 @@ h1 {
   display: inline-block;
   position: relative;
   color: $primary_color;
-  @media (max-width: 415px) {
-    font-size: 1.2em;
-  }
 }
 /* hover */
 a:after {
