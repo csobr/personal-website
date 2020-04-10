@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap');
 $primary_color: #eeeeee;
 // #0b0b0b
 $secondary_color: #050505;
@@ -21,7 +22,7 @@ $white: #ffffff;
 }
 html {
   font-size: 62.5%;
-  font-family: Helvetica, 'Trebuchet MS', Verdana, sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-weight: 300;
 }
 @media (max-width: 75em) {
@@ -206,7 +207,8 @@ main {
 h1 {
   color: $primary_color;
   font-size: 2.5rem;
-  font-weight: 700;
+  font-weight: 400;
+  letter-spacing: 0.05rem;
   padding: 1rem;
   font-family: Didot, Didot LT STD, Hoefler Text, Garamond, Times New Roman,
     serif;
@@ -226,7 +228,7 @@ h1 {
 
   p {
     font-size: 1.3em;
-    font-weight: 400;
+    font-weight: 300;
     line-height: 2.8rem;
     @media (max-width: 415px) {
       line-height: 2rem;
@@ -236,6 +238,7 @@ h1 {
 .social a {
   font-size: 1.2em;
   padding: 1rem;
+  font-weight: 400;
   text-decoration: none;
   display: inline-block;
   position: relative;
