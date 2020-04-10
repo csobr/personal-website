@@ -1,10 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap');
-$primary_color: #eeeeee;
-// #0b0b0b
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+$primary_color: #181818;
 $secondary_color: #050505;
 $third_color: rgb(198, 156, 109);
-// rgb(245, 245, 243)
-$bg_color: #171616;
+$bg_color: rgb(245, 245, 243);
 $white: #ffffff;
 
 @mixin center {
@@ -207,7 +205,7 @@ main {
 h1 {
   color: $primary_color;
   font-size: 2.5rem;
-  font-weight: 400;
+  font-weight: 600;
   letter-spacing: 0.05rem;
   padding: 1rem;
   font-family: Didot, Didot LT STD, Hoefler Text, Garamond, Times New Roman,
@@ -477,7 +475,7 @@ h5 {
   font-weight: 100;
   white-space: pre-wrap;
   text-align: center;
-  letter-spacing: 0.2rem;
+  letter-spacing: 0.1rem;
   padding: 9rem 0 3rem 0;
 
   @media (max-width: 415px) {
@@ -548,7 +546,7 @@ h4 {
   margin: auto;
   padding: 9rem 0 1rem 0;
   font-size: 2em;
-  font-weight: 700;
+  font-weight: 600;
   text-transform: uppercase;
   text-align: center;
   letter-spacing: 0.1rem;
