@@ -12,14 +12,19 @@ const Wore = () => {
   const wore = data.wore;
 
   let images = useRef(null);
+  // let image = useRef(null);
   let tl = new TimelineLite();
   useEffect(() => {
     TweenMax.from(images, 0.5, { opacity: 0 });
     tl.to(images, 2, {
       opacity: 1,
-      y: 40,
+      y: 30,
       ease: Power3.easeInOut,
     });
+    // tl.to(image, {
+    //   opacity: 1,
+    //   ease: Power3.easeInOut,
+    // });
   });
 
   return (
@@ -41,7 +46,7 @@ const Wore = () => {
           className='container container-wore'
           ref={(element) => (images = element)}
         >
-          {error && <div>Something went wrong...</div>}
+          {error && <div className='error-msg'>Something went wrong...</div>}
           {loading ? (
             <div className='loader'>
               <div className='circle circle-fill'></div>

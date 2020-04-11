@@ -15,7 +15,7 @@ const Photos = () => {
     TweenMax.from(photos, 0.5, { opacity: 0 });
     tl.to(photos, 2, {
       opacity: 1,
-      y: 40,
+      y: 30,
       ease: Power3.easeInOut,
     });
   });
@@ -34,7 +34,7 @@ const Photos = () => {
           className='container container-photos '
           ref={(el) => (photos = el)}
         >
-          {error && <div>Something went wrong...</div>}
+          {error && <div className='error-msg'>Something went wrong...</div>}
           {loading ? (
             <div className='loader'>
               <div className='circle circle-fill'></div>

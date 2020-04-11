@@ -262,10 +262,13 @@ a:hover:after {
 Page: Projects
 ****************************************/
 .loader {
-  margin: 0 auto;
   border-radius: 50%;
   width: 5rem;
   height: 5rem;
+  grid-column: 2/3;
+}
+.error-msg {
+  grid-column: 2/3;
 }
 .circle {
   border-radius: 50%;
@@ -495,7 +498,7 @@ Pages: Furniture/Photos
 ****************************************/
 .container {
   display: grid;
-  grid-template-columns: repeat(3, 3fr);
+  grid-template-columns: repeat(3, 1fr);
   grid-gap: 20px;
   grid-auto-rows: minmax(10px, auto);
   padding: 0 0 6rem 0;
