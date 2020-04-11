@@ -23,46 +23,44 @@ const Wore = () => {
   });
 
   return (
-    <div>
-      <Layout>
-        <Navbar />
-        <Head>
-          <title>Wore</title>
-          <meta charSet='utf-8' />
-          <meta
-            name='description'
-            content='Modest fashion from the high street shops'
-          />
-        </Head>
-        <main>
-          <h4>Wore </h4>
-          <h5>Project year: 2017 | Designer | Fullstack developer </h5>
+    <Layout>
+      <Navbar />
+      <Head>
+        <title>Wore</title>
+        <meta charSet='utf-8' />
+        <meta
+          name='description'
+          content='Modest fashion from the high street shops'
+        />
+      </Head>
+      <main>
+        <h4>Wore </h4>
+        <h5>Project year: 2017 | Designer | Fullstack developer </h5>
 
-          <div
-            className='container container-wore'
-            ref={(element) => (images = element)}
-          >
-            {error && <div>Something went wrong...</div>}
-            {loading ? (
-              <div className='loader'>
-                <div className='circle circle-fill'></div>
-              </div>
-            ) : (
-              <Fragment>
-                {wore &&
-                  wore.map((item) => (
-                    <div key={item.id}>
-                      <p>{item.text}</p>
-                      <img src={item.image}></img>{' '}
-                    </div>
-                  ))}
-              </Fragment>
-            )}
-          </div>
-        </main>
-        <Footer />
-      </Layout>
-    </div>
+        <div
+          className='container container-wore'
+          ref={(element) => (images = element)}
+        >
+          {error && <div>Something went wrong...</div>}
+          {loading ? (
+            <div className='loader'>
+              <div className='circle circle-fill'></div>
+            </div>
+          ) : (
+            <Fragment>
+              {wore &&
+                wore.map((item) => (
+                  <div key={item.id}>
+                    <p>{item.text}</p>
+                    <img src={item.image}></img>{' '}
+                  </div>
+                ))}
+            </Fragment>
+          )}
+        </div>
+      </main>
+      <Footer />
+    </Layout>
   );
 };
 export default Wore;

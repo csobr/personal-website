@@ -20,41 +20,39 @@ const Photos = () => {
     });
   });
   return (
-    <div>
-      <Layout>
-        <Navbar />
-        <Head>
-          <title>Selection of photos</title>
-          <meta charSet='utf-8' />
-          <meta name='description' content='Photos taken by Siham Hadi' />
-        </Head>{' '}
-        <main>
-          <h4>Selection of photos</h4>
+    <Layout>
+      <Navbar />
+      <Head>
+        <title>Selection of photos</title>
+        <meta charSet='utf-8' />
+        <meta name='description' content='Photos taken by Siham Hadi' />
+      </Head>{' '}
+      <main>
+        <h4>Selection of photos</h4>
 
-          <div
-            className='container container-photos '
-            ref={(el) => (photos = el)}
-          >
-            {error && <div>Something went wrong...</div>}
-            {loading ? (
-              <div className='loader'>
-                <div className='circle circle-fill'></div>
-              </div>
-            ) : (
-              <Fragment>
-                {photo &&
-                  photo.map((item) => (
-                    <div key={item.id}>
-                      <img src={item.image}></img>
-                    </div>
-                  ))}
-              </Fragment>
-            )}
-          </div>
-        </main>
-        <Footer />
-      </Layout>
-    </div>
+        <div
+          className='container container-photos '
+          ref={(el) => (photos = el)}
+        >
+          {error && <div>Something went wrong...</div>}
+          {loading ? (
+            <div className='loader'>
+              <div className='circle circle-fill'></div>
+            </div>
+          ) : (
+            <Fragment>
+              {photo &&
+                photo.map((item) => (
+                  <div key={item.id}>
+                    <img src={item.image}></img>
+                  </div>
+                ))}
+            </Fragment>
+          )}
+        </div>
+      </main>
+      <Footer />
+    </Layout>
   );
 };
 export default Photos;
