@@ -498,7 +498,7 @@ Pages: Furniture/Photos
   grid-template-columns: repeat(3, 3fr);
   grid-gap: 20px;
   grid-auto-rows: minmax(10px, auto);
-  padding: 4rem 0 6rem 0;
+  padding: 0 0 6rem 0;
   margin: 0 auto;
   text-align: center;
   width: 80%;
@@ -512,24 +512,30 @@ Pages: Furniture/Photos
     grid-template-columns: repeat(1, 1fr);
   }
 }
+h4 {
+  margin: auto;
+  padding: 9rem 0 1rem 0;
+  font-size: 2em;
+  font-weight: 600;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 0.1rem;
+}
 h5 {
   font-size: 1.4em;
   font-weight: 100;
   white-space: pre-wrap;
   text-align: center;
-  letter-spacing: 0.1rem;
-  padding: 9rem 0 3rem 0;
 
   @media (max-width: 415px) {
     font-size: 1.2em;
-    padding-top: 9rem;
   }
 }
 
 .container-furniture,
 .container-app {
   display: grid;
-  padding-bottom: 6%;
+  padding: 2rem 0 4rem 0;
   margin: 0 auto;
   grid-template-columns: repeat(2, 1fr);
   grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
@@ -582,20 +588,6 @@ Page: App
     height: auto;
     margin: auto;
   }
-}
-
-h4 {
-  margin: auto;
-  padding: 9rem 0 1rem 0;
-  font-size: 2em;
-  font-weight: 600;
-  text-transform: uppercase;
-  text-align: center;
-  letter-spacing: 0.1rem;
-}
-h5 {
-  padding: 0;
-  letter-spacing: 0.2rem;
 }
 .app-text {
   margin: auto;
