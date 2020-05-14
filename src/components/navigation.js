@@ -1,49 +1,49 @@
-import React from 'react';
+import React from "react";
 class Navbar extends React.Component {
   render() {
     return (
       <nav>
-        <div className='logo'>
-          <a href='/'>
-            <img src='./logo.svg' alt='logo'></img>
+        <div className="logo">
+          <a href="/">
+            <img src="./logo.svg" alt="logo"></img>
           </a>
         </div>
 
-        <div className='toggle' onClick={this.toggle}>
-          <i className='hamburger'>
+        <div className="toggle" onClick={this.toggle}>
+          <i className="hamburger">
             <span></span> <span></span>
             <span></span>
           </i>
         </div>
 
-        <ul className='links'>
+        <ul className="links">
           <li>
-            <a href='/seyn' onClick={this.toggle}>
+            <a href="/seyn" onClick={this.toggle}>
               Seyn
             </a>
           </li>
           <li>
-            <a href='/wore' onClick={this.toggle}>
+            <a href="/wore" onClick={this.toggle}>
               Wore
             </a>
           </li>
           <li>
-            <a href='/unit' onClick={this.toggle}>
+            <a href="/unit" onClick={this.toggle}>
               Unit
             </a>
           </li>
           <li>
-            <a href='/ui' onClick={this.toggle}>
-              Ui exploration
+            <a href="/ui" onClick={this.toggle}>
+              UI exploration
             </a>
           </li>
           <li>
-            <a href='/photos' onClick={this.toggle}>
+            <a href="/photos" onClick={this.toggle}>
               Photos
             </a>
           </li>
           <li>
-            <a href='/furniture' onClick={this.toggle}>
+            <a href="/furniture" onClick={this.toggle}>
               Furniture
             </a>
           </li>
@@ -54,7 +54,7 @@ class Navbar extends React.Component {
   toggle() {
     // Function only does stuff when the screen width is to the point where the toggle icon is visible. This function is added to links as well as the toggle icon so that the dropdown closes after a link is clicked
     if (window.innerWidth < 415) {
-      document.querySelector('.links').classList.toggle('open');
+      document.querySelector(".links").classList.toggle("open");
     }
   }
 }
