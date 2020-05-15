@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from 'react';
-import axios from 'axios';
+import React, { useState, useEffect } from "react";
+import axios from "axios";
 
 const ImageApi = () => {
   const [data, setData] = useState([]);
-  const [url, setUrl] = useState('images.json');
+  const [url, setUrl] = useState("images.json");
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(false);
 
