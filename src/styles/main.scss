@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap");
 $primary_color: #181818;
 $secondary_color: #050505;
 $third_color: rgb(198, 156, 109);
@@ -20,20 +20,20 @@ $white: #ffffff;
 }
 html {
   font-size: 62.5%;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: 300;
 }
-@media (max-width: 75em) {
+@media (max-width: 75rem) {
   html {
     font-size: 56.25%;
   }
 }
-@media (max-width: 56.25em) {
+@media (max-width: 56.25rem) {
   html {
     font-size: 50%;
   }
 }
-@media (min-width: 112.5em) {
+@media (min-width: 112.5rem) {
   html {
     font-size: 75%;
   }
@@ -52,10 +52,10 @@ body {
   min-height: 100vh;
   grid-template-columns: 1fr;
   grid-template-areas:
-    'nav'
-    'main'
-    'footer';
-  grid-template-rows: '';
+    "nav"
+    "main"
+    "footer";
+  grid-template-rows: "";
 }
 /***************************************
   Navigation
@@ -148,7 +148,7 @@ nav {
     position: relative;
     flex-direction: row;
     color: $primary_color;
-    font-size: 1.3em;
+    font-size: 1.3rem;
   }
   li {
     list-style: none;
@@ -225,7 +225,7 @@ h1 {
   }
 
   p {
-    font-size: 1.3em;
+    font-size: 1.3rem;
     font-weight: 300;
     line-height: 2.8rem;
     @media (max-width: 415px) {
@@ -234,7 +234,7 @@ h1 {
   }
 }
 .social a {
-  font-size: 1.2em;
+  font-size: 1.2rem;
   padding: 1rem;
   font-weight: 400;
   text-decoration: none;
@@ -246,7 +246,7 @@ h1 {
 a:after {
   background: none repeat scroll 0 0 transparent;
   bottom: 0;
-  content: '';
+  content: "";
   display: block;
   height: 1px;
   left: 50%;
@@ -518,20 +518,20 @@ Pages: Furniture/Photos
 h4 {
   margin: auto;
   padding: 9rem 0 1rem 0;
-  font-size: 2em;
+  font-size: 2rem;
   font-weight: 600;
   text-transform: uppercase;
   text-align: center;
   letter-spacing: 0.1rem;
 }
 h5 {
-  font-size: 1.4em;
+  font-size: 1.4rem;
   font-weight: 100;
   white-space: pre-wrap;
   text-align: center;
 
   @media (max-width: 415px) {
-    font-size: 1.2em;
+    font-size: 1.2rem;
   }
 }
 
@@ -568,7 +568,7 @@ Page: Wore
     width: 100%;
     margin: auto;
     white-space: pre-wrap;
-    font-size: 2em;
+    font-size: 2rem;
     font-family: Didot, Didot LT STD, Hoefler Text, Garamond, Times New Roman,
       serif;
 
@@ -596,7 +596,7 @@ Page: App
   margin: auto;
   text-align: center;
   white-space: pre-wrap;
-  font-size: 1.8em;
+  font-size: 1.8rem;
   font-family: Didot, Didot LT STD, Hoefler Text, Garamond, Times New Roman,
     serif;
   font-style: italic;
@@ -606,7 +606,7 @@ Page: App
 }
 // error
 .error {
-  font-size: 3em;
+  font-size: 3rem;
   padding: 0;
   width: 100%;
   text-align: center;
@@ -616,15 +616,15 @@ Page: App
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   .error-title {
-    font-size: 2.4em;
+    font-size: 2.4rem;
   }
 
   p {
     text-align: center;
-    font-size: 1em;
+    font-size: 1rem;
   }
   a {
-    font-size: 0.5em;
+    font-size: 0.5rem;
     text-decoration: none;
     color: $white;
   }
@@ -638,6 +638,6 @@ footer {
   font-size: 1.2em;
   color: $primary_color;
   @media (max-width: 415px) {
-    font-size: 1.2em;
+    font-size: 1.2rem;
   }
 }
