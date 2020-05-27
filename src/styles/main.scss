@@ -205,12 +205,11 @@ main {
 }
 h1 {
   color: $primary_color;
-  font-size: 2.5rem;
+  font-size: 3rem;
   font-weight: 600;
-  letter-spacing: 0.05rem;
-  padding: 1rem;
-  font-family: Didot, Didot LT STD, Hoefler Text, Garamond, Times New Roman,
-    serif;
+  width: 100%;
+  padding: 0.5rem;
+  font-family: Didot, Didot LT STD, Times New Roman, serif;
   @media (max-width: 415px) {
     font-size: 2.4rem;
     color: $primary_color;
@@ -219,7 +218,6 @@ h1 {
 
 .about-me {
   text-align: center;
-  white-space: pre-line;
   padding: 1rem;
   @media (max-width: 415px) {
     white-space: pre-wrap;
@@ -229,6 +227,7 @@ h1 {
     font-size: 1.3rem;
     font-weight: 300;
     line-height: 2.8rem;
+    white-space: pre-line;
     @media (max-width: 415px) {
       line-height: 2rem;
     }
