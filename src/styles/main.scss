@@ -267,9 +267,12 @@ Page: Projects
   width: 5rem;
   height: 5rem;
   grid-column: 2/3;
+  align-items: center;
+  margin: auto;
 }
 .error-msg {
   grid-column: 2/3;
+  align-items: center;
 }
 .circle {
   border-radius: 50%;
