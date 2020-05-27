@@ -38,11 +38,6 @@ class Navbar extends React.Component {
             </a>
           </li>
           <li>
-            <a href="/photos" onClick={this.toggle}>
-              Photos
-            </a>
-          </li>
-          <li>
             <a href="/furniture" onClick={this.toggle}>
               Furniture
             </a>
