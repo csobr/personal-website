@@ -141,6 +141,7 @@ nav {
   position: absolute;
   width: 100%;
   font-size: 1.6rem;
+  text-transform: uppercase;
   @media (min-width: 415px) {
     display: flex;
     background-color: transparent;
@@ -149,14 +150,13 @@ nav {
     flex-direction: row;
     color: $primary_color;
     font-size: 1.3rem;
-    text-transform: uppercase;
   }
   li {
     list-style: none;
     @media (max-width: 415px) {
       padding: 1.4rem 0 0 1rem;
       margin: 1rem;
-      border-bottom: 0.1rem solid #1818181c;
+      border-bottom: 0.1rem solid #3d3d3d1c;
     }
   }
   a {
