@@ -42,6 +42,7 @@ const Home = () => {
           <div className="about">
             <div className="about-me">
               <h1>Be curious and go deeper.</h1>
+
               <p>
                 I’m Siham a software developer and designer based in Stockholm,
                 Sweden.{"\n"}I specialize in JavaScript. Language agnostic, I
