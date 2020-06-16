@@ -1,10 +1,10 @@
-import React from 'react';
-import Head from 'next/head';
-import '../styles/main.scss';
-import Navbar from '../components/navigation';
-import Footer from '../components/footer';
-import Layout from '../components/layout';
-import { useSpring, animated } from 'react-spring';
+import React from "react";
+import Head from "next/head";
+import "../styles/main.scss";
+import Navbar from "../components/navigation";
+import Footer from "../components/footer";
+import Layout from "../components/layout";
+import { useSpring, animated } from "react-spring";
 const Unit = () => {
   const props = useSpring({ opacity: 1, from: { opacity: 0 } });
   return (
@@ -22,17 +22,14 @@ const Unit = () => {
         <animated.div style={props}>
           <div className=' container container-app'>
             <p className='app-text'>
-              Unit is a fashion rental marketplace where local businesses rent
-              out their clothes to anyone through the app.
+              A fashion rental marketplace where local businesses rent out their
+              products.
             </p>
             <img src='./images/unit/unit1.png' alt='app'></img>
             <img src='./images/unit/unit2.png' alt='app'></img>
-            <img src='./images/unit/futur-rent.gif' alt='gif'></img>
             <img src='./images/unit/unit3.jpg' alt='app'></img>
             <img src='./images/unit/unit4.png' alt='app'></img>
-            <p className='app-text'>
-              Unit evolved from Wore and it's a more sustainable idea.
-            </p>
+            <p className='app-text'>Unit evolved from Wore.</p>
           </div>
         </animated.div>
       </main>
