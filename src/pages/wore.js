@@ -15,7 +15,7 @@ const Wore = () => {
   // let image = useRef(null);
   let tl = new TimelineLite();
   useEffect(() => {
-    TweenMax.from(images, 0.5, { opacity: 0 });
+    TweenMax.from(images, 0.1, { opacity: 0 });
     tl.to(images, 2, {
       opacity: 1,
       y: 30,
@@ -52,16 +52,16 @@ const Wore = () => {
               <div className='circle circle-fill'></div>
             </div>
           ) : (
-            <Fragment>
-              {wore &&
-                wore.map((item) => (
-                  <div key={item.id}>
-                    <p>{item.text}</p>
-                    <img src={item.image}></img>{' '}
-                  </div>
-                ))}
-            </Fragment>
-          )}
+              <Fragment>
+                {wore &&
+                  wore.map((item) => (
+                    <div key={item.id}>
+                      <p>{item.text}</p>
+                      <img src={item.image}></img>{' '}
+                    </div>
+                  ))}
+              </Fragment>
+            )}
         </div>
       </main>
       <Footer />
