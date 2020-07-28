@@ -22,7 +22,7 @@
   },
   "keywords": [],
   "author": "",
-  "license": "MIT",
+  "license": "",
   "devDependencies": {
     "prettier": "1.19.1"
   }
