@@ -4,19 +4,8 @@ import Navbar from "../components/navigation";
 import Footer from "../components/footer";
 import "../styles/main.scss";
 import Layout from "../components/layout";
-import { TweenMax, TimelineLite, Power3 } from "gsap";
 
 const Home = () => {
-  // reveal when gasaps load
-  // let text = useRef(null);
-  // let tl = new TimelineLite();
-  // useEffect(() => {
-  //   TweenMax.from(text, 0.5, { opacity: 0 });
-  //   tl.to(text, 3, {
-  //     opacity: 1,
-  //     ease: Power3.easeInOut,
-  //   });
-  // });
   return (
     <div>
       <Layout>
@@ -42,7 +31,6 @@ const Home = () => {
           <div className="about">
             <div className="about-me">
               <h1>Be curious and go deeper.</h1>
-
               <p>
                 I’m Siham a software developer and designer based in Stockholm,
                 Sweden.{"\n"}I specialize in JavaScript. Language agnostic, I

@@ -1,0 +1,54 @@
+import React, { Component } from 'react'
+import '../styles/main.scss'
+import Head from 'next/head'
+import Layout from '../components/layout'
+import Navbar from '../components/navigation'
+import Footer from '../components/footer'
+
+class Error extends Component {
+    render() {
+        return (
+            <>
+                <Layout>
+                    <Navbar />
+                    <Head>
+                        <title>Error</title>
+                        <meta charSet="utf-8" />
+                        <meta name="description" content="Error" />
+                    </Head>
+
+                    <main>
+                        <section className="error">
+                            <p className="error-title">Error 404</p>{' '}
+                            <p> Page not found!</p> <a href="/">Go back home</a>
+                        </section>
+                    </main>
+                    <Footer />
+                </Layout>
+                <style type="text/css">
+                    {`
+    html,body {
+      background-color: #050505;
+
+    }
+      a:hover:after {
+    width: 0 !important;
+  }
+   nav, .toggle, .links
+   {background-color: #050505;
+
+   }
+   .hamburger span{
+       background-color: #fff;
+   }
+   nav a, footer{
+     color:#fff;
+   }
+   `}
+                </style>
+            </>
+        )
+    }
+}
+
+export default Error
