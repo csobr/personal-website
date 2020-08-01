@@ -19,25 +19,9 @@ $white: #ffffff;
     box-sizing: inherit;
 }
 html {
-    font-size: 62.5%;
     font-family: 'Work Sans', sans-serif;
     font-weight: 300;
     font-size: 10px;
-}
-@media (max-width: 75rem) {
-    html {
-        font-size: 56.25%;
-    }
-}
-@media (max-width: 56.25rem) {
-    html {
-        font-size: 50%;
-    }
-}
-@media (min-width: 112.5rem) {
-    html {
-        font-size: 75%;
-    }
 }
 html,
 body {
@@ -56,7 +40,7 @@ body {
         'nav'
         'main'
         'footer';
-    grid-template-rows: '';
+    // grid-template-rows: '';
 }
 /***************************************
   Navigation
