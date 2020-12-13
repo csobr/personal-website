@@ -41,8 +41,8 @@ const Home = () => {
                             <p>
                                 I’m Siham a software developer and designer
                                 based in Stockholm, Sweden.{'\n'} I specialize
-                                in JavaScript.
-                                {'\n'}Languages: Somali, Swedish and English
+                                in JavaScript but the language depends on the
+                                projects requirements. {'\n'}
                             </p>
 
                             <span className="social">
@@ -57,7 +57,7 @@ const Home = () => {
                                     href="https://www.instagram.com/texturlab/"
                                     target="_blank"
                                 >
-                                    Instagram
+                                    Instagram(After visit clear your 🍪's)
                                 </a>
                             </span>
                         </div>

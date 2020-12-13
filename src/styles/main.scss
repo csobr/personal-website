@@ -213,6 +213,7 @@ h1 {
         font-weight: 300;
         line-height: 2.8rem;
         white-space: pre-line;
+        color: $primary_color;
         @media (max-width: 415px) {
             line-height: 2rem;
         }
