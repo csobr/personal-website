@@ -57,7 +57,7 @@ const Home = () => {
                                     href="https://www.instagram.com/texturlab/"
                                     target="_blank"
                                 >
-                                    Instagram(After visit clear your 🍪's)
+                                    IG(Don't forget to clear your 🍪's)
                                 </a>
                             </span>
                         </div>
