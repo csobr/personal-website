@@ -42,7 +42,7 @@ const Home = () => {
                                 I’m Siham a software developer and designer
                                 based in Stockholm, Sweden.{'\n'} I specialize
                                 in JavaScript but the language depends on the
-                                project requirements. {'\n'}
+                                project. {'\n'}
                             </p>
 
                             <span className="social">
