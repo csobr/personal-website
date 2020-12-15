@@ -40,9 +40,7 @@ const Home = () => {
                             <h1>Be curious and go deeper.</h1>
                             <p>
                                 I’m Siham a software developer and designer
-                                based in Stockholm, Sweden.{'\n'} I specialize
-                                in JavaScript but the language depends on the
-                                project. {'\n'}
+                                based in Stockholm, Sweden.{'\n'}
                             </p>
 
                             <span className="social">
