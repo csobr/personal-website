@@ -10,7 +10,7 @@ export default class Daie extends Component {
         return (
             <Layout>
                 <Head>
-                    <title>daie</title>
+                    <title>Daie</title>
                     <meta charSet="utf-8" />
                     <meta name="description" content="Daie app" />
                 </Head>
