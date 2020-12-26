@@ -18,8 +18,8 @@ class Navbar extends React.Component {
 
         <ul className="links">
           <li>
-            <a href="/seyn" onClick={this.toggle}>
-              Seyn
+            <a href="/daie" onClick={this.toggle}>
+              Daie
             </a>
           </li>
           <li>

@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react'
+import React from 'react'
 import Head from 'next/head'
 import Navbar from '../components/navigation'
 import Footer from '../components/footer'
@@ -55,7 +55,7 @@ const Home = () => {
                                     href="https://www.instagram.com/texturlab/"
                                     target="_blank"
                                 >
-                                    IG(Don't forget to clear your 🍪's)
+                                    IG
                                 </a>
                             </span>
                         </div>
