@@ -553,19 +553,19 @@ h5 {
 /***************************************
 Page: Wore
 ****************************************/
-.container-wore {
-    p {
+.container-wore p {
         width: 100%;
-        margin: auto;
-        white-space: pre-wrap;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        text-align: center;
         font-size: 2rem;
         font-family: Didot, Didot LT STD, Hoefler Text, Garamond,
             Times New Roman, serif;
-
         font-style: italic;
         font-weight: 300;
         line-height: 3.4rem;
-    }
+    
     @media (max-width: 768px) {
         width: 90%;
         grid-template-columns: repeat(1, 1fr);
@@ -578,8 +578,7 @@ Page: App
 .container-app {
     img {
         width: 250px;
-        height: auto;
-        margin: auto;
+     
     }
 }
 .app-text {

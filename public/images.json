@@ -22,10 +22,7 @@
     }
   ],
   "wore": [
-    {
-      "id": "0",
-      "text": "Wore started out from a problem I had whilst shopping. Finding modest clothes at the high street shops was not easy, so I started curating all the clothes I found modest. Then created Wore."
-    },
+  
     {
       "id": "1",
       "image": "./images/wore/wore1.jpg"
@@ -65,11 +62,8 @@
     {
       "id": "10",
       "image": "./images/wore/wore10.jpg"
-    },
-    {
-      "id": "11",
-      "text": "The website was place for women to find inspiration on how they could dress modestly."
     }
+
   ],
   "photos": [
     {

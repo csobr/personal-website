@@ -51,15 +51,17 @@ const Wore = () => {
             <div className='loader'>
               <div className='circle circle-fill'></div>
             </div>
+            
           ) : (
               <Fragment>
+                  <p>Curated fashion from the high st brands.</p>
                 {wore &&
                   wore.map((item) => (
                     <div key={item.id}>
-                      <p>{item.text}</p>
                       <img src={item.image}></img>{' '}
                     </div>
                   ))}
+                <p>The website was place for women to find inspiration on how they could dress modestly.</p>
               </Fragment>
             )}
         </div>
