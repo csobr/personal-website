@@ -1,10 +1,3 @@
-## My personal website.
-Built with Next.js
+## sihamhadi.com
 
-Installation
 
-```bash
-npm install
-
-npm run dev
-```
