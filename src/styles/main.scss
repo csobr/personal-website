@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100;0,300;0,400;1,100&display=swap');
-$primary_color: #181818;
-$secondary_color: #050505;
+$primary_color: #ffffff;
+$secondary_color: rgb(255, 255, 255);
 $third_color: rgb(198, 156, 109);
-$bg_color: rgb(245, 245, 243);
+$bg_color: rgb(51, 51, 51);
 $white: #ffffff;
 
 @mixin center {
@@ -513,12 +513,14 @@ h4 {
     text-transform: uppercase;
     text-align: center;
     letter-spacing: 0.1rem;
+    color: $primary_color;
 }
 h5 {
     font-size: 1.4rem;
-    font-weight: 100;
+    font-weight: 300;
     white-space: pre-wrap;
     text-align: center;
+    color: rgb(150, 150, 150);
 
     @media (max-width: 415px) {
         font-size: 1.2rem;
@@ -536,7 +538,6 @@ h5 {
     text-align: center;
     width: 60%;
     grid-gap: 1rem;
-
     img {
         width: 100%;
         height: auto;
@@ -554,18 +555,18 @@ h5 {
 Page: Wore
 ****************************************/
 .container-wore p {
-        width: 100%;
-        height: 100%;
-        display: flex;
-        align-items: center;
-        text-align: center;
-        font-size: 2rem;
-        font-family: Didot, Didot LT STD, Hoefler Text, Garamond,
-            Times New Roman, serif;
-        font-style: italic;
-        font-weight: 300;
-        line-height: 3.4rem;
-    
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    font-size: 2rem;
+    font-family: Didot, Didot LT STD, Hoefler Text, Garamond, Times New Roman,
+        serif;
+    font-style: italic;
+    font-weight: 300;
+    line-height: 3.4rem;
+
     @media (max-width: 768px) {
         width: 90%;
         grid-template-columns: repeat(1, 1fr);
@@ -578,8 +579,7 @@ Page: App
 .container-app {
     img {
         width: 250px;
-        margin:  0 auto;
-     
+        margin: 0 auto;
     }
 }
 .app-text {
@@ -619,6 +619,7 @@ Page: App
 p {
     text-align: center;
     font-size: 2rem;
+    color: $primary_color;
 }
 
 a {
