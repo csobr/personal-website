@@ -17,10 +17,8 @@ export default class Daie extends Component {
                 <main>
                     <Navbar />
                     <h4>Daie</h4>
-                    <h5>
-                        Project year: 2020 | Designer | Developer 
-                    </h5>
-                    <p className="app-text">Coming to app store soon ... </p>
+                    <h5>Project year: 2020 | Designer | Developer</h5>
+                    <p className="app-text">Coming soon</p>
                     <div className=" container container-app">
                         <img src="./images/daie/daie.png" alt="daie"></img>
                     </div>
