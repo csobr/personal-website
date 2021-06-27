@@ -4,17 +4,17 @@
   "description": "My personal website",
   "main": "index.js",
   "dependencies": {
-    "@zeit/next-sass": "^1.0.1",
+    "@zeit/next-sass": "^0.0.4",
     "axios": "^0.21.1",
     "gsap": "^3.6.0",
     "next": "^10.0.3",
-    "node-sass": "^4.14.1",
+    "node-sass": "^6.0.1",
     "react": "^16.14.0",
     "react-dom": "^16.14.0",
     "react-ga": "^2.7.0",
     "react-spring": "^8.0.27",
     "strip-ansi": "^6.0.0",
-    "webpack": "^4.44.2"
+    "webpack": "^5.40.0"
   },
   "scripts": {
     "dev": "next",
