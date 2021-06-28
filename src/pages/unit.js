@@ -1,6 +1,5 @@
 import React from 'react'
 import Head from 'next/head'
-import '../styles/main.scss'
 import Navbar from '../components/navigation'
 import Footer from '../components/footer'
 import Layout from '../components/layout'
@@ -23,7 +22,7 @@ const Unit = () => {
                 <h5>Project year: 2018 | Designer | Developer</h5>
 
                 <animated.div style={props}>
-                    <div className=" container container-app">
+                    <div className="container container-app">
                         <p className="app-text">
                             A fashion rental marketplace where local businesses
                             rent out their products.

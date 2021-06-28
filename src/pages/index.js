@@ -2,7 +2,6 @@ import React from 'react'
 import Head from 'next/head'
 import Navbar from '../components/navigation'
 import Footer from '../components/footer'
-import '../styles/main.scss'
 import Layout from '../components/layout'
 
 const Home = () => {

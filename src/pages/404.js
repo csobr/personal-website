@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import '../styles/main.scss'
 import Head from 'next/head'
 import Layout from '../components/layout'
 import Navbar from '../components/navigation'
