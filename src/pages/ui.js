@@ -2,12 +2,11 @@ import React, { Component } from 'react'
 import Head from 'next/head'
 import Navbar from '../components/navigation'
 import Footer from '../components/footer'
-import Layout from '../components/layout'
 
 export default class Ui extends Component {
     render() {
         return (
-            <Layout>
+            <>
                 <Head>
                     <title>UI Exploration</title>
                     <meta charSet="utf-8" />
@@ -23,7 +22,7 @@ export default class Ui extends Component {
                     </div>
                 </main>
                 <Footer />
-            </Layout>
+            </>
         )
     }
 }

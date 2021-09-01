@@ -2,7 +2,7 @@ import React, { Fragment, useRef, useEffect } from 'react'
 import Head from 'next/head'
 import Navbar from '../components/navigation'
 import Footer from '../components/footer'
-import Layout from '../components/layout'
+
 import imageApi from '../components/api'
 import { TweenMax, TimelineLite, Power3 } from 'gsap'
 const Photos = () => {
@@ -19,7 +19,7 @@ const Photos = () => {
         })
     })
     return (
-        <Layout>
+        <>
             <Navbar />
             <Head>
                 <title>Selection of photos</title>
@@ -31,7 +31,7 @@ const Photos = () => {
 
                 <div
                     className="container container-photos "
-                    ref={el => (photos = el)}
+                    ref={(el) => (photos = el)}
                 >
                     {error && (
                         <div className="error-msg">Something went wrong...</div>
@@ -43,9 +43,12 @@ const Photos = () => {
                     ) : (
                         <Fragment>
                             {photo &&
-                                photo.map(item => (
+                                photo.map((item) => (
                                     <div key={item.id}>
-                                        <img src={item.image}></img>
+                                        <img
+                                            src={item.image}
+                                            alt="landscape"
+                                        ></img>
                                     </div>
                                 ))}
                         </Fragment>
@@ -53,7 +56,7 @@ const Photos = () => {
                 </div>
             </main>
             <Footer />
-        </Layout>
+        </>
     )
 }
 export default Photos

@@ -2,13 +2,13 @@ import React from 'react'
 import Head from 'next/head'
 import Navbar from '../components/navigation'
 import Footer from '../components/footer'
-import Layout from '../components/layout'
+
 import { useSpring, animated } from 'react-spring'
 
 const Furniture = () => {
     const props = useSpring({ opacity: 1, from: { opacity: 0 } })
     return (
-        <Layout>
+        <>
             <Navbar />
             <Head>
                 <title>Furniture</title>
@@ -66,7 +66,7 @@ const Furniture = () => {
                 </animated.div>
             </main>
             <Footer />
-        </Layout>
+        </>
     )
 }
 export default Furniture

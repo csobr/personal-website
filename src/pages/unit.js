@@ -2,12 +2,12 @@ import React from 'react'
 import Head from 'next/head'
 import Navbar from '../components/navigation'
 import Footer from '../components/footer'
-import Layout from '../components/layout'
 import { useSpring, animated } from 'react-spring'
+
 const Unit = () => {
     const props = useSpring({ opacity: 1, from: { opacity: 0 } })
     return (
-        <Layout>
+        <>
             <Head>
                 <title>Unit</title>
                 <meta charSet="utf-8" />
@@ -36,7 +36,7 @@ const Unit = () => {
                 </animated.div>
             </main>
             <Footer />
-        </Layout>
+        </>
     )
 }
 export default Unit

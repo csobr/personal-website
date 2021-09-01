@@ -1,7 +1,6 @@
 import React, { Fragment, useRef, useEffect } from 'react'
 import Head from 'next/head'
 import Navbar from '../components/navigation'
-import Layout from '../components/layout'
 import Footer from '../components/footer'
 import ImageApi from '../components/api'
 import { TweenMax, TimelineLite, Power3 } from 'gsap'
@@ -27,7 +26,7 @@ const Wore = () => {
     })
 
     return (
-        <Layout>
+        <>
             <Navbar />
             <Head>
                 <title>Wore</title>
@@ -43,7 +42,7 @@ const Wore = () => {
 
                 <div
                     className="container container-wore"
-                    ref={element => (images = element)}
+                    ref={(element) => (images = element)}
                 >
                     {error && (
                         <div className="error-msg">Something went wrong...</div>
@@ -56,9 +55,12 @@ const Wore = () => {
                         <Fragment>
                             <p>Curated fashion from the high st brands.</p>
                             {wore &&
-                                wore.map(item => (
+                                wore.map((item) => (
                                     <div key={item.id}>
-                                        <img src={item.image}></img>{' '}
+                                        <img
+                                            src={item.image}
+                                            alt="fashion"
+                                        ></img>
                                     </div>
                                 ))}
                             <p>
@@ -70,7 +72,7 @@ const Wore = () => {
                 </div>
             </main>
             <Footer />
-        </Layout>
+        </>
     )
 }
 export default Wore

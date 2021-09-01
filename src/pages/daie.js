@@ -3,12 +3,11 @@ import React, { Component } from 'react'
 import Head from 'next/head'
 import Navbar from '../components/navigation'
 import Footer from '../components/footer'
-import Layout from '../components/layout'
 
 export default class Daie extends Component {
     render() {
         return (
-            <Layout>
+            <>
                 <Head>
                     <title>Daie</title>
                     <meta charSet="utf-8" />
@@ -24,7 +23,7 @@ export default class Daie extends Component {
                     </div>
                 </main>
                 <Footer />
-            </Layout>
+            </>
         )
     }
 }
