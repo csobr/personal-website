@@ -31,9 +31,9 @@ function Project() {
   const paginate = (pageNumber) => setCurrentPage(pageNumber);
   return (
     <main>
-      <div className='projects--wrapper'>
-        <h2 className='projects--header'>Projects</h2>
-        <div className='grid'>
+      <div className="projects--wrapper">
+        <h2 className="projects--header">Projects</h2>
+        <div className="grid">
           <Projects projects={currentProjects} loading={loading} />
           <Pagination
             projectsPerPage={projectsPerPage}

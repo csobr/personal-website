@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 
 const Projects = ({ projects, loading }) => {
   if (loading) {
@@ -10,7 +10,7 @@ const Projects = ({ projects, loading }) => {
   }
   return (
     <div>
-      {projects.map(project => (
+      {projects.map((project) => (
         <div key={project.name}>
           <div className="item">
             <div className="item--image">

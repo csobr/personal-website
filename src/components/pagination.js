@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 
 const Pagination = ({ projectsPerPage, totalProjects, paginate }) => {
   const pageNumbers = [];
@@ -8,7 +8,7 @@ const Pagination = ({ projectsPerPage, totalProjects, paginate }) => {
 
   return (
     <div className="pagination">
-      {pageNumbers.map(number => (
+      {pageNumbers.map((number) => (
         <div key={number} className="dots">
           <a onClick={() => paginate(number)} className="dot">
             {number}

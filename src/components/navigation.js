@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 class Navbar extends React.Component {
   render() {
     return (
@@ -44,7 +44,7 @@ class Navbar extends React.Component {
   toggle() {
     // Function only does stuff when the screen width is to the point where the toggle icon is visible. This function is added to links as well as the toggle icon so that the dropdown closes after a link is clicked
     if (window.innerWidth < 415) {
-      document.querySelector(".links").classList.toggle("open");
+      document.querySelector('.links').classList.toggle('open');
     }
   }
 }
