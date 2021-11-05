@@ -15,12 +15,13 @@
     "scripts": {
         "dev": "next",
         "build": "next build",
-        "start": "next start"
+        "start": "next start",
+        "lint-all": "prettier --write ./src/"
     },
     "keywords": [],
     "author": "Siham Hadi",
     "license": "",
     "devDependencies": {
-        "prettier": "2.4.1"
+        "prettier": "^2.4.1"
     }
 }
