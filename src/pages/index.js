@@ -14,7 +14,7 @@ const Home = () => {
         <meta charSet="utf-8" />
         <meta
           name="description"
-          content="Siham Hadi Software Developer And Designer Based In Stockholm."
+          content="Siham Hadi | A Software Developer And Designer."
         />
         <meta name="keywords" content="JavaScript,Frontend,developer" />
         <meta name="author" content="Siham Hadi" />
@@ -25,10 +25,7 @@ const Home = () => {
         <div className="about">
           <div className="about-me">
             <h1>Be curious and go deeper.</h1>
-            <p>
-              I’m Siham a software developer and designer based in Stockholm,
-              Sweden.{'\n'}
-            </p>
+            <p>I’m Siham a software developer and designer based in Sweden.</p>
 
             <span className="social">
               <a href="mailto: siham.hadi@live.se">Email</a>
