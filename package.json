@@ -10,7 +10,7 @@
         "react": "^18.2.0",
         "react-dom": "^18.2.0",
         "react-spring": "^9.2.6",
-        "webpack": "^5.58.1"
+        "webpack": "^5.76.0"
     },
     "scripts": {
         "dev": "next",
