@@ -23,6 +23,11 @@ export default function RootLayout({ children }) {
         <meta name="keywords" content={metadata.keywords} />
         <meta name="author" content={metadata.author} />
         <meta name="viewport" content={metadata.viewport} />
+        <script
+          defer
+          data-domain="sihamhadi.com"
+          src="https://plausible.io/js/script.js"
+        ></script>
       </Head>
       <body>{children}</body>
     </html>
