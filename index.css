@@ -160,6 +160,12 @@ a:hover:after {
   padding-left: 1rem;
 }
 
+@media (max-width: 768px) {
+  .selected-works {
+    padding-left: 0;
+  }
+}
+
 h4 {
   font-size: 4rem;
   font-weight: 600;

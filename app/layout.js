@@ -7,7 +7,13 @@ export const metadata = {
   keywords:
     'Siham Hadi, JavaScript, Frontend, developer, Designer, Software Developer',
   author: 'Siham Hadi',
-  viewport: 'width=device-width, initial-scale=1.0',
+};
+
+export const viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 1,
+  userScalable: false,
 };
 
 export default function RootLayout({ children }) {
