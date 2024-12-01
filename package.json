@@ -4,7 +4,7 @@
   "description": "My personal website",
   "main": "app/page.js",
   "dependencies": {
-    "axios": "0.27.2",
+    "axios": "0.28.0",
     "eslint-config-next": "15.0.3",
     "gsap": "3.8.0",
     "next": "15.0.3",
