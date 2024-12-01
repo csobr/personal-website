@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 import Footer from '../components/footer';
+import PlausibleProvider from 'next-plausible';
 
 const Modal = ({ isOpen, onClose, title, children }) => {
   useEffect(() => {
@@ -216,112 +217,117 @@ const Home = () => {
   };
 
   return (
-    <div>
-      <main>
-        <div style={{ textAlign: 'center', top: 10 }} className="fade-in">
-          <h1>Be curious and go deeper.</h1>
-        </div>
-        <div className="about fade-in-bottom">
-          <div className="about-me">
-            <h2>Developer & Designer</h2>
+    <PlausibleProvider domain="sihamhadi.com">
+      <div>
+        <main>
+          <div style={{ textAlign: 'center', top: 10 }} className="fade-in">
+            <h1>Be curious and go deeper.</h1>
           </div>
-          <div className="social">
-            <div
-              className="github fade-in-bottom"
-              style={{ animationDelay: '0.2s' }}
-            >
-              <a href="https://github.com/csobr" target="_blank">
-                github
-              </a>
+          <div className="about fade-in-bottom">
+            <div className="about-me">
+              <h2>Developer & Designer</h2>
             </div>
-
-            <div
-              className="linkedin fade-in-bottom"
-              style={{ animationDelay: '0.3s' }}
-            >
-              <a href="https://www.linkedin.com/in/sihamhadi/" target="_blank">
-                linkedin
-              </a>
-            </div>
-            <div
-              className="instagram fade-in-bottom"
-              style={{ animationDelay: '0.4s' }}
-            >
-              <a href="https://www.instagram.com/texturlab/" target="_blank">
-                ig
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <h4>Selected work</h4>
-        <div className="selected-works">
-          <div className="selected-works-container">
-            {works.map((work) => (
+            <div className="social">
               <div
-                key={work.id}
-                className="selected-works-item"
-                onClick={() => handleWorkClick(work)}
+                className="github fade-in-bottom"
+                style={{ animationDelay: '0.2s' }}
               >
-                <Image
-                  src={work.image}
-                  alt={work.title}
-                  width={468}
-                  height={300}
-                />
-                <h5>{work.title}</h5>
+                <a href="https://github.com/csobr" target="_blank">
+                  github
+                </a>
               </div>
-            ))}
-          </div>
-        </div>
-        <Modal
-          isOpen={isModalOpen}
-          onClose={() => setIsModalOpen(false)}
-          title={selectedWork?.title}
-          image={selectedWork?.image}
-        >
-          <div className="modal-description-container">
-            <div className="modal-description-top">
-              <p>Developer and Designer: Siham Hadi</p>|{' '}
-              <p>
-                Project Year:{' '}
-                {Array.isArray(selectedWork?.modal.projectYear)
-                  ? selectedWork?.modal.projectYear?.join(' - ')
-                  : selectedWork?.modal.projectYear}
-              </p>
-              {selectedWork?.modal.link !== null && (
-                <>
-                  |{' '}
-                  <a
-                    href={`https://${selectedWork?.modal.link}`}
-                    target="_blank"
-                  >
-                    URL: {selectedWork?.modal.link}
-                  </a>
-                </>
-              )}
-            </div>
-            <div className="item-description">
-              <p>{selectedWork?.modal.description}</p>
-            </div>
-          </div>
-          <div className="item-images">
-            {selectedWork?.modal.images.map((image, index) => (
-              <Image
-                key={index}
-                src={image}
-                alt={selectedWork?.title}
-                width={800}
-                height={600}
-                style={{ objectFit: 'contain' }}
-              />
-            ))}
-          </div>
-        </Modal>
-      </main>
 
-      <Footer />
-    </div>
+              <div
+                className="linkedin fade-in-bottom"
+                style={{ animationDelay: '0.3s' }}
+              >
+                <a
+                  href="https://www.linkedin.com/in/sihamhadi/"
+                  target="_blank"
+                >
+                  linkedin
+                </a>
+              </div>
+              <div
+                className="instagram fade-in-bottom"
+                style={{ animationDelay: '0.4s' }}
+              >
+                <a href="https://www.instagram.com/texturlab/" target="_blank">
+                  ig
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <h4>Selected work</h4>
+          <div className="selected-works">
+            <div className="selected-works-container">
+              {works.map((work) => (
+                <div
+                  key={work.id}
+                  className="selected-works-item"
+                  onClick={() => handleWorkClick(work)}
+                >
+                  <Image
+                    src={work.image}
+                    alt={work.title}
+                    width={468}
+                    height={300}
+                  />
+                  <h5>{work.title}</h5>
+                </div>
+              ))}
+            </div>
+          </div>
+          <Modal
+            isOpen={isModalOpen}
+            onClose={() => setIsModalOpen(false)}
+            title={selectedWork?.title}
+            image={selectedWork?.image}
+          >
+            <div className="modal-description-container">
+              <div className="modal-description-top">
+                <p>Developer and Designer: Siham Hadi</p>|{' '}
+                <p>
+                  Project Year:{' '}
+                  {Array.isArray(selectedWork?.modal.projectYear)
+                    ? selectedWork?.modal.projectYear?.join(' - ')
+                    : selectedWork?.modal.projectYear}
+                </p>
+                {selectedWork?.modal.link !== null && (
+                  <>
+                    |{' '}
+                    <a
+                      href={`https://${selectedWork?.modal.link}`}
+                      target="_blank"
+                    >
+                      URL: {selectedWork?.modal.link}
+                    </a>
+                  </>
+                )}
+              </div>
+              <div className="item-description">
+                <p>{selectedWork?.modal.description}</p>
+              </div>
+            </div>
+            <div className="item-images">
+              {selectedWork?.modal.images.map((image, index) => (
+                <Image
+                  key={index}
+                  src={image}
+                  alt={selectedWork?.title}
+                  width={800}
+                  height={600}
+                  style={{ objectFit: 'contain' }}
+                />
+              ))}
+            </div>
+          </Modal>
+        </main>
+
+        <Footer />
+      </div>
+    </PlausibleProvider>
   );
 };
 
