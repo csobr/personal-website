@@ -244,7 +244,7 @@ const Home = () => {
             </div>
           </Modal>
         </main>
-        <footer> © {getYear()} Siham Hadi</footer>;
+        <footer> © {getYear()} Siham Hadi</footer>
       </div>
     </PlausibleProvider>
   );

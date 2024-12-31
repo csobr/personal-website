@@ -88,6 +88,11 @@ h1 {
   font-family: var(--font-serif);
 }
 
+@media (max-width: 415px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+}
 
 h2 {
   font-family: var(--font-sans);
@@ -161,6 +166,12 @@ a:hover:after {
 }
 
 @media (max-width: 768px) {
+  .selected-works {
+    padding-left: 0;
+  }
+}
+
+@media (max-width: 415px) {
   .selected-works {
     padding-left: 0;
   }
@@ -422,15 +433,9 @@ footer {
   padding-top: 7rem;
   grid-area: footer;
   text-align: center;
-  font-size: 0.8rem;
+  font-size: 12px;
   font-family: var(--font-serif);
 
-}
-
-@media (max-width: 415px) {
-  footer {
-    font-size: 1.2rem;
-  }
 }
 
 .fade-in {
