@@ -23,7 +23,7 @@ const Home = () => {
         ],
         title: 'Coated',
         description: 'With Coated, transform any space effortlessly.',
-        link: 'coated.ai',
+        link: 'coated-sihams-projects-d254c308.vercel.app',
         projectYear: ['2023', '2024'],
       },
     },
@@ -36,7 +36,7 @@ const Home = () => {
         title: 'Ani',
         description:
           'Ani is a website for teens to learn about their amazing brain.',
-        link: 'ani-brain.com',
+        link: 'ani-brain.com/',
         projectYear: ['2020'],
       },
     },
@@ -217,7 +217,7 @@ const Home = () => {
                       href={`https://${selectedWork?.modal.link}`}
                       target="_blank"
                     >
-                      URL: {selectedWork?.modal.link}
+                      URL: {selectedWork?.title}
                     </a>
                   </>
                 )}
