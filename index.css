@@ -38,7 +38,6 @@ body {
   overflow-y: auto;
   scroll-behavior: smooth;
   scrollbar-width: none;
-
 }
 
 body {
@@ -55,7 +54,6 @@ body {
   overflow-x: hidden;
   color: var(--white);
   letter-spacing: 0.05rem;
-
 }
 
 /***************************************
@@ -97,7 +95,6 @@ h1 {
 h2 {
   font-family: var(--font-sans);
   font-size: 1.8rem;
-
 }
 
 h3 {
@@ -105,8 +102,6 @@ h3 {
   font-size: 1.5rem;
   font-weight: 400;
 }
-
-
 
 .about-me {
   display: flex;
@@ -116,7 +111,6 @@ h3 {
 }
 
 @media (max-width: 415px) {
-
   .about-me {
     white-space: pre-wrap;
   }
@@ -131,7 +125,6 @@ h3 {
   padding-inline: 1rem;
   padding-top: 0.5rem;
   padding-bottom: 0.2rem;
-
 }
 
 .social a {
@@ -183,7 +176,6 @@ h4 {
   font-family: var(--font-serif);
   text-transform: capitalize;
   padding-left: 2rem;
-
 }
 
 @media (max-width: 768px) {
@@ -214,7 +206,6 @@ h4 {
   transition: transform 0.3s ease;
   width: 450px;
 }
-
 
 /* Coated - Top left */
 .selected-works-item:nth-child(1) {
@@ -283,7 +274,6 @@ h5 {
 }
 
 @media (max-width: 1024px) {
-
   .selected-works-container {
     grid-template-columns: 1fr;
     gap: 2rem;
@@ -305,9 +295,6 @@ h5 {
     aspect-ratio: 3/2;
   }
 }
-
-
-
 
 .modal-overlay {
   position: fixed;
@@ -338,7 +325,6 @@ h5 {
   overflow-y: auto;
   width: 100%;
   max-height: 70vh;
-
 }
 
 .modal-close {
@@ -371,7 +357,6 @@ h5 {
   padding-bottom: 0.5rem;
   font-family: var(--font-sans);
   font-weight: 400;
-
 }
 
 .modal-description-top {
@@ -382,16 +367,13 @@ h5 {
   font-family: var(--font-sans);
   font-size: 0.9rem;
   padding-bottom: 0.1rem;
-
-
 }
 
 .item-images {
   display: grid;
-  grid-template-columns: repeat(auto-fill, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 1rem;
   padding-top: 1rem;
-
 }
 
 .selected-works-item {
@@ -412,13 +394,11 @@ h5 {
     font-size: 0.8rem;
     flex-direction: unset;
     flex-wrap: wrap;
-
   }
 
   .item-images {
     max-width: 100%;
     align-items: start;
-
   }
 }
 
@@ -435,7 +415,6 @@ footer {
   text-align: center;
   font-size: 12px;
   font-family: var(--font-serif);
-
 }
 
 .fade-in {

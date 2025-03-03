@@ -203,7 +203,12 @@ const Home = () => {
           >
             <div className="modal-description-container">
               <div className="modal-description-top">
-                <p>Developer and Designer: Siham Hadi</p>|{' '}
+                {selectedWork?.title === 'Furniture' ? (
+                  <p>Created with 3DS Max</p>
+                ) : (
+                  <p>Developer and Designer: Siham Hadi</p>
+                )}
+                <span> | </span>
                 <p>
                   Project Year:{' '}
                   {Array.isArray(selectedWork?.modal.projectYear)
@@ -234,6 +239,7 @@ const Home = () => {
                   alt={selectedWork?.title}
                   width={800}
                   height={600}
+                  priority
                   style={{
                     objectFit: 'contain',
                     width: '100%',
