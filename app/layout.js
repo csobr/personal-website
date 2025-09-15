@@ -5,8 +5,7 @@ export const metadata = {
     default: 'Siham Hadi',
     template: '%s | Siham Hadi',
   },
-  description:
-    'Software Developer and Designer specializing in frontend development, UI/UX design, and full-stack applications. Explore my portfolio of web applications, furniture design, and creative projects.',
+  description: 'Software Developer & Designer specializing in frontend development, UI/UX design, and full-stack applications. Portfolio showcase.',
   keywords: [
     'Siham Hadi',
     'Software Developer',
@@ -31,15 +30,13 @@ export const metadata = {
     type: 'website',
     url: 'https://sihamhadi.com',
     title: 'Siham Hadi - Software Developer & Designer',
-    description:
-      'Software Developer and Designer specializing in frontend development, UI/UX design, and full-stack applications.',
+    description: 'Software Developer & Designer specializing in frontend development, UI/UX design, and full-stack applications. Portfolio showcase.',
     siteName: 'Siham Hadi Portfolio',
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Siham Hadi - Software Developer & Designer',
-    description:
-      'Software Developer and Designer specializing in frontend development, UI/UX design, and full-stack applications.',
+    description: 'Software Developer & Designer specializing in frontend development, UI/UX design, and full-stack applications. Portfolio showcase.',
   },
   robots: {
     index: true,
