@@ -137,17 +137,11 @@ const Home = () => {
       <div>
         <main>
           <div style={{ textAlign: 'center', top: 10 }} className="fade-in">
-            <h1>Siham Hadi - Software Developer & Designer</h1>
-            <p style={{ fontSize: '1.2rem', marginTop: '1rem' }}>Be curious and go deeper.</p>
+            <h1>Be curious and go deeper.</h1>
           </div>
           <div className="about fade-in-bottom">
             <div className="about-me">
-              <h2>About Siham Hadi</h2>
-              <p style={{ marginBottom: '1rem', maxWidth: '600px', margin: '1rem auto' }}>
-                I'm a Software Developer and Designer passionate about creating beautiful,
-                functional web experiences. With expertise in JavaScript, React, and Next.js,
-                I bring ideas to life through code and design.
-              </p>
+              <h2>Developer & Designer</h2>
             </div>
             <div className="social">
               <div
