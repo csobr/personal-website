@@ -1,0 +1,14 @@
+/* TEAM */
+Developer & Designer: Siham Hadi
+Site: https://sihamhadi.com
+Twitter: @sihamhadi
+Location: Sweden
+
+/* THANKS */
+Next.js Team
+
+/* SITE */
+Last update: 2025/10/23
+Standards: HTML5, CSS3, JavaScript
+Components: React, Next.js
+Software: VS Code
