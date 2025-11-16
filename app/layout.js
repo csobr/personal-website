@@ -1,4 +1,5 @@
 import '../index.css';
+import { Analytics } from '@vercel/analytics/next';
 
 export const metadata = {
   title: {
@@ -167,12 +168,6 @@ export default function RootLayout({ children }) {
         <link rel="apple-touch-icon" href="/logo/apple-touch-icon.png" />
         <link rel="manifest" href="/manifest.json" />
         <link rel="author" href="/humans.txt" />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link
-          rel="preconnect"
-          href="https://fonts.gstatic.com"
-          crossOrigin="anonymous"
-        />
         <meta name="author" content="Siham Hadi" />
         <meta name="designer" content="Siham Hadi" />
         <meta name="developer" content="Siham Hadi" />
@@ -184,7 +179,10 @@ export default function RootLayout({ children }) {
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
-      <body>{children}</body>
+      <body>
+        {children}
+        <Analytics />
+      </body>
     </html>
   );
 }
