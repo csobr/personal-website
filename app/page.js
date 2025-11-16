@@ -147,7 +147,7 @@ const Home = () => {
           </p>
           <p>
             I'm the founder of <a href="https://rafphia.com">Rafphia</a>, a
-            platform for creating beautiful interior spaces.
+            platform for creating beautiful interiors.
           </p>
           {/*      <div className="social">
             <span>Reach me on:</span>
