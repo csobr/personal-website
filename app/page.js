@@ -1,7 +1,6 @@
 'use client';
-import React, { useState } from 'react';
+import { useState } from 'react';
 import Image from 'next/image';
-import PlausibleProvider from 'next-plausible';
 import { Modal } from '../components/Modal';
 
 const Home = () => {
@@ -133,126 +132,115 @@ const Home = () => {
   };
 
   return (
-    <PlausibleProvider domain="sihamhadi.com">
-      <div>
-        <main>
-          <div style={{ textAlign: 'center', top: 10 }} className="fade-in">
-            <h1>Be curious and go deeper.</h1>
-          </div>
-          <div className="about fade-in-bottom">
-            <div className="about-me">
-              <h2>Developer & Designer</h2>
+    <div>
+      <main>
+        <div className="about fade-in line-height">
+          <h1>Siham Hadi</h1>
+          <p>
+            I am a developer who enjoys exploring and building applications at
+            the intersection of cutting-edge technology, design, and business.
+          </p>
+          <p>
+            "Be curious and go deeper" is a motto I strive to live by. It
+            embodies my commitment to continuous learning and exploration, both
+            personally and professionally.
+          </p>
+          <p>
+            I'm the founder of <a href="https://rafphia.com">Rafphia</a>, a
+            platform for creating beautiful interior spaces.
+          </p>
+          {/*      <div className="social">
+            <span>Reach me on:</span>
+            <div className="github fade-in-bottom">
+              <a href="https://github.com/csobr" target="_blank">
+                github
+              </a>
             </div>
-            <div className="social">
+            |
+            <div className="linkedin fade-in-bottom">
+              <a href="https://www.linkedin.com/in/sihamhadi/" target="_blank">
+                linkedin
+              </a>
+            </div>
+          </div> */}
+        </div>
+        <h4>Selected work</h4>
+        <div className="selected-works">
+          <div className="selected-works-container">
+            {works.map((work) => (
               <div
-                className="github fade-in-bottom"
-                style={{ animationDelay: '0.2s' }}
+                key={work.id}
+                className="selected-works-item"
+                onClick={() => handleWorkClick(work)}
               >
-                <a href="https://github.com/csobr" target="_blank">
-                  github
-                </a>
-              </div>
-
-              <div
-                className="linkedin fade-in-bottom"
-                style={{ animationDelay: '0.3s' }}
-              >
-                <a
-                  href="https://www.linkedin.com/in/sihamhadi/"
-                  target="_blank"
-                >
-                  linkedin
-                </a>
-              </div>
-              <div
-                className="instagram fade-in-bottom"
-                style={{ animationDelay: '0.4s' }}
-              >
-                <a href="https://www.instagram.com/texturlab/" target="_blank">
-                  ig
-                </a>
-              </div>
-            </div>
-          </div>
-
-          <h4>Selected work</h4>
-          <div className="selected-works">
-            <div className="selected-works-container">
-              {works.map((work) => (
-                <div
-                  key={work.id}
-                  className="selected-works-item"
-                  onClick={() => handleWorkClick(work)}
-                >
-                  <Image
-                    src={work.image}
-                    alt={`${work.title} - Portfolio project by Siham Hadi`}
-                    width={468}
-                    height={300}
-                  />
-                  <h5>{work.title}</h5>
-                </div>
-              ))}
-            </div>
-          </div>
-          <Modal
-            isOpen={isModalOpen}
-            onClose={() => setIsModalOpen(false)}
-            title={selectedWork?.title}
-            image={selectedWork?.image}
-          >
-            <div className="modal-description-container">
-              <div className="modal-description-top">
-                {selectedWork?.title === 'Furniture' ? (
-                  <p>Created with 3DS Max</p>
-                ) : (
-                  <p>Developer and Designer: Siham Hadi</p>
-                )}
-                <span> | </span>
-                <p>
-                  Project Year:{' '}
-                  {Array.isArray(selectedWork?.modal.projectYear)
-                    ? selectedWork?.modal.projectYear?.join(' - ')
-                    : selectedWork?.modal.projectYear}
-                </p>
-                {selectedWork?.modal.link !== null && (
-                  <>
-                    |{' '}
-                    <a
-                      href={`https://${selectedWork?.modal.link}`}
-                      target="_blank"
-                    >
-                      URL: {selectedWork?.title}
-                    </a>
-                  </>
-                )}
-              </div>
-              <div className="item-description">
-                <p>{selectedWork?.modal.description}</p>
-              </div>
-            </div>
-            <div className="item-images">
-              {selectedWork?.modal.images.map((image, index) => (
                 <Image
-                  key={index}
-                  src={image}
-                  alt={`${selectedWork?.title} project by Siham Hadi - ${selectedWork?.modal.description}`}
-                  width={800}
-                  height={600}
-                  priority
-                  style={{
-                    objectFit: 'contain',
-                    width: '100%',
-                    height: 'auto',
-                  }}
+                  src={work.image}
+                  alt={work.title}
+                  width={468}
+                  height={300}
                 />
-              ))}
+                <h5>{work.title}</h5>
+              </div>
+            ))}
+          </div>
+        </div>
+        <Modal
+          isOpen={isModalOpen}
+          onClose={() => setIsModalOpen(false)}
+          title={selectedWork?.title}
+          image={selectedWork?.image}
+        >
+          <div className="modal-description-container">
+            <div className="modal-description-top">
+              {selectedWork?.title === 'Furniture' ? (
+                <p>Created with 3DS Max</p>
+              ) : (
+                <p>Developer and Designer: Siham Hadi</p>
+              )}
+              <span> | </span>
+              <p>
+                Project Year:{' '}
+                {Array.isArray(selectedWork?.modal.projectYear)
+                  ? selectedWork?.modal.projectYear?.join(' - ')
+                  : selectedWork?.modal.projectYear}
+              </p>
+              {selectedWork?.modal.link !== null && (
+                <>
+                  |{' '}
+                  <a
+                    href={`https://${selectedWork?.modal.link}`}
+                    target="_blank"
+                  >
+                    URL: {selectedWork?.title}
+                  </a>
+                </>
+              )}
             </div>
-          </Modal>
-        </main>
-        <footer> © {getYear()} Siham Hadi</footer>
-      </div>
-    </PlausibleProvider>
+            <div className="item-description">
+              <p>{selectedWork?.modal.description}</p>
+            </div>
+          </div>
+          <div className="item-images">
+            {selectedWork?.modal.images.map((image, index) => (
+              <Image
+                key={index}
+                src={image}
+                alt={selectedWork?.title}
+                width={800}
+                height={600}
+                priority
+                style={{
+                  objectFit: 'contain',
+                  width: '100%',
+                  height: 'auto',
+                }}
+              />
+            ))}
+          </div>
+        </Modal>
+      </main>
+      <footer> © {getYear()} Siham Hadi</footer>
+    </div>
   );
 };
 

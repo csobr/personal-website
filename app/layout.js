@@ -2,15 +2,17 @@ import '../index.css';
 
 export const metadata = {
   title: {
-    default: 'Siham Hadi - Software Developer & Designer Portfolio',
+    default: 'Siham Hadi',
     template: '%s | Siham Hadi',
   },
-  description: 'Siham Hadi is a Software Developer and Designer specializing in frontend development, UI/UX design, and full-stack web applications. Explore my portfolio of creative projects and design work.',
+  description:
+    'Siham Hadi is a Software Developer and Designer specializing in frontend development, UI/UX design, and full-stack web applications. Explore my portfolio of creative projects and design work.',
   keywords: [
     'Siham Hadi',
     'Siham Hadi Portfolio',
     'Siham Hadi Developer',
     'Siham Hadi Designer',
+    'Founder',
     'Software Developer',
     'Frontend Developer',
     'Web Developer',
@@ -33,21 +35,31 @@ export const metadata = {
     type: 'profile',
     url: 'https://sihamhadi.com',
     title: 'Siham Hadi - Software Developer & Designer Portfolio',
-    description: 'Siham Hadi is a Software Developer and Designer specializing in frontend development, UI/UX design, and full-stack web applications. Explore my portfolio of creative projects and design work.',
+    description:
+      'Siham Hadi is a Software Developer and Designer specializing in frontend development, UI/UX design, and full-stack web applications. Explore my portfolio of creative projects and design work.',
     siteName: 'Siham Hadi',
     locale: 'en_US',
+    images: [
+      {
+        url: '/og.png',
+        width: 1200,
+        height: 630,
+        alt: 'Siham Hadi',
+      },
+    ],
     profile: {
       firstName: 'Siham',
       lastName: 'Hadi',
       username: 'sihamhadi',
-      gender: 'female',
     },
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Siham Hadi - Software Developer & Designer Portfolio',
-    description: 'Siham Hadi is a Software Developer and Designer specializing in frontend development, UI/UX design, and full-stack web applications.',
+    description:
+      'Siham Hadi is a Software Developer and Designer specializing in frontend development, UI/UX design, and full-stack web applications.',
     creator: '@sihamhadi',
+    images: ['/og.png'],
   },
   robots: {
     index: true,
@@ -59,11 +71,6 @@ export const metadata = {
       'max-image-preview': 'large',
       'max-snippet': -1,
     },
-  },
-  verification: {
-    google: 'your-google-verification-code',
-    yandex: 'your-yandex-verification-code',
-    bing: 'your-bing-verification-code',
   },
 };
 
@@ -86,7 +93,11 @@ export default function RootLayout({ children }) {
         familyName: 'Hadi',
         url: 'https://sihamhadi.com',
         image: 'https://sihamhadi.com/logo/apple-touch-icon.png',
-        jobTitle: ['Software Developer', 'UI/UX Designer', 'Frontend Developer'],
+        jobTitle: [
+          'Software Developer',
+          'UI/UX Designer',
+          'Frontend Developer',
+        ],
         description:
           'Siham Hadi is a Software Developer and Designer specializing in frontend development, UI/UX design, and full-stack applications. Experienced in JavaScript, React, and Next.js.',
         knowsAbout: [
@@ -102,13 +113,8 @@ export default function RootLayout({ children }) {
         sameAs: [
           'https://github.com/csobr',
           'https://www.linkedin.com/in/sihamhadi/',
-          'https://www.instagram.com/texturlab/',
         ],
-        alumniOf: {
-          '@type': 'EducationalOrganization',
-          name: 'Educational Institution',
-        },
-        gender: 'Female',
+
         nationality: 'SE',
       },
       {
@@ -125,11 +131,6 @@ export default function RootLayout({ children }) {
         },
         publisher: {
           '@id': 'https://sihamhadi.com/#person',
-        },
-        potentialAction: {
-          '@type': 'SearchAction',
-          target: 'https://sihamhadi.com/?s={search_term_string}',
-          'query-input': 'required name=search_term_string',
         },
       },
       {
