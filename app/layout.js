@@ -7,10 +7,9 @@ export const metadata = {
     template: '%s | Siham Hadi',
   },
   description:
-    'Siham Hadi is a Software Developer and Designer specializing in frontend development, UI/UX design, and full-stack web applications. Explore my portfolio of creative projects and design work.',
+    'Siham Hadi is a Software Developer and Designer specializing in frontend development, UI/UX design, and full-stack web applications. Explore selected creative projects and design work.',
   keywords: [
     'Siham Hadi',
-    'Siham Hadi Portfolio',
     'Siham Hadi Developer',
     'Siham Hadi Designer',
     'Founder',
@@ -35,9 +34,9 @@ export const metadata = {
   openGraph: {
     type: 'profile',
     url: 'https://sihamhadi.com',
-    title: 'Siham Hadi - Software Developer & Designer Portfolio',
+    title: 'Siham Hadi',
     description:
-      'Siham Hadi is a Software Developer and Designer specializing in frontend development, UI/UX design, and full-stack web applications. Explore my portfolio of creative projects and design work.',
+      'Siham Hadi is a Software Developer and Designer specializing in frontend development, UI/UX design, and full-stack web applications. Explore selected creative projects and design work.',
     siteName: 'Siham Hadi',
     locale: 'en_US',
     images: [
@@ -56,7 +55,7 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Siham Hadi - Software Developer & Designer Portfolio',
+    title: 'Siham Hadi',
     description:
       'Siham Hadi is a Software Developer and Designer specializing in frontend development, UI/UX design, and full-stack web applications.',
     creator: '@sihamhadi',
@@ -123,9 +122,9 @@ export default function RootLayout({ children }) {
         '@id': 'https://sihamhadi.com/#website',
         url: 'https://sihamhadi.com',
         name: 'Siham Hadi - Software Developer & Designer',
-        alternateName: 'Siham Hadi Portfolio',
+        alternateName: 'Siham Hadi',
         description:
-          'Official portfolio website of Siham Hadi, Software Developer and Designer showcasing web applications, UI/UX design projects, and creative work.',
+          'Official website of Siham Hadi, Software Developer and Designer showcasing web applications, UI/UX design projects, and creative work.',
         inLanguage: 'en-US',
         author: {
           '@id': 'https://sihamhadi.com/#person',
