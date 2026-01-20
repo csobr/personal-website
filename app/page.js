@@ -6,6 +6,7 @@ import { Modal } from '../components/Modal';
 const Home = () => {
   const [selectedWork, setSelectedWork] = useState(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
+
   const getYear = () => {
     return new Date().getFullYear();
   };
@@ -238,6 +239,18 @@ const Home = () => {
             ))}
           </div>
         </Modal>
+        {/* Hidden preload images */}
+        <div aria-hidden="true" style={{ position: 'absolute', width: 0, height: 0, overflow: 'hidden' }}>
+          {works.flatMap((work) => work.modal.images).map((src) => (
+            <Image
+              key={src}
+              src={src}
+              alt=""
+              width={800}
+              height={600}
+            />
+          ))}
+        </div>
       </main>
       <footer> © {getYear()} Siham Hadi</footer>
     </div>
