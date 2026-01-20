@@ -129,7 +129,13 @@ const Home = () => {
             the intersection of cutting-edge technology, design, and business.
           </p>
           <p>
-            Founder of <a href="https://rafphia.com">Rafphia</a>
+            "Be curious and go deeper" is a motto I strive to live by. It
+            embodies my commitment to continuous learning and exploration, both
+            personally and professionally.
+          </p>
+          <p>
+            I'm the founder of <a href="https://rafphia.com">Rafphia</a>, a
+            platform for creating beautiful interiors.
           </p>
           <p>
             <a href="https://github.com/csobr" target="_blank" rel="noopener noreferrer">github</a> | <a href="https://www.linkedin.com/in/sihamhadi/" target="_blank" rel="noopener noreferrer">linkedin</a>
