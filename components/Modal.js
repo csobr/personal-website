@@ -19,7 +19,7 @@ export const Modal = ({ isOpen, onClose, title, children }) => {
     <div className="modal-overlay" onClick={onClose}>
       <div className="modal-content" onClick={(e) => e.stopPropagation()}>
         <button className="modal-close" onClick={onClose}>
-          ×
+          <span>x</span>
         </button>
         <h3 className="modal-title">{title}</h3>
         <div className="modal-scrollable">{children}</div>

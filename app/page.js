@@ -1,11 +1,14 @@
 'use client';
-import { useState } from 'react';
+import { useState, useCallback } from 'react';
 import Image from 'next/image';
 import { Modal } from '../components/Modal';
+import { ShaderCanvas, useShaderCanvas } from '../components/ShaderCanvas';
+import { ProjectImage } from '../components/ProjectImage';
 
-const Home = () => {
+const HomeContent = () => {
   const [selectedWork, setSelectedWork] = useState(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const shaderContext = useShaderCanvas();
 
   const getYear = () => {
     return new Date().getFullYear();
@@ -128,12 +131,13 @@ const Home = () => {
   ];
 
   const handleWorkClick = (work) => {
+    shaderContext?.resetAllHover();
     setSelectedWork(work);
     setIsModalOpen(true);
   };
 
   return (
-    <div>
+    <>
       <main>
         <div className="about fade-in line-height">
           <h1>Siham Hadi</h1>
@@ -174,7 +178,7 @@ const Home = () => {
                 className="selected-works-item"
                 onClick={() => handleWorkClick(work)}
               >
-                <Image
+                <ProjectImage
                   src={work.image}
                   alt={work.title}
                   width={468}
@@ -253,8 +257,14 @@ const Home = () => {
         </div>
       </main>
       <footer> © {getYear()} Siham Hadi</footer>
-    </div>
+    </>
   );
 };
+
+const Home = () => (
+  <ShaderCanvas>
+    <HomeContent />
+  </ShaderCanvas>
+);
 
 export default Home;
