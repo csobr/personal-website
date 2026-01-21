@@ -1,9 +1,36 @@
 'use client';
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import Image from 'next/image';
 
 const Home = () => {
   const [selectedWork, setSelectedWork] = useState(null);
+  const galleryRef = useRef(null);
+
+  const scrollToGallery = () => {
+    if (window.innerWidth <= 600 && galleryRef.current) {
+      galleryRef.current.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
+  const handleWorkClick = (work) => {
+    const newSelection = selectedWork?.id === work.id ? null : work;
+    setSelectedWork(newSelection);
+    if (newSelection) {
+      scrollToGallery();
+    }
+  };
+
+  const handleCurrentClick = () => {
+    const newSelection = selectedWork === 'current' ? null : 'current';
+    setSelectedWork(newSelection);
+    if (newSelection) {
+      scrollToGallery();
+    }
+  };
+
+  const handleBackClick = () => {
+    setSelectedWork(null);
+  };
 
   const works = [
     {
@@ -106,7 +133,7 @@ const Home = () => {
           <li>
             <button
               className={`work-item ${selectedWork === 'current' ? 'active' : ''}`}
-              onClick={() => setSelectedWork(selectedWork === 'current' ? null : 'current')}
+              onClick={handleCurrentClick}
             >
               [current] Rafphia
             </button>
@@ -115,7 +142,7 @@ const Home = () => {
             <li key={work.id}>
               <button
                 className={`work-item ${selectedWork?.id === work.id ? 'active' : ''}`}
-                onClick={() => setSelectedWork(selectedWork?.id === work.id ? null : work)}
+                onClick={() => handleWorkClick(work)}
               >
                 [{work.year}] {work.title}
               </button>
@@ -143,9 +170,12 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="right-column">
+      <div className="right-column" ref={galleryRef}>
         {selectedWork === 'current' ? (
           <div className="current-project">
+            <button className="back-button" onClick={handleBackClick}>
+              Back
+            </button>
             <p>AI-powered interior design tool</p>
             <a href="https://rafphia.com" target="_blank" rel="noopener noreferrer">
               rafphia.com
@@ -155,6 +185,9 @@ const Home = () => {
           <>
             {selectedWork && (
               <div className="work-details">
+                <button className="back-button" onClick={handleBackClick}>
+                  Back
+                </button>
                 <p className="work-description">{selectedWork.description}</p>
                 {selectedWork.link && (
                   <a href={selectedWork.link} target="_blank" rel="noopener noreferrer" className="work-link">

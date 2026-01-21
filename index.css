@@ -64,6 +64,13 @@ a:hover {
   height: calc(100vh - 2rem);
   text-align: center;
   font-size: 14px;
+  position: relative;
+}
+
+.current-project .back-button {
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 .current-project p {
@@ -123,6 +130,25 @@ a:hover {
 
 .about-section p {
   margin-bottom: 0.75rem;
+}
+
+/* Back Button */
+.back-button {
+  display: inline-block;
+  padding: 0.4rem 0.8rem;
+  margin-bottom: 1rem;
+  background: none;
+  border: 1px solid var(--primary);
+  font-family: inherit;
+  font-size: 13px;
+  color: var(--primary);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.back-button:hover {
+  background: var(--primary);
+  color: var(--bg);
 }
 
 /* Work Details */
