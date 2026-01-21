@@ -1,10 +1,39 @@
 'use client';
-import { useState, useRef } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import Image from 'next/image';
 
 const Home = () => {
   const [selectedWork, setSelectedWork] = useState(null);
   const rightColumnRef = useRef(null);
+
+  useEffect(() => {
+    console.log(`
+                 M
+                 ' \`
+                |  :|\`-._
+                |  :|\`-._\`-._
+               /   ::\\   \`-._\`-._
+              /     ::\\      \`-(_)
+             |_________|      / /
+                 \`-'         / /
+                            / /
+                           / /
+                          / /
+         ________________/ _&_______
+        /8P'             \`'      S/
+       /P'        ____________   /
+      /'  /\\     /           /   /
+     /  . \\ \\   /           /   /
+    /  //  \\ \\ /           /   /
+   /  //    \\ \\___________/   /
+  / ///      \\ \\       __    /
+ /8 \`'        \\/      /_/  ./
+/88b.____________________.8/
+
+    Same obsession, better application.
+    sihamhadi.com/slojd.jpg
+    `);
+  }, []);
 
   const handleBackClick = () => {
     setSelectedWork(null);
@@ -22,7 +51,7 @@ const Home = () => {
   const works = [
     {
       id: 1,
-      year: '2024',
+      year: '2023',
       title: 'Coated',
       thumbnail: '/images/coated/product-shot.jpg',
       images: [
@@ -165,7 +194,12 @@ const Home = () => {
           ))}
         </ul>
         {selectedWork && selectedWork !== 'current' && (
-          <p className="legend">🌥️ = sunsetted</p>
+          <div className="spacer">
+            <p className="legend">🌥️ = sunsetted</p>
+            <p className="legend">
+              Side projects = ventures, experiments & musings
+            </p>
+          </div>
         )}
         <div className="about-section">
           <h1>Siham Hadi</h1>
