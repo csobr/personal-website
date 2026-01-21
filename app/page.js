@@ -12,7 +12,10 @@ const Home = () => {
 
   const scrollToRightColumn = () => {
     if (rightColumnRef.current) {
-      rightColumnRef.current.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      rightColumnRef.current.scrollIntoView({
+        behavior: 'smooth',
+        block: 'center',
+      });
     }
   };
 
@@ -27,7 +30,9 @@ const Home = () => {
         '/images/coated/coated-social.jpg',
         '/images/coated/coated-interior-sketch.jpg',
       ],
-      description: 'With Coated, transform any space effortlessly. A platform for creating beautiful interiors.',
+      description:
+        'Coated AI native platform for creating beautiful interiors.',
+      role: 'Design & Development',
       link: 'https://coated-sihams-projects-d254c308.vercel.app',
     },
     {
@@ -36,7 +41,9 @@ const Home = () => {
       title: 'Factor',
       thumbnail: '/images/factor/Overview.png',
       images: ['/images/factor/Overview.png'],
-      description: 'Financial water risk assessment in real-time. Data-driven insights for environmental impact.',
+      description:
+        'Financial water risk assessment in real-time. Data-driven insights for environmental impact.',
+      role: 'Design & Development',
       link: null,
     },
     {
@@ -45,7 +52,9 @@ const Home = () => {
       title: 'Ani',
       thumbnail: '/images/ani/ani.jpg',
       images: ['/images/ani/ani.jpg'],
-      description: 'Ani is a website for teens to learn about their amazing brain. Educational and engaging.',
+      description:
+        'Ani is a website for teens to learn about their amazing brain. Educational and engaging.',
+      role: 'Design & Development',
       link: 'https://ani-brain.com/',
     },
     {
@@ -58,7 +67,9 @@ const Home = () => {
         '/images/daie/chat-view.jpg',
         '/images/daie/search.jpg',
       ],
-      description: 'A community app. Think gig app for your neighborhood. Connecting people locally.',
+      description:
+        'A community app. Think gig app for your neighborhood. Connecting people locally.',
+      role: 'Design & Development',
       link: null,
     },
     {
@@ -71,7 +82,9 @@ const Home = () => {
         '/images/unit/unit2.jpg',
         '/images/unit/unit3.jpg',
       ],
-      description: 'A fashion rental marketplace where local businesses rent out their products.',
+      description:
+        'A fashion rental marketplace where local businesses rent out their products.',
+      role: 'Design & Development',
       link: null,
     },
     {
@@ -87,7 +100,9 @@ const Home = () => {
         '/images/wore/wore4.jpg',
         '/images/wore/wore6.jpg',
       ],
-      description: 'Curated fashion from the high street brands. Personal styling made accessible.',
+      description:
+        'Curated fashion from the high street brands. Personal styling made accessible.',
+      role: 'Design & Development',
       link: null,
     },
     {
@@ -105,7 +120,8 @@ const Home = () => {
         '/images/furniture/srh6.jpg',
         '/images/furniture/srh10.jpg',
       ],
-      description: 'Some of my early furniture projects. Created with 3DS Max.',
+      description: 'My furniture designs.',
+      role: '3D Visualization',
       link: null,
     },
   ];
@@ -116,7 +132,9 @@ const Home = () => {
         <ul className="work-list">
           <li>
             <button
-              className={`work-item ${selectedWork === 'current' ? 'active' : ''}`}
+              className={`work-item ${
+                selectedWork === 'current' ? 'active' : ''
+              }`}
               onClick={() => {
                 setSelectedWork(selectedWork === 'current' ? null : 'current');
                 if (selectedWork !== 'current') scrollToRightColumn();
@@ -128,17 +146,27 @@ const Home = () => {
           {works.map((work) => (
             <li key={work.id}>
               <button
-                className={`work-item ${selectedWork?.id === work.id ? 'active' : ''}`}
+                className={`work-item ${
+                  selectedWork?.id === work.id ? 'active' : ''
+                }`}
                 onClick={() => {
                   setSelectedWork(selectedWork?.id === work.id ? null : work);
                   if (selectedWork?.id !== work.id) scrollToRightColumn();
                 }}
               >
+                {selectedWork?.id === work.id ? (
+                  <span title="Sunsetted project">🌥️ </span>
+                ) : (
+                  ''
+                )}
                 [{work.year}] {work.title}
               </button>
             </li>
           ))}
         </ul>
+        {selectedWork && selectedWork !== 'current' && (
+          <p className="legend">🌥️ = sunsetted</p>
+        )}
         <div className="about-section">
           <h1>Siham Hadi</h1>
           <p>
@@ -155,7 +183,29 @@ const Home = () => {
             platform for creating beautiful interiors.
           </p>
           <p>
-            <a href="https://github.com/csobr" target="_blank" rel="noopener noreferrer">github</a> | <a href="https://www.linkedin.com/in/sihamhadi/" target="_blank" rel="noopener noreferrer">linkedin</a>
+            <a
+              href="https://github.com/csobr"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              github
+            </a>{' '}
+            |{' '}
+            <a
+              href="https://www.linkedin.com/in/sihamhadi/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              linkedin
+            </a>{' '}
+            |{' '}
+            <a
+              href="https://sihamhadi.substack.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              newsletter
+            </a>
           </p>
         </div>
       </div>
@@ -164,7 +214,11 @@ const Home = () => {
         {selectedWork === 'current' ? (
           <div className="current-project">
             <p>AI-powered interior design tool</p>
-            <a href="https://rafphia.com" target="_blank" rel="noopener noreferrer">
+            <a
+              href="https://rafphia.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               rafphia.com
             </a>
           </div>
@@ -175,52 +229,56 @@ const Home = () => {
                 <button className="back-button" onClick={handleBackClick}>
                   Back
                 </button>
+                <p className="work-role">{selectedWork.role}</p>
                 <p className="work-description">{selectedWork.description}</p>
                 {selectedWork.link && (
-                  <a href={selectedWork.link} target="_blank" rel="noopener noreferrer" className="work-link">
+                  <a
+                    href={selectedWork.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="work-link"
+                  >
                     {selectedWork.link}
                   </a>
                 )}
               </div>
             )}
             <div className="image-grid">
-              {selectedWork ? (
-                selectedWork.images.map((img, index) => (
-                  <div key={index} className="image-grid-item active">
-                    <Image
-                      src={img}
-                      alt={`${selectedWork.title} ${index + 1}`}
-                      width={300}
-                      height={240}
-                      style={{
-                        width: '100%',
-                        height: 'auto',
-                        objectFit: 'cover',
-                      }}
-                    />
-                  </div>
-                ))
-              ) : (
-                works.map((work) => (
-                  <div
-                    key={work.id}
-                    className="image-grid-item"
-                    onClick={() => setSelectedWork(work)}
-                  >
-                    <Image
-                      src={work.thumbnail}
-                      alt={work.title}
-                      width={300}
-                      height={240}
-                      style={{
-                        width: '100%',
-                        height: 'auto',
-                        objectFit: 'cover',
-                      }}
-                    />
-                  </div>
-                ))
-              )}
+              {selectedWork
+                ? selectedWork.images.map((img, index) => (
+                    <div key={index} className="image-grid-item active">
+                      <Image
+                        src={img}
+                        alt={`${selectedWork.title} ${index + 1}`}
+                        width={300}
+                        height={240}
+                        style={{
+                          width: '100%',
+                          height: 'auto',
+                          objectFit: 'cover',
+                        }}
+                      />
+                    </div>
+                  ))
+                : works.map((work) => (
+                    <div
+                      key={work.id}
+                      className="image-grid-item"
+                      onClick={() => setSelectedWork(work)}
+                    >
+                      <Image
+                        src={work.thumbnail}
+                        alt={work.title}
+                        width={300}
+                        height={240}
+                        style={{
+                          width: '100%',
+                          height: 'auto',
+                          objectFit: 'cover',
+                        }}
+                      />
+                    </div>
+                  ))}
             </div>
           </>
         )}
