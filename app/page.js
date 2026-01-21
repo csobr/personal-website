@@ -1,12 +1,19 @@
 'use client';
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import Image from 'next/image';
 
 const Home = () => {
   const [selectedWork, setSelectedWork] = useState(null);
+  const rightColumnRef = useRef(null);
 
   const handleBackClick = () => {
     setSelectedWork(null);
+  };
+
+  const scrollToRightColumn = () => {
+    if (rightColumnRef.current) {
+      rightColumnRef.current.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
   };
 
   const works = [
@@ -110,7 +117,10 @@ const Home = () => {
           <li>
             <button
               className={`work-item ${selectedWork === 'current' ? 'active' : ''}`}
-              onClick={() => setSelectedWork(selectedWork === 'current' ? null : 'current')}
+              onClick={() => {
+                setSelectedWork(selectedWork === 'current' ? null : 'current');
+                if (selectedWork !== 'current') scrollToRightColumn();
+              }}
             >
               [current] Rafphia
             </button>
@@ -119,7 +129,10 @@ const Home = () => {
             <li key={work.id}>
               <button
                 className={`work-item ${selectedWork?.id === work.id ? 'active' : ''}`}
-                onClick={() => setSelectedWork(selectedWork?.id === work.id ? null : work)}
+                onClick={() => {
+                  setSelectedWork(selectedWork?.id === work.id ? null : work);
+                  if (selectedWork?.id !== work.id) scrollToRightColumn();
+                }}
               >
                 [{work.year}] {work.title}
               </button>
@@ -147,7 +160,7 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="right-column">
+      <div className="right-column" ref={rightColumnRef}>
         {selectedWork === 'current' ? (
           <div className="current-project">
             <p>AI-powered interior design tool</p>
