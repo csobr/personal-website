@@ -5,6 +5,10 @@ import Image from 'next/image';
 const Home = () => {
   const [selectedWork, setSelectedWork] = useState(null);
 
+  const handleBackClick = () => {
+    setSelectedWork(null);
+  };
+
   const works = [
     {
       id: 1,
@@ -155,6 +159,9 @@ const Home = () => {
           <>
             {selectedWork && (
               <div className="work-details">
+                <button className="back-button" onClick={handleBackClick}>
+                  Back
+                </button>
                 <p className="work-description">{selectedWork.description}</p>
                 {selectedWork.link && (
                   <a href={selectedWork.link} target="_blank" rel="noopener noreferrer" className="work-link">

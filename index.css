@@ -131,6 +131,21 @@ a:hover {
   margin-bottom: 1.5rem;
 }
 
+.back-button {
+  background: none;
+  border: 1px solid var(--primary);
+  font-family: inherit;
+  font-size: 14px;
+  padding: 0.25rem 0.5rem;
+  cursor: pointer;
+  margin-bottom: 1rem;
+}
+
+.back-button:hover {
+  background: var(--primary);
+  color: var(--bg);
+}
+
 .work-description {
   font-size: 14px;
   line-height: 1.6;
