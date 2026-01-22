@@ -174,17 +174,18 @@ a:hover {
   word-break: break-all;
 }
 
-/* Image Grid */
+/* Image Grid - Masonry Layout */
 .image-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 0.5rem;
+  column-count: 3;
+  column-gap: 0.5rem;
 }
 
 .image-grid-item {
   cursor: pointer;
   opacity: 0.7;
   transition: opacity 0.2s;
+  break-inside: avoid;
+  margin-bottom: 0.5rem;
 }
 
 .image-grid-item:hover,
@@ -205,7 +206,7 @@ a:hover {
   }
 
   .image-grid {
-    grid-template-columns: repeat(2, 1fr);
+    column-count: 2;
   }
 }
 
