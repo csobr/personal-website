@@ -2,9 +2,31 @@
 import { useState, useRef, useEffect } from 'react';
 import Image from 'next/image';
 
+const shimmer = (w, h) => `
+<svg width="${w}" height="${h}" xmlns="http://www.w3.org/2000/svg">
+  <rect width="${w}" height="${h}" fill="#e5e0da"/>
+</svg>`;
+
+const toBase64 = (str) =>
+  typeof window === 'undefined'
+    ? Buffer.from(str).toString('base64')
+    : window.btoa(str);
+
+const blurDataURL = (w, h) =>
+  `data:image/svg+xml;base64,${toBase64(shimmer(w, h))}`;
+
 const Home = () => {
   const [selectedWork, setSelectedWork] = useState(null);
+  const [lightboxImage, setLightboxImage] = useState(null);
   const rightColumnRef = useRef(null);
+
+  useEffect(() => {
+    const handleEscape = (e) => {
+      if (e.key === 'Escape') setLightboxImage(null);
+    };
+    window.addEventListener('keydown', handleEscape);
+    return () => window.removeEventListener('keydown', handleEscape);
+  }, []);
 
   useEffect(() => {
     console.log(`
@@ -280,19 +302,20 @@ const Home = () => {
             <div className="image-grid">
               {selectedWork
                 ? selectedWork.images.map((img, index) => (
-                    <div key={index} className="image-grid-item active">
+                    <div
+                      key={index}
+                      className="image-grid-item detail"
+                      onClick={() => setLightboxImage(img)}
+                    >
                       <Image
                         src={img}
                         alt={`${selectedWork.title} ${index + 1}`}
-                        width={600}
-                        height={400}
+                        fill
                         sizes="(max-width: 600px) 100vw, (max-width: 900px) 50vw, 33vw"
                         priority={index === 0}
-                        style={{
-                          width: '100%',
-                          height: 'auto',
-                          objectFit: 'cover',
-                        }}
+                        placeholder="blur"
+                        blurDataURL={blurDataURL(600, 400)}
+                        style={{ objectFit: 'cover' }}
                       />
                     </div>
                   ))
@@ -305,15 +328,12 @@ const Home = () => {
                       <Image
                         src={work.thumbnail}
                         alt={work.title}
-                        width={300}
-                        height={300}
+                        fill
                         sizes="(max-width: 600px) 100vw, (max-width: 900px) 50vw, 33vw"
                         priority={index < 3}
-                        style={{
-                          width: '100%',
-                          height: '100%',
-                          objectFit: 'cover',
-                        }}
+                        placeholder="blur"
+                        blurDataURL={blurDataURL(300, 300)}
+                        style={{ objectFit: 'cover' }}
                       />
                     </div>
                   ))}
@@ -321,6 +341,24 @@ const Home = () => {
           </>
         )}
       </div>
+
+      {lightboxImage && (
+        <div className="lightbox" onClick={() => setLightboxImage(null)}>
+          <button className="lightbox-close" onClick={() => setLightboxImage(null)}>
+            &times;
+          </button>
+          <div className="lightbox-image">
+            <Image
+              src={lightboxImage}
+              alt="Full size"
+              fill
+              sizes="70vw"
+              style={{ objectFit: 'contain' }}
+              priority
+            />
+          </div>
+        </div>
+      )}
     </main>
   );
 };
