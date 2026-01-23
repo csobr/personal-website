@@ -284,8 +284,10 @@ const Home = () => {
                       <Image
                         src={img}
                         alt={`${selectedWork.title} ${index + 1}`}
-                        width={300}
-                        height={240}
+                        width={600}
+                        height={400}
+                        sizes="(max-width: 600px) 100vw, (max-width: 900px) 50vw, 33vw"
+                        priority={index === 0}
                         style={{
                           width: '100%',
                           height: 'auto',
@@ -294,20 +296,22 @@ const Home = () => {
                       />
                     </div>
                   ))
-                : works.map((work) => (
+                : works.map((work, index) => (
                     <div
                       key={work.id}
-                      className="image-grid-item"
+                      className="image-grid-item thumbnail"
                       onClick={() => setSelectedWork(work)}
                     >
                       <Image
                         src={work.thumbnail}
                         alt={work.title}
                         width={300}
-                        height={240}
+                        height={300}
+                        sizes="(max-width: 600px) 100vw, (max-width: 900px) 50vw, 33vw"
+                        priority={index < 3}
                         style={{
                           width: '100%',
-                          height: 'auto',
+                          height: '100%',
                           objectFit: 'cover',
                         }}
                       />
