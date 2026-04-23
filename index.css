@@ -138,7 +138,7 @@ a:hover {
 }
 
 .back-button {
-  background: linear-gradient(180deg, #f0f0f0 0%, #c0c0c0 50%, #a0a0a0 100%);
+  background: #e0e0e0;
   border: 1px solid #888;
   border-radius: 0;
   font-family: inherit;
@@ -146,13 +146,11 @@ a:hover {
   padding: 0.25rem 0.75rem;
   cursor: pointer;
   margin-bottom: 1rem;
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2);
   color: black;
 }
 
 .back-button:active {
-  background: linear-gradient(180deg, #a0a0a0 0%, #c0c0c0 50%, #e0e0e0 100%);
-  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.2);
+  background: #c0c0c0;
 }
 
 .work-role {
@@ -174,25 +172,26 @@ a:hover {
   word-break: break-all;
 }
 
-/* Image Grid - Masonry Layout */
+.work-section {
+  margin-bottom: 2rem;
+}
+
+.work-section .work-role {
+  margin-bottom: 0.75rem;
+}
+
+/* Image Grid - Flex layout that fills width on the last row */
 .image-grid {
-  column-count: 3;
-  column-gap: 0.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
 }
 
 .image-grid-item {
   position: relative;
   cursor: pointer;
-  opacity: 0.7;
-  transition: opacity 0.2s;
-  break-inside: avoid;
-  margin-bottom: 0.5rem;
+  flex: 1 1 calc(33.333% - 0.5rem);
   background-color: #e5e0da;
-}
-
-.image-grid-item:hover,
-.image-grid-item.active {
-  opacity: 1;
 }
 
 .image-grid-item img {
@@ -218,8 +217,8 @@ a:hover {
     grid-template-columns: 280px 1fr;
   }
 
-  .image-grid {
-    column-count: 2;
+  .image-grid-item {
+    flex: 1 1 calc(50% - 0.5rem);
   }
 }
 

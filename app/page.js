@@ -160,20 +160,36 @@ const Home = () => {
       id: 7,
       year: '2016',
       title: 'Furniture',
-      thumbnail: '/images/furniture/srh11.jpg',
-      images: [
-        '/images/furniture/srh11.jpg',
-        '/images/furniture/srh12.jpg',
-        '/images/furniture/srh1.jpg',
-        '/images/furniture/srh2.png',
-        '/images/furniture/srh4.jpg',
-        '/images/furniture/srh5.jpg',
-        '/images/furniture/srh6.jpg',
-        '/images/furniture/srh10.jpg',
-      ],
+      thumbnail: '/images/furniture/rafphia-sinehuette-monitor.png',
       description: 'My furniture designs.',
-      role: '3D Visualization',
       link: null,
+      sections: [
+        {
+          title: 'Rafphia + Siham',
+          year: '2026',
+          images: [
+            '/images/furniture/rafphia-sinehuette-gallery.png',
+            '/images/furniture/rafphia-sinehuette-bedroom.png',
+            '/images/furniture/rafphia-sinehuette-bedside-lake.png',
+            '/images/furniture/rafphia-sinehuette-bedside-plaid.png',
+            '/images/furniture/rafphia-sinehuette-monitor.png',
+          ],
+        },
+        {
+          title: '3D Visualization',
+          year: '2016',
+          images: [
+            '/images/furniture/srh11.jpg',
+            '/images/furniture/srh12.jpg',
+            '/images/furniture/srh1.jpg',
+            '/images/furniture/srh2.png',
+            '/images/furniture/srh4.jpg',
+            '/images/furniture/srh5.jpg',
+            '/images/furniture/srh6.jpg',
+            '/images/furniture/srh10.jpg',
+          ],
+        },
+      ],
     },
   ];
 
@@ -285,7 +301,9 @@ const Home = () => {
                 <button className="back-button" onClick={handleBackClick}>
                   Back
                 </button>
-                <p className="work-role">{selectedWork.role}</p>
+                {selectedWork.role && (
+                  <p className="work-role">{selectedWork.role}</p>
+                )}
                 <p className="work-description">{selectedWork.description}</p>
                 {selectedWork.link && (
                   <a
@@ -299,45 +317,76 @@ const Home = () => {
                 )}
               </div>
             )}
-            <div className="image-grid">
-              {selectedWork
-                ? selectedWork.images.map((img, index) => (
-                    <div
-                      key={index}
-                      className="image-grid-item detail"
-                      onClick={() => setLightboxImage(img)}
-                    >
-                      <Image
-                        src={img}
-                        alt={`${selectedWork.title} ${index + 1}`}
-                        fill
-                        sizes="(max-width: 600px) 100vw, (max-width: 900px) 50vw, 33vw"
-                        priority={index === 0}
-                        placeholder="blur"
-                        blurDataURL={blurDataURL(600, 400)}
-                        style={{ objectFit: 'cover' }}
-                      />
-                    </div>
-                  ))
-                : works.map((work, index) => (
-                    <div
-                      key={work.id}
-                      className="image-grid-item thumbnail"
-                      onClick={() => setSelectedWork(work)}
-                    >
-                      <Image
-                        src={work.thumbnail}
-                        alt={work.title}
-                        fill
-                        sizes="(max-width: 600px) 100vw, (max-width: 900px) 50vw, 33vw"
-                        priority={index < 3}
-                        placeholder="blur"
-                        blurDataURL={blurDataURL(300, 300)}
-                        style={{ objectFit: 'cover' }}
-                      />
-                    </div>
-                  ))}
-            </div>
+            {selectedWork && selectedWork.sections ? (
+              selectedWork.sections.map((section) => (
+                <div key={section.title} className="work-section">
+                  <p className="work-role">
+                    {section.title}
+                    {section.year && ` · ${section.year}`}
+                  </p>
+                  <div className="image-grid">
+                    {section.images.map((img, index) => (
+                      <div
+                        key={index}
+                        className="image-grid-item detail"
+                        onClick={() => setLightboxImage(img)}
+                      >
+                        <Image
+                          src={img}
+                          alt={`${selectedWork.title} ${index + 1}`}
+                          fill
+                          sizes="(max-width: 600px) 100vw, (max-width: 900px) 50vw, 33vw"
+                          priority={index === 0}
+                          placeholder="blur"
+                          blurDataURL={blurDataURL(600, 400)}
+                          style={{ objectFit: 'cover' }}
+                        />
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              ))
+            ) : (
+              <div className="image-grid">
+                {selectedWork
+                  ? selectedWork.images.map((img, index) => (
+                      <div
+                        key={index}
+                        className="image-grid-item detail"
+                        onClick={() => setLightboxImage(img)}
+                      >
+                        <Image
+                          src={img}
+                          alt={`${selectedWork.title} ${index + 1}`}
+                          fill
+                          sizes="(max-width: 600px) 100vw, (max-width: 900px) 50vw, 33vw"
+                          priority={index === 0}
+                          placeholder="blur"
+                          blurDataURL={blurDataURL(600, 400)}
+                          style={{ objectFit: 'cover' }}
+                        />
+                      </div>
+                    ))
+                  : works.map((work, index) => (
+                      <div
+                        key={work.id}
+                        className="image-grid-item thumbnail"
+                        onClick={() => setSelectedWork(work)}
+                      >
+                        <Image
+                          src={work.thumbnail}
+                          alt={work.title}
+                          fill
+                          sizes="(max-width: 600px) 100vw, (max-width: 900px) 50vw, 33vw"
+                          priority={index < 3}
+                          placeholder="blur"
+                          blurDataURL={blurDataURL(300, 300)}
+                          style={{ objectFit: 'cover' }}
+                        />
+                      </div>
+                    ))}
+              </div>
+            )}
           </>
         )}
       </div>
