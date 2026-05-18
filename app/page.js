@@ -160,7 +160,7 @@ const Home = () => {
       id: 7,
       year: '2016',
       title: 'Furniture',
-      thumbnail: '/images/furniture/rafphia-sinehuette-monitor.png',
+      thumbnail: '/images/furniture/rafphia-sinehuette--tied.png',
       description: 'My furniture designs.',
       link: null,
       sections: [
@@ -168,6 +168,7 @@ const Home = () => {
           title: 'Rafphia + Siham',
           year: '2026',
           images: [
+            '/images/furniture/rafphia-sinehuette--tied.png',
             '/images/furniture/rafphia-sinehuette-gallery.png',
             '/images/furniture/rafphia-sinehuette-bedroom.png',
             '/images/furniture/rafphia-sinehuette-bedside-lake.png',
