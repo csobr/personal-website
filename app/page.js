@@ -59,6 +59,7 @@ const Home = () => {
 
   const handleBackClick = () => {
     setSelectedWork(null);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
   const scrollToRightColumn = () => {
