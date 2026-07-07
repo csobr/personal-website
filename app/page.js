@@ -197,6 +197,48 @@ const Home = () => {
   return (
     <main className="brutalist-layout">
       <div className="left-column">
+        <div className="about-section">
+          <h1>Siham Hadi</h1>
+          <p className="greeting">Greetings, visitor!</p>
+          <p>
+            I am a developer who enjoys exploring and building applications at
+            the intersection of cutting-edge technology, design, and business.
+          </p>
+          <p>
+            "Be curious and go deeper" is a motto I strive to live by. It
+            embodies my commitment to continuous learning and exploration, both
+            personally and professionally.
+          </p>
+          <p>
+            I'm the founder of <a href="https://rafphia.com">Rafphia</a>, a
+            platform for creating beautiful interiors.
+          </p>
+          <p>
+            <a
+              href="https://github.com/csobr"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              github
+            </a>{' '}
+            |{' '}
+            <a
+              href="https://www.linkedin.com/in/sihamhadi/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              linkedin
+            </a>{' '}
+            |{' '}
+            <a
+              href="https://sihamhadi.substack.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              newsletter
+            </a>
+          </p>
+        </div>
         <ul className="work-list">
           <li>
             <button
@@ -240,47 +282,6 @@ const Home = () => {
             </p>
           </div>
         )}
-        <div className="about-section">
-          <h1>Siham Hadi</h1>
-          <p>
-            I am a developer who enjoys exploring and building applications at
-            the intersection of cutting-edge technology, design, and business.
-          </p>
-          <p>
-            "Be curious and go deeper" is a motto I strive to live by. It
-            embodies my commitment to continuous learning and exploration, both
-            personally and professionally.
-          </p>
-          <p>
-            I'm the founder of <a href="https://rafphia.com">Rafphia</a>, a
-            platform for creating beautiful interiors.
-          </p>
-          <p>
-            <a
-              href="https://github.com/csobr"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              github
-            </a>{' '}
-            |{' '}
-            <a
-              href="https://www.linkedin.com/in/sihamhadi/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              linkedin
-            </a>{' '}
-            |{' '}
-            <a
-              href="https://sihamhadi.substack.com"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              newsletter
-            </a>
-          </p>
-        </div>
       </div>
 
       <div className="right-column" ref={rightColumnRef}>
@@ -336,7 +337,7 @@ const Home = () => {
                           src={img}
                           alt={`${selectedWork.title} ${index + 1}`}
                           fill
-                          sizes="(max-width: 600px) 100vw, (max-width: 900px) 50vw, 33vw"
+                          sizes="(max-width: 700px) 50vw, 350px"
                           priority={index === 0}
                           placeholder="blur"
                           blurDataURL={blurDataURL(600, 400)}
@@ -360,7 +361,7 @@ const Home = () => {
                           src={img}
                           alt={`${selectedWork.title} ${index + 1}`}
                           fill
-                          sizes="(max-width: 600px) 100vw, (max-width: 900px) 50vw, 33vw"
+                          sizes="(max-width: 700px) 50vw, 350px"
                           priority={index === 0}
                           placeholder="blur"
                           blurDataURL={blurDataURL(600, 400)}
@@ -378,7 +379,7 @@ const Home = () => {
                           src={work.thumbnail}
                           alt={work.title}
                           fill
-                          sizes="(max-width: 600px) 100vw, (max-width: 900px) 50vw, 33vw"
+                          sizes="(max-width: 700px) 50vw, 350px"
                           priority={index < 3}
                           placeholder="blur"
                           blurDataURL={blurDataURL(300, 300)}

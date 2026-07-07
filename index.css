@@ -41,14 +41,14 @@ a:hover {
 /* Layout */
 .brutalist-layout {
   display: grid;
-  grid-template-columns: 350px 1fr;
+  grid-template-columns: 1fr;
   min-height: 100vh;
-  max-width: 1400px;
+  max-width: 700px;
   margin: 0 auto;
 }
 
 .left-column {
-  border-right: 1px solid var(--primary);
+  border-bottom: 1px solid var(--primary);
   padding: 1rem;
 }
 
@@ -113,9 +113,16 @@ a:hover {
   margin-top: 0.5rem;
 }
 
+/* Greeting */
+.greeting {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 14px;
+  margin-bottom: 0.75rem;
+}
+
 /* About */
 .about-section {
-  margin-top: 2rem;
+  margin-bottom: 2rem;
   font-size: 13px;
   line-height: 1.6;
 }
@@ -190,7 +197,7 @@ a:hover {
 .image-grid-item {
   position: relative;
   cursor: pointer;
-  flex: 1 1 calc(33.333% - 0.5rem);
+  flex: 1 1 calc(50% - 0.5rem);
   background-color: #e5e0da;
 }
 
@@ -209,28 +216,6 @@ a:hover {
 .image-grid-item.detail {
   aspect-ratio: 3 / 2;
   overflow: hidden;
-}
-
-/* Responsive */
-@media (max-width: 900px) {
-  .brutalist-layout {
-    grid-template-columns: 280px 1fr;
-  }
-
-  .image-grid-item {
-    flex: 1 1 calc(50% - 0.5rem);
-  }
-}
-
-@media (max-width: 600px) {
-  .brutalist-layout {
-    grid-template-columns: 1fr;
-  }
-
-  .left-column {
-    border-right: none;
-    border-bottom: 1px solid var(--primary);
-  }
 }
 
 .lightbox {
