@@ -350,45 +350,28 @@ const Home = () => {
                 </div>
               ))
             ) : (
-              <div className="image-grid">
-                {selectedWork
-                  ? selectedWork.images.map((img, index) => (
-                      <div
-                        key={index}
-                        className="image-grid-item detail"
-                        onClick={() => setLightboxImage(img)}
-                      >
-                        <Image
-                          src={img}
-                          alt={`${selectedWork.title} ${index + 1}`}
-                          fill
-                          sizes="(max-width: 700px) 50vw, 350px"
-                          priority={index === 0}
-                          placeholder="blur"
-                          blurDataURL={blurDataURL(600, 400)}
-                          style={{ objectFit: 'cover' }}
-                        />
-                      </div>
-                    ))
-                  : works.map((work, index) => (
-                      <div
-                        key={work.id}
-                        className="image-grid-item thumbnail"
-                        onClick={() => setSelectedWork(work)}
-                      >
-                        <Image
-                          src={work.thumbnail}
-                          alt={work.title}
-                          fill
-                          sizes="(max-width: 700px) 50vw, 350px"
-                          priority={index < 3}
-                          placeholder="blur"
-                          blurDataURL={blurDataURL(300, 300)}
-                          style={{ objectFit: 'cover' }}
-                        />
-                      </div>
-                    ))}
-              </div>
+              selectedWork && (
+                <div className="image-grid">
+                  {selectedWork.images.map((img, index) => (
+                    <div
+                      key={index}
+                      className="image-grid-item detail"
+                      onClick={() => setLightboxImage(img)}
+                    >
+                      <Image
+                        src={img}
+                        alt={`${selectedWork.title} ${index + 1}`}
+                        fill
+                        sizes="(max-width: 700px) 50vw, 350px"
+                        priority={index === 0}
+                        placeholder="blur"
+                        blurDataURL={blurDataURL(600, 400)}
+                        style={{ objectFit: 'cover' }}
+                      />
+                    </div>
+                  ))}
+                </div>
+              )
             )}
           </>
         )}

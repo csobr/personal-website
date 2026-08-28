@@ -48,7 +48,6 @@ a:hover {
 }
 
 .left-column {
-  border-bottom: 1px solid var(--primary);
   padding: 1rem;
 }
 
