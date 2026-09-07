@@ -45,6 +45,7 @@ a:hover {
 .brutalist-layout {
   display: grid;
   grid-template-columns: 1fr;
+  align-content: start;
   min-height: 100vh;
   max-width: 700px;
   margin: 0 auto;
@@ -69,8 +70,9 @@ a:hover {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  height: calc(100vh - 2rem);
+  justify-content: flex-start;
+  min-height: 0;
+  padding-top: 1rem;
   text-align: center;
   font-size: 14px;
 }
@@ -145,6 +147,8 @@ a:hover {
 }
 
 .back-button {
+  align-self: flex-start;
+  margin: -0.5rem auto 1rem 0;
   background: #e0e0e0;
   border: 1px solid #888;
   border-radius: 0;
@@ -152,7 +156,6 @@ a:hover {
   font-size: 14px;
   padding: 0.25rem 0.75rem;
   cursor: pointer;
-  margin-bottom: 1rem;
   color: black;
 }
 
@@ -505,7 +508,7 @@ a:hover {
 
 .brutalist-layout.bare {
   background-image: none;
-  background-color: #fff;
+  background-color: #d6d5d2;
   backdrop-filter: none;
   -webkit-backdrop-filter: none;
   box-shadow: none;

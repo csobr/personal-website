@@ -379,6 +379,7 @@ const Home = ({ notes = [] }) => {
                     selectedWork === 'current' ? null : 'current'
                   );
                   setSelectedNote(null);
+                  setFootage(false);
                   if (selectedWork !== 'current') scrollToRightColumn();
                 }}
               >
@@ -395,6 +396,7 @@ const Home = ({ notes = [] }) => {
                   onClick={() => {
                     setSelectedWork(selectedWork?.id === work.id ? null : work);
                     setSelectedNote(null);
+                    setFootage(false);
                     if (selectedWork?.id !== work.id) scrollToRightColumn();
                   }}
                 >
@@ -424,6 +426,7 @@ const Home = ({ notes = [] }) => {
                           selectedNote?.slug === note.slug ? null : note;
                         setSelectedNote(next);
                         setSelectedWork(null);
+                        setFootage(false);
                         if (next) scrollToRightColumn();
                       }}
                     >
