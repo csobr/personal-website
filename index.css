@@ -393,10 +393,8 @@ a:hover {
   }
 }
 
-/* No footage behind the sheet on mobile, so make it solid */
 @media (max-width: 600px) {
   .brutalist-layout {
-    /* the strip follows the sheet, so it need not fill the viewport */
     min-height: 0;
     padding-bottom: 0;
     background-color: rgb(242, 241, 236);
@@ -504,11 +502,19 @@ a:hover {
   }
 }
 
-/* Dismiss the background (primarily for mobile) */
-.bg-close {
-  position: fixed;
-  top: 0.5rem;
-  right: 0.5rem;
+
+.brutalist-layout.bare {
+  background-image: none;
+  background-color: #fff;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+  box-shadow: none;
+}
+
+.sheet-toggle {
+  position: absolute;
+  top: 0.35rem;
+  right: 0.4rem;
   z-index: 3;
   width: 1.75rem;
   height: 1.75rem;
@@ -523,7 +529,7 @@ a:hover {
   cursor: pointer;
 }
 
-.bg-close:hover {
+.sheet-toggle:hover {
   opacity: 1;
 }
 
@@ -532,7 +538,6 @@ a:hover {
   max-width: 420px;
 }
 
-/* Mobile: the footage sits in a strip below the sheet, not behind it */
 .video-strip {
   display: none;
 }

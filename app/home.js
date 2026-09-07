@@ -27,11 +27,33 @@ const Home = ({ notes = [] }) => {
   const [selectedNote, setSelectedNote] = useState(null);
   const [showAll, setShowAll] = useState(false);
   const [bgOffset, setBgOffset] = useState({ x: 0, y: 0 });
-  const [bgVisible, setBgVisible] = useState(true);
   const [isMobile, setIsMobile] = useState(false);
+  const [sheetVisible, setSheetVisible] = useState(true);
+  const videoRefs = useRef([]);
+  const touchedFootage = useRef(false);
   const dragRef = useRef(null);
   const [lightboxImage, setLightboxImage] = useState(null);
   const rightColumnRef = useRef(null);
+
+  const setFootage = (playing) => {
+    touchedFootage.current = true;
+    setSheetVisible(playing);
+    videoRefs.current.forEach((video) => {
+      if (!video) return;
+      if (playing) video.play();
+      else video.pause();
+    });
+  };
+
+  useEffect(() => {
+    if (isMobile) return;
+    const timer = setTimeout(() => {
+      if (touchedFootage.current) return;
+      setSheetVisible(false);
+      videoRefs.current.forEach((video) => video && video.pause());
+    }, 3000);
+    return () => clearTimeout(timer);
+  }, [isMobile]);
 
   useEffect(() => {
     const mq = window.matchMedia('(max-width: 600px)');
@@ -43,11 +65,13 @@ const Home = ({ notes = [] }) => {
 
   useEffect(() => {
     const handleEscape = (e) => {
-      if (e.key === 'Escape') setLightboxImage(null);
+      if (e.key !== 'Escape') return;
+      if (lightboxImage) setLightboxImage(null);
+      else setFootage(true);
     };
     window.addEventListener('keydown', handleEscape);
     return () => window.removeEventListener('keydown', handleEscape);
-  }, []);
+  }, [lightboxImage]);
 
   useEffect(() => {
     console.log(`
@@ -255,16 +279,8 @@ const Home = ({ notes = [] }) => {
 
   return (
     <>
-      {bgVisible && !isMobile && (
+      {!isMobile && (
         <>
-          <button
-            className="bg-close"
-            onClick={() => setBgVisible(false)}
-            aria-label="Hide background video"
-            title="Hide background"
-          >
-            &times;
-          </button>
           <div
             className="video-background"
             aria-hidden="true"
@@ -280,6 +296,7 @@ const Home = ({ notes = [] }) => {
             {[1, 2].map((n) => (
               <video
                 key={n}
+                ref={(el) => (videoRefs.current[n - 1] = el)}
                 src={`/videos/bg-${n}.mp4`}
                 autoPlay
                 muted
@@ -291,7 +308,17 @@ const Home = ({ notes = [] }) => {
           </div>
         </>
       )}
-      <main className="brutalist-layout">
+      <main className={`brutalist-layout${sheetVisible ? '' : ' bare'}`}>
+        {!isMobile && (
+          <button
+            className="sheet-toggle"
+            onClick={() => setFootage(!sheetVisible)}
+            aria-label={sheetVisible ? 'Stop the footage' : 'Play the footage'}
+            title={sheetVisible ? 'Stop' : 'Play'}
+          >
+            {sheetVisible ? '\u25a0' : '\u25b6'}
+          </button>
+        )}
         <div className="left-column">
           <div className="about-section">
             <h1>Siham Hadi</h1>
@@ -555,7 +582,7 @@ const Home = ({ notes = [] }) => {
           </div>
         )}
       </main>
-      {isMobile && bgVisible && (
+      {isMobile && (
         <div className="video-strip" aria-hidden="true">
           {[1, 2].map((n) => (
             <video
