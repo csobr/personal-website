@@ -393,6 +393,19 @@ a:hover {
   }
 }
 
+/* No footage behind the sheet on mobile, so make it solid */
+@media (max-width: 600px) {
+  .brutalist-layout {
+    /* the strip follows the sheet, so it need not fill the viewport */
+    min-height: 0;
+    padding-bottom: 0;
+    background-color: rgb(242, 241, 236);
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    box-shadow: none;
+  }
+}
+
 /* Description shown inline in the list, no click needed */
 .work-list li {
   min-width: 0;
@@ -517,4 +530,40 @@ a:hover {
 /* The mock market chart reads fine small; the still life wants full width */
 .note-body img[src*='harmshi'] {
   max-width: 420px;
+}
+
+/* Mobile: the footage sits in a strip below the sheet, not behind it */
+.video-strip {
+  display: none;
+}
+
+@media (max-width: 600px) {
+  .left-column,
+  .right-column {
+    padding-bottom: 0.25rem;
+  }
+
+  .video-strip {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    gap: 1px;
+    width: 100%;
+    height: 38vw;
+    max-height: 220px;
+    background-color: rgb(242, 241, 236);
+  }
+
+  .video-strip video {
+    flex: 1 1 50%;
+    width: 50%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .video-strip {
+    display: none;
+  }
 }

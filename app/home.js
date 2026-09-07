@@ -28,9 +28,18 @@ const Home = ({ notes = [] }) => {
   const [showAll, setShowAll] = useState(false);
   const [bgOffset, setBgOffset] = useState({ x: 0, y: 0 });
   const [bgVisible, setBgVisible] = useState(true);
+  const [isMobile, setIsMobile] = useState(false);
   const dragRef = useRef(null);
   const [lightboxImage, setLightboxImage] = useState(null);
   const rightColumnRef = useRef(null);
+
+  useEffect(() => {
+    const mq = window.matchMedia('(max-width: 600px)');
+    const update = () => setIsMobile(mq.matches);
+    update();
+    mq.addEventListener('change', update);
+    return () => mq.removeEventListener('change', update);
+  }, []);
 
   useEffect(() => {
     const handleEscape = (e) => {
@@ -246,7 +255,7 @@ const Home = ({ notes = [] }) => {
 
   return (
     <>
-      {bgVisible && (
+      {bgVisible && !isMobile && (
         <>
           <button
             className="bg-close"
@@ -276,7 +285,7 @@ const Home = ({ notes = [] }) => {
                 muted
                 loop
                 playsInline
-                preload="metadata"
+                preload="auto"
               />
             ))}
           </div>
@@ -488,6 +497,7 @@ const Home = ({ notes = [] }) => {
                               fill
                               sizes="(max-width: 700px) 50vw, 350px"
                               priority={index === 0}
+                              loading={index === 0 ? undefined : 'eager'}
                               placeholder="blur"
                               blurDataURL={blurDataURL(600, 400)}
                               style={{ objectFit: 'cover' }}
@@ -511,6 +521,7 @@ const Home = ({ notes = [] }) => {
                             fill
                             sizes="(max-width: 700px) 50vw, 350px"
                             priority={index === 0}
+                            loading={index === 0 ? undefined : 'eager'}
                             placeholder="blur"
                             blurDataURL={blurDataURL(600, 400)}
                             style={{ objectFit: 'cover' }}
@@ -544,6 +555,21 @@ const Home = ({ notes = [] }) => {
           </div>
         )}
       </main>
+      {isMobile && bgVisible && (
+        <div className="video-strip" aria-hidden="true">
+          {[1, 2].map((n) => (
+            <video
+              key={n}
+              src={`/videos/bg-${n}.mp4`}
+              autoPlay
+              muted
+              loop
+              playsInline
+              preload="metadata"
+            />
+          ))}
+        </div>
+      )}
     </>
   );
 };
