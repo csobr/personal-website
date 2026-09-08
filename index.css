@@ -541,7 +541,7 @@ a:hover {
 
 /* The mock market chart reads fine small; the still life wants full width */
 .note-body img[src*='harmshi'] {
-  max-width: 420px;
+  max-width: min(420px, 100%);
 }
 
 .video-strip {
