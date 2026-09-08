@@ -289,21 +289,22 @@ const Home = ({ notes = [] }) => {
             onPointerUp={handleBgPointerUp}
             onPointerCancel={handleBgPointerUp}
             onDoubleClick={() => setBgOffset({ x: 0, y: 0 })}
-            style={{
-              transform: `translate(${bgOffset.x}px, ${bgOffset.y}px) scale(1.3)`,
-            }}
           >
             {[1, 2].map((n) => (
-              <video
-                key={n}
-                ref={(el) => (videoRefs.current[n - 1] = el)}
-                src={`/videos/bg-${n}.mp4`}
-                autoPlay
-                muted
-                loop
-                playsInline
-                preload="auto"
-              />
+              <div key={n} className="video-pane">
+                <video
+                  ref={(el) => (videoRefs.current[n - 1] = el)}
+                  src={`/videos/bg-${n}.mp4`}
+                  autoPlay
+                  muted
+                  loop
+                  playsInline
+                  preload="auto"
+                  style={{
+                    transform: `translate(${bgOffset.x}px, ${bgOffset.y}px) scale(1.3)`,
+                  }}
+                />
+              </div>
             ))}
           </div>
         </>
