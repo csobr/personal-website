@@ -334,8 +334,8 @@ const Home = ({ notes = [] }) => {
               both personally and professionally.
             </p>
             <p>
-              I'm the founder of <a href="https://rafphia.com">Rafphia</a>, a
-              platform for creating beautiful interiors.
+              I'm the founder of <a href="https://rafphia.com">Rafphia</a>, an
+              intelligent antique and vintage scout.
             </p>
             <p>
               <a
@@ -386,7 +386,7 @@ const Home = ({ notes = [] }) => {
               >
                 [current] Rafphia
               </button>
-              <p className="list-excerpt">AI-powered interior design tool</p>
+              <p className="list-excerpt">Intelligent antique and vintage scout</p>
             </li>
             {works.map((work) => (
               <li key={work.id}>
@@ -471,7 +471,10 @@ const Home = ({ notes = [] }) => {
               <button className="back-button" onClick={handleBackClick}>
                 Back
               </button>
-              <p>AI-powered interior design tool</p>
+              <p>Intelligent antique and vintage scout</p>
+              <p>
+                Rafphia started in 2025 as an AI-first interior design tool.
+              </p>
               <a
                 href="https://rafphia.com"
                 target="_blank"
