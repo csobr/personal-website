@@ -386,7 +386,9 @@ const Home = ({ notes = [] }) => {
               >
                 [current] Rafphia
               </button>
-              <p className="list-excerpt">Intelligent antique and vintage scout</p>
+              <p className="list-excerpt">
+                Intelligent antique and vintage scout
+              </p>
             </li>
             {works.map((work) => (
               <li key={work.id}>
@@ -475,12 +477,22 @@ const Home = ({ notes = [] }) => {
               <p>
                 Rafphia started in 2025 as an AI-first interior design tool.
               </p>
+              <div className="video-embed">
+                <iframe
+                  src="https://www.youtube-nocookie.com/embed/3TS2YR7w38g"
+                  title="Rafphia"
+                  loading="lazy"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  referrerPolicy="strict-origin-when-cross-origin"
+                  allowFullScreen
+                />
+              </div>
               <a
-                href="https://rafphia.com"
+                href="https://rafphia.com/blog"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                rafphia.com
+                Rafphia blog
               </a>
             </div>
           ) : (
