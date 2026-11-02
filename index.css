@@ -33,13 +33,11 @@ body {
 
 a {
   color: inherit;
-  text-decoration: underline;
-  text-decoration-thickness: 1px;
-  text-underline-offset: 0.2em;
+  text-decoration: none;
 }
 
 a:hover {
-  text-decoration-thickness: 2px;
+  text-decoration: underline;
 }
 
 /* Layout */
@@ -80,6 +78,16 @@ a:hover {
 
 .current-project p {
   margin-bottom: 0.5rem;
+}
+
+.current-project a {
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.2em;
+}
+
+.current-project a:hover {
+  text-decoration-thickness: 2px;
 }
 
 .video-embed {
