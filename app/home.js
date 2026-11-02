@@ -475,7 +475,14 @@ const Home = ({ notes = [] }) => {
               </button>
               <p>Intelligent antique and vintage scout</p>
               <p>
-                Rafphia started in 2025 as an AI-first interior design tool.
+                <a
+                  href="https://rafphia.com/blog"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Rafphia
+                </a>{' '}
+                started in 2025 as an AI-first interior design tool.
               </p>
               <div className="video-embed">
                 <iframe
@@ -487,13 +494,6 @@ const Home = ({ notes = [] }) => {
                   allowFullScreen
                 />
               </div>
-              <a
-                href="https://rafphia.com/blog"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Rafphia blog
-              </a>
             </div>
           ) : (
             <>
