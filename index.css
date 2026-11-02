@@ -117,20 +117,21 @@ a:hover {
 /* Greeting */
 .greeting {
   font-family: 'Courier New', Courier, monospace;
-  font-size: 14px;
+  font-size: 15px;
   margin-bottom: 0.75rem;
 }
 
 /* About */
 .about-section {
   margin-bottom: 2rem;
-  font-size: 13px;
-  line-height: 1.6;
+  font-size: 15px;
+  line-height: 1.618;
 }
 
 .about-section h1 {
   font-family: 'Courier New', Courier, monospace;
-  font-size: 18px;
+  font-size: 20px;
+  line-height: 1.2;
   font-weight: 600;
   margin-bottom: 0.75rem;
 }
