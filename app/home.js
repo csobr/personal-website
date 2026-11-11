@@ -362,7 +362,7 @@ const Home = ({ notes = [] }) => {
               onClick={() => setShowAll(!showAll)}
               aria-expanded={showAll}
             >
-              {showAll ? 'show less' : `show all (${works.length})`}
+              {showAll ? 'show less' : `show all (${works.length + 1})`}
             </button>
           </div>
           <ul
