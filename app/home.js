@@ -489,8 +489,9 @@ const Home = ({ notes = [] }) => {
                   href="https://rafphia.sihamhadi.com/"
                   target="_blank"
                   rel="noopener noreferrer"
+                  style={{ textDecoration: 'underline' }}
                 >
-                  Try the demo
+                  Try version 1.0 of Rafphia
                 </a>
               </p>
               <div className="video-embed">
