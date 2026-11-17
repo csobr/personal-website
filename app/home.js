@@ -183,7 +183,7 @@ const Home = ({ notes = [] }) => {
       description:
         'Ani is a website for teens to learn about their amazing brain. Educational and engaging.',
       role: 'Design & Development',
-      link: 'https://ani-brain.com/',
+      link: 'https://ani.sihamhadi.com/',
     },
     {
       id: 4,
@@ -483,6 +483,15 @@ const Home = ({ notes = [] }) => {
                   Rafphia
                 </a>{' '}
                 started in 2025 as an AI-first interior design tool.
+              </p>
+              <p>
+                <a
+                  href="https://rafphia.sihamhadi.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Try the demo
+                </a>
               </p>
               <div className="video-embed">
                 <iframe
