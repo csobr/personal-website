@@ -80,13 +80,13 @@ a:hover {
   margin-bottom: 0.5rem;
 }
 
-.current-project a {
+.current-project .demo-link {
   text-decoration: underline;
   text-decoration-thickness: 1px;
   text-underline-offset: 0.2em;
 }
 
-.current-project a:hover {
+.current-project .demo-link:hover {
   text-decoration-thickness: 2px;
 }
 
