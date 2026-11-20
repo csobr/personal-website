@@ -493,24 +493,6 @@ a.back-button:hover {
   margin-top: 0;
 }
 
-.show-all {
-  display: block;
-  margin-left: auto;
-  margin-bottom: 0.4rem;
-  padding: 0;
-  background: none;
-  border: none;
-  font-family: inherit;
-  font-size: 11px;
-  color: inherit;
-  opacity: 0.7;
-  cursor: pointer;
-}
-
-.show-all:hover {
-  text-decoration: underline;
-}
-
 .work-list.expanded .list-excerpt {
   white-space: normal;
   overflow: visible;
@@ -545,22 +527,6 @@ a.back-button:hover {
 @media (max-width: 400px) {
   .work-list.grid-two {
     grid-template-columns: 1fr;
-  }
-}
-
-/* Collapsed: one full row of three on desktop.
-   The pinned [current] item is the first cell. */
-.work-list.grid-two.collapsed li:nth-child(n + 4) {
-  display: none;
-}
-
-@media (max-width: 600px) {
-  .work-list.grid-two.collapsed li:nth-child(n + 4) {
-    display: list-item;
-  }
-
-  .work-list.grid-two.collapsed li:nth-child(n + 5) {
-    display: none;
   }
 }
 

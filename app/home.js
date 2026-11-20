@@ -15,9 +15,8 @@ const toBase64 = (str) =>
 const blurDataURL = (w, h) =>
   `data:image/svg+xml;base64,${toBase64(shimmer(w, h))}`;
 
-const Home = ({ notes = [] }) => {
+const Home = () => {
   const [selectedWork, setSelectedWork] = useState(null);
-  const [showAll, setShowAll] = useState(false);
   const [bgOffset, setBgOffset] = useState({ x: 0, y: 0 });
   const [isMobile, setIsMobile] = useState(false);
   const [sheetVisible, setSheetVisible] = useState(true);
@@ -348,19 +347,8 @@ const Home = ({ notes = [] }) => {
           </div>
           <div className="list-header">
             <p className="list-heading">Projects</p>
-            <button
-              className="show-all"
-              onClick={() => setShowAll(!showAll)}
-              aria-expanded={showAll}
-            >
-              {showAll ? 'show less' : `show all (${works.length + 1})`}
-            </button>
           </div>
-          <ul
-            className={`work-list grid-two ${
-              showAll ? 'expanded' : 'collapsed'
-            }`}
-          >
+          <ul className="work-list grid-two">
             <li>
               <button
                 className={`work-item ${
@@ -403,26 +391,6 @@ const Home = ({ notes = [] }) => {
               </li>
             ))}
           </ul>
-          {notes.length > 0 && (
-            <>
-              <p className="list-heading">Notes</p>
-              <ul className={`work-list ${showAll ? 'expanded' : ''}`}>
-                {notes.map((note) => (
-                  <li key={note.slug}>
-                    <a
-                      className="work-item"
-                      href={`https://modestcuriosity.sihamhadi.com/${note.slug}`}
-                    >
-                      [{note.date}] {note.title}
-                    </a>
-                    {note.description && (
-                      <p className="list-excerpt">{note.description}</p>
-                    )}
-                  </li>
-                ))}
-              </ul>
-            </>
-          )}
           {selectedWork && selectedWork !== 'current' && (
             <div className="spacer">
               <p className="legend">🌥️ = sunsetted</p>

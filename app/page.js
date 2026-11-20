@@ -1,6 +1,5 @@
-import { getAllNotes } from '../lib/notes';
 import Home from './home';
 
-const Page = () => <Home notes={getAllNotes()} />;
+const Page = () => <Home />;
 
 export default Page;
