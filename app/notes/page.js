@@ -16,7 +16,7 @@ const NotesIndex = () => {
   const notes = getAllNotes();
 
   return (
-    <main className="brutalist-layout bare">
+    <main className="brutalist-layout bare notes">
       <div className="left-column">
         <div className="about-section">
           <h1>Modest Curiosity</h1>

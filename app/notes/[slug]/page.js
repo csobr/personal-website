@@ -40,7 +40,7 @@ const NotePage = async ({ params }) => {
   if (!note) notFound();
 
   return (
-    <main className="brutalist-layout bare">
+    <main className="brutalist-layout bare notes">
       <div className="right-column">
         <article className="note">
           <a className="back-button" href="/">
