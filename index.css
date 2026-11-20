@@ -183,6 +183,14 @@ a:hover {
   color: black;
 }
 
+a.back-button {
+  display: inline-block;
+}
+
+a.back-button:hover {
+  text-decoration: none;
+}
+
 .back-button:active {
   background: #c0c0c0;
 }

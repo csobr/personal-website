@@ -15,16 +15,8 @@ const toBase64 = (str) =>
 const blurDataURL = (w, h) =>
   `data:image/svg+xml;base64,${toBase64(shimmer(w, h))}`;
 
-const formatDate = (date) =>
-  new Date(date).toLocaleDateString('en-US', {
-    year: 'numeric',
-    month: 'short',
-    day: 'numeric',
-  });
-
 const Home = ({ notes = [] }) => {
   const [selectedWork, setSelectedWork] = useState(null);
-  const [selectedNote, setSelectedNote] = useState(null);
   const [showAll, setShowAll] = useState(false);
   const [bgOffset, setBgOffset] = useState({ x: 0, y: 0 });
   const [isMobile, setIsMobile] = useState(false);
@@ -134,7 +126,6 @@ const Home = ({ notes = [] }) => {
 
   const handleBackClick = () => {
     setSelectedWork(null);
-    setSelectedNote(null);
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
@@ -379,7 +370,6 @@ const Home = ({ notes = [] }) => {
                   setSelectedWork(
                     selectedWork === 'current' ? null : 'current'
                   );
-                  setSelectedNote(null);
                   setFootage(false);
                   if (selectedWork !== 'current') scrollToRightColumn();
                 }}
@@ -398,7 +388,6 @@ const Home = ({ notes = [] }) => {
                   }`}
                   onClick={() => {
                     setSelectedWork(selectedWork?.id === work.id ? null : work);
-                    setSelectedNote(null);
                     setFootage(false);
                     if (selectedWork?.id !== work.id) scrollToRightColumn();
                   }}
@@ -420,21 +409,12 @@ const Home = ({ notes = [] }) => {
               <ul className={`work-list ${showAll ? 'expanded' : ''}`}>
                 {notes.map((note) => (
                   <li key={note.slug}>
-                    <button
-                      className={`work-item ${
-                        selectedNote?.slug === note.slug ? 'active' : ''
-                      }`}
-                      onClick={() => {
-                        const next =
-                          selectedNote?.slug === note.slug ? null : note;
-                        setSelectedNote(next);
-                        setSelectedWork(null);
-                        setFootage(false);
-                        if (next) scrollToRightColumn();
-                      }}
+                    <a
+                      className="work-item"
+                      href={`https://modestcuriosity.sihamhadi.com/${note.slug}`}
                     >
                       [{note.date}] {note.title}
-                    </button>
+                    </a>
                     {note.description && (
                       <p className="list-excerpt">{note.description}</p>
                     )}
@@ -454,21 +434,7 @@ const Home = ({ notes = [] }) => {
         </div>
 
         <div className="right-column" ref={rightColumnRef}>
-          {selectedNote ? (
-            <article className="note">
-              <button className="back-button" onClick={handleBackClick}>
-                Back
-              </button>
-              <h2>{selectedNote.title}</h2>
-              {selectedNote.date && (
-                <p className="work-role">{formatDate(selectedNote.date)}</p>
-              )}
-              <div
-                className="note-body"
-                dangerouslySetInnerHTML={{ __html: selectedNote.html }}
-              />
-            </article>
-          ) : selectedWork === 'current' ? (
+          {selectedWork === 'current' ? (
             <div className="current-project">
               <button className="back-button" onClick={handleBackClick}>
                 Back
