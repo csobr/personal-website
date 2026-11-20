@@ -20,5 +20,3 @@ If your taste aligns with something like Pinterest Predictions you're not cultiv
 Taste can be consensus. But if you formed it after the consensus, you're not tastemaking.
 
 Get less 4U brained for your own benefit.
-
-— Siham

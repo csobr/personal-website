@@ -22,5 +22,3 @@ Grey is meek, and that’s kinda off putting. There’s something charming about
 Nouveau riche with their shiny gold get mocked too, but at least they have resources. They can graduate from the shininess. The Jysk dining set is there to stay. When it falls apart, it’s back to flatpack land.
 
 I respect the aspiration. It deserved a better chance. The answer isn’t grey, and ditching flatpack land isn’t an option. But it’s not this either. There’s a space between bland and embarrassing. That’s worth finding.
-
-— Siham

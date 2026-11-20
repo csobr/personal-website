@@ -24,5 +24,3 @@ The friction that once kept excess in check has dissolved. The discipline that s
 When options are endless, the work is editing and choosing. When options are few, the work is invention. Neither comes naturally. Both require practice.
 
 Wishing you a more restrained 2026.
-
-— Siham
