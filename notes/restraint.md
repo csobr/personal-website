@@ -1,7 +1,6 @@
 ---
 title: 'Restraint'
 date: '2025-12-27'
-description: 'When options are endless, the work is editing and choosing. When options are few, the work is invention.'
 ---
 
 ![A cyanotype-toned Dutch still life — candle, fruit bowl, game bird and lobster on a draped table — overrun with tangled cables, a laptop, a tablet and a phone.](/images/notes/constraintandrestraint.webp)

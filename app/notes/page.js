@@ -28,9 +28,6 @@ const NotesIndex = () => {
               <a className="work-item" href={`/${note.slug}`}>
                 [{note.date}] {note.title}
               </a>
-              {note.description && (
-                <p className="list-excerpt">{note.description}</p>
-              )}
             </li>
           ))}
         </ul>

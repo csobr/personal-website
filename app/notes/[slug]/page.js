@@ -23,13 +23,11 @@ export const generateMetadata = async ({ params }) => {
   const url = `${NOTES_URL}/${note.slug}`;
   return {
     title: { absolute: `${note.title} | Modest Curiosity` },
-    description: note.description,
     alternates: { canonical: url },
     openGraph: {
       type: 'article',
       url,
       title: note.title,
-      description: note.description,
       siteName: 'Modest Curiosity',
       publishedTime: note.date,
     },

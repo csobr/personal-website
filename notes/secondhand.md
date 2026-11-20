@@ -1,7 +1,6 @@
 ---
 title: 'Notes on secondhand shopping'
 date: '2026-07-15'
-description: 'Reflecting on the stories behind the items, which often lead to reminders about loss and gain.'
 ---
 
 Shopping more secondhand has affected me in ways I did not expect. I'm reflecting on the stories behind the items which often lead to reminders about loss and gain.

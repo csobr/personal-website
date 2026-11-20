@@ -1,7 +1,6 @@
 ---
 title: "Let's stop mocking aspirational decor"
 date: '2025-12-15'
-description: 'Aspirational decor reaches for something. You can see what they wanted. And that is what gets punished.'
 ---
 
 I came across a TikTok about interiors that “gives me instant depression.” I liked it instantly and the comments had me in stitches: “Jysk” (6k likes), “Come Dine With Me chic” (+11k likes). A very Euro taxonomy, but you know the style: beige leather, oak-effect tables, butter yellow painted walls, black and chrome details.

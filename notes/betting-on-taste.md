@@ -1,7 +1,6 @@
 ---
 title: 'Betting on taste'
 date: '2026-01-21'
-description: 'Taste is judgment. Judgment needs training data. If you are online too much, your training data is the same as everyone like you.'
 ---
 
 Taste is judgment. Judgment needs training data. If you're online too much, your training data is the same as everyone "like you." Same data, same judgment, same output.
